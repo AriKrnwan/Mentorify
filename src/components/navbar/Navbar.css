@@ -1,4 +1,4 @@
-img {
+.profile {
     border-radius: 50%;
     align-items: center;
     object-fit: cover;
@@ -8,8 +8,16 @@ Nav {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: #00A9B8;
+    font-size: 0.85rem;
+    background-color: #fff;
+
+
 }
 
 .toogle {
     border: none;
+}
+
+.logo {
+    height: 35px;
 }
