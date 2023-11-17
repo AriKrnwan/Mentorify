@@ -1,15 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import Login from './Pages/Login';
-import Mentoring from './Pages/mentoring';
-import Notification from './Pages/Notification';
-import Profile from './Pages/profile';
-import Qna from './Pages/Qna';
-import Register from './Pages/Register';
-import Save from './Pages/Save';
-import Schedule from './Pages/Schedule';
-import Error from './pages/Error';
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
+import Mentoring from './pages/mentoring/Mentoring';
+import Notification from './pages/notification/Notification';
+import Profile from './pages/profile/Profile';
+import Qna from './pages/qna/Qna';
+import Register from './pages/register/Register';
+import Save from './pages/save/Save';
+import Schedule from './pages/schedule/Schedule';
+import Error from './pages/error/Error';
 
 function App() {
   return (
