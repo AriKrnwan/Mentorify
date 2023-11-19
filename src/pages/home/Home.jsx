@@ -1,11 +1,11 @@
-import OffcanvasExample from "../../components/navbar/Navbar";
+import Navbar from'../../components/navbar/Navbar'
 
 const Home = () => {
     return ( 
-        <div>
-            <OffcanvasExample />
-            <h1>home</h1>
-        </div>
+        <>
+            <Navbar/>
+            <h1>mentoring</h1>
+        </>
     );
 }
 

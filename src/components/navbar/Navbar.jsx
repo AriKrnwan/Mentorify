@@ -33,8 +33,8 @@ function OffcanvasExample() {
               <Offcanvas.Header closeButton />
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1  align-items-center gap-5">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/mentoring" >Mentoring</Nav.Link>
+                  <Nav.Link href="/home">Home</Nav.Link>
+                  <Nav.Link href="/mentoring">Mentoring</Nav.Link>
                   <Nav.Link href="/qna">Tanya & Jawab</Nav.Link>
                   <Nav.Link href="/schedule">Jadwal</Nav.Link>
                   <div className="d-flex">
