@@ -1,0 +1,213 @@
+:root {
+    --grey-colors-gray-3: #828282;
+    --grey-colors-gray-4: #bdbdbd;
+    --brand-colors-primary: #00a9b8;
+    --black-colors-white: #fff;
+    --black-colors-black-3: #282828;
+  }
+
+  .container-xxl {
+    margin-top: 80px;
+    width: 95%;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+  
+  .navigasiJadwal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 314px;
+    border-radius: 10px;
+    border: 1px solid var(--grey-colors-gray-4);
+    background: var(--black-colors-white);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .jadwal,
+  .mAktif,
+  .mAktif-f,
+  .mSelesai,
+  .mSelesai-f {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
+  
+  .jadwal {
+    color: var(--brand-colors-primary);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .mAktif.aktif {
+    border-radius: 10px;
+    background-color: var(--brand-colors-primary);
+    cursor: pointer;
+    color: var(--black-colors-white);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .mAktif-f {
+    border-radius: 10px;
+    color: var(--black-colors-black-3);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .mSelesai.aktif {
+    border-radius: 10px;
+    background-color: var(--brand-colors-primary);
+    cursor: pointer;
+    color: var(--black-colors-white);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .mSelesai-f {
+    color: var(--black-colors-black-3);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* ===============Mentoring Aktif============== */
+  
+  .cardMentoringAktif {
+    border-radius: 10px;
+    border: 1px solid var(--grey-colors-gray-4);
+    padding: 28px;
+  }
+  
+  .profileMentor {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profileName span:nth-child(1) {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 145.8%;
+  }
+  
+  .profileName span:nth-child(2) {
+    color: var(--grey-colors-gray-4);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 145.8%;
+  }
+  
+  .profileTime span:nth-child(1) {
+    color: var(--grey-colors-gray-4);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .profileTime span:nth-child(2) {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .profileHarga span:nth-child(1) {
+    color: var(--brand-colors-primary);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 145.8%;
+  }
+  
+  .profileHarga span:nth-child(2) {
+    color: var(--grey-colors-gray-4);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 145.8%;
+  }
+  
+  .btn-Aktif {
+    width: 190px;
+    height: 50px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--brand-colors-primary);
+    color: var(--black-colors-white);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .btn-disable {
+    width: 190px;
+    height: 50px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--grey-colors-gray-4);
+    color: var(--grey-colors-gray-3);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* ===============Mentoring Selesai============== */
+  
+  .penilaian {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .rating span {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .ulasan span {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .ulasan textarea {
+    height: 140px;
+    border-radius: 10px;
+    border: 1px solid var(--grey-colors-gray-4);
+    padding: 15px;
+  }
+  
+  .btn-kirimUlasan {
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--brand-colors-primary);
+    color: var(--black-colors-white);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  input[type=radio] {
+    display: none;
+  }
+  
+  .star {
+    cursor: pointer;
+  }

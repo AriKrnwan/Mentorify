@@ -1,0 +1,78 @@
+:root {
+    --grey-colors-gray-3: #828282;
+    --grey-colors-gray-4: #bdbdbd;
+    --brand-colors-primary: #00a9b8;
+    --black-colors-white: #fff;
+    --black-colors-black-3: #282828;
+  }
+  
+  .navigasiJadwal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+   
+    border-radius: 10px;
+    border: 1px solid var(--grey-colors-gray-4);
+    background: var(--black-colors-white);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .jadwal,
+  .mAktif,
+  .mAktif-f,
+  .mSelesai,
+  .mSelesai-f {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
+  
+  .jadwal {
+    color: var(--brand-colors-primary);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .mAktif.aktif {
+    border-radius: 10px;
+    background-color: var(--brand-colors-primary);
+    cursor: pointer;
+    color: var(--black-colors-white);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .mAktif-f {
+    border-radius: 10px;
+    color: var(--black-colors-black-3);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .mSelesai.aktif {
+    border-radius: 10px;
+    background-color: var(--brand-colors-primary);
+    cursor: pointer;
+    color: var(--black-colors-white);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .mSelesai-f {
+    color: var(--black-colors-black-3);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }

@@ -1,0 +1,53 @@
+:root {
+  --brand-colors-primary: #00a9b8;
+  --grey-colors-gray-3: #828282;
+  --grey-colors-gray-4: #bdbdbd;
+}
+
+.data-diri-user {
+  padding: 32px;
+  gap: 32px;
+  border-radius: 10px;
+  border: 1px solid var(--grey-colors-gray-4, #bdbdbd);
+}
+
+.heading-profile-user span:nth-child(1) {
+  color: var(--brand-colors-primary);
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.heading-profile-user span:nth-child(2) {
+  color: var(--grey-colors-gray-3);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.foto-user {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 140px;
+  height: 140px;
+}
+
+.nama-lengkap span {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nama-lengkap input {
+  height: 40px;
+  padding: 20px 10px 20px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--grey-colors-gray-4);
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
