@@ -1,0 +1,29 @@
+.card {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.card-title h6 {
+    font-weight: 600;
+}
+
+.card-text p {
+    font-weight: 500;
+    color: #303030;
+    font-size: 0.850rem;
+}
+
+.info-harga h4 {
+    color: #00A9B8;
+    font-weight: 600;
+
+}
+
+.rating {
+    background: rgba(226, 185, 59, 0.10);
+}
+
+.rating p {
+    font-size: 0.850rem;
+    color: #282828;
+}

@@ -1,8 +1,19 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 .container-xxl {
     margin-top: 80px;
     width: 95%;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+}
+
+/* INTRO */
+
+#intro {
+    width: 100%;
+    padding: 0 !important;
 }
 
 .col-6 {
@@ -31,3 +42,11 @@ h1 {
     background-color: #0094a1;
     box-shadow: none;
 }
+
+/* INTRO - END */
+
+/* REKOMENDASI MENTOR */
+
+
+
+/* REKOMENDASI MENTOR - END */
