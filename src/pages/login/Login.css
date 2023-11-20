@@ -1,0 +1,190 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.login {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header h1 {
+    color: #00A9B8;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+
+.login-form label {
+    color: #303030;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 22px;
+}
+
+.login-form input {
+    width: 100%;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    background: #FFF;
+    color: #BDBDBD;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 3px;
+}
+
+.login-form a {
+    color: #6d6d6d;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    margin-top: 6px;
+}
+
+.login-form .btn-login {
+    width: 100%;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #00A9B8;
+    margin-top: 36px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+}
+
+.login-form .btn-login a{
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+button:hover {
+    border: 1px dashed #CCCCCC;
+    border-bottom: 2px ridge Lime;
+}
+
+.login-form p {
+    color: #BDBDBD;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* margin: 35px 0 35px 0; */
+}
+
+.login-form a{
+    text-decoration: none;
+}
+
+.login-form .btn-google {
+    width: 100%;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #BDBDBD;
+    background: #FFF;
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.google {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    margin: 4px;
+}
+
+.login-form span {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+.login-form span a {
+    display: inline-block;
+    color: #00A9B8;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    
+}
+
+.square {
+    position: absolute;
+    border-radius: 30px;
+    box-shadow:1px 1px 1px 3px #cecaca;
+    top: 1px;
+    right: 0;
+    width: 100%;
+    height: 75%;
+    padding: 50px;
+    padding-top: 50px;
+    height: 100;
+    background:#ffffff;
+    clip-path: square(100px at right);
+}
+
+.login-right{
+    position: relative;
+    width: 716px;
+    height: 900px;
+}
+
+
+.logo-login {
+    position:absolute;
+    padding-left: 10%;
+    margin: 20px;
+    margin-top: 45px;
+
+}
+
+.logo1 {
+    width: 232px;
+    height: 40px;
+}
+
+
+.hero {
+    margin-top: 110px;
+    margin-left: 100px;
+    position: absolute;
+    width: 382px;
+    height: 422px;
+}
+
+.diksi{
+    margin-top: 70%;
+    margin-bottom: 45px;
+    padding: 10%;
+    text-align: center;
+    font-style: normal;
+    font-family: Poppins;
+    font-weight: 500;
+}
