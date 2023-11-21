@@ -7,10 +7,11 @@ const Notification = () => {
     return ( 
         <div>
             <Navbar/>
-            <Container className="mt-5">
-                <Row >
+            <Container fluid= "xxl">
+                <Row className="gap-2">
                     <Col md={3}>
                     <Card>
+                        
                         <Card.Header>Notifikasi</Card.Header>
                         <Card.Body>
                             <Button variant="primary">Mentoring</Button>
@@ -19,12 +20,12 @@ const Notification = () => {
                     </Card>
                     </Col>
 
-                    <Col md={9}>
+                    <Col md={8}>
                         <Card>
                             {/* <Card.Header>Notifikasi Mentoring</Card.Header> */}
                             <ListGroup variant="flush">
                             <ListGroup.Item>
-                            <Card.Img variant="top" src={picture} />
+                            <Card.Img variant="top" src="{picture}" />
                                 Permintaan mentoring diterima
                                 <br />
                                 <small>18-11-2023 14:07</small>
