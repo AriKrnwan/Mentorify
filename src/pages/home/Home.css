@@ -9,6 +9,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#intro,
+#recomend-mentor,
+#benefits,
+#iklan {
+    margin-bottom: 100px;
+}
+
 /* INTRO */
 
 #intro {
@@ -46,8 +53,10 @@ h1 {
 /* INTRO - END */
 
 /* REKOMENDASI MENTOR */
-
-
+#benefits p,
+#recomend-mentor p {
+    font-weight: 600;
+}
 
 /* REKOMENDASI MENTOR - END */
 

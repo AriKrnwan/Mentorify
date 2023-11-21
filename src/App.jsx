@@ -10,8 +10,16 @@ import Register from './pages/register/Register';
 import Save from './pages/save/Save';
 import Schedule from './pages/schedule/Schedule';
 import Error from './pages/error/Error';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect (() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div>
       <Routes>

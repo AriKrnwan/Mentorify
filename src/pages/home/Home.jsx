@@ -34,7 +34,7 @@ const Home = () => {
         <>
             <Navbar/>
             <div className="container-xxl mx-auto">
-                <div id='intro' className='row mx-auto mb-5'>
+                <div id='intro' className='row mx-auto'>
                     <div className="col-6 text-start mt-5">
                         <h1>Dapatkan Bimbingan dari Para Profesional.</h1>
                         <p className='fs-6'>Aplikasi mentoring kami membantu anda mencapai potensi penuh anda dengan dukungan pribadi dari mentor berpengalaman, kurikulum yang disesuaikan, dan komunitas yang mendukung pertumbuhan Anda secara holistik.</p>
@@ -44,29 +44,36 @@ const Home = () => {
                         <img className='img-intro' src={profile} alt="Mentors" />
                     </div>
                 </div>
-                <div id="recomend-mentors" className='d-flex justify-content-between row mx-auto mb-5'>
-                    {/* Map over the mentorsData array to dynamically render CardMentor components */}
-                    {mentorsData.map((mentor, index) => (
-                        <CardMentor
-                            key={index}
-                            nama={mentor.nama}
-                            jenisMentor={mentor.jenisMentor}
-                            ketTambah={mentor.ketTambah}
-                            harga={mentor.harga}
-                            rating={mentor.rating}
-                            foto={mentor.foto}
-                        />
-                    ))}
+                <div id="recomend-mentor" className='mx-auto'>
+                    <p className='text-center fs-2'>Rekomendasi Mentor</p>
+                    <div className='d-flex justify-content-start row mx-auto mb-5'>
+                        {mentorsData.map((mentor, index) => (
+                            <CardMentor
+                                key={index}
+                                nama={mentor.nama}
+                                jenisMentor={mentor.jenisMentor}
+                                ketTambah={mentor.ketTambah}
+                                harga={mentor.harga}
+                                rating={mentor.rating}
+                                foto={mentor.foto}
+                            />
+                        ))}
+                    </div>
                 </div>
-                <div id="recomend-mentors" className='row mx-auto mb-5'>
-                    <Benefits />
+                <div id="benefits" className='mx-auto'>
+                    <p className='text-center fs-2'>Benefits Mentoring dengan Kami</p>
+                    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" className='row mx-auto mb-5'>
+                        <Benefits />
+                    </div>
                 </div>
                 <div id="iklan" className='row mx-auto'>
-                    <AdvertismentV1
-                        ilustrasi = {imgAdvQna}
-                        judul = "Forum Tanya & Jawab"
-                        descPanjang = "Temukan ide, jawaban, dan pertanyaan terkini seputar berbagai topik di forum tanya jawab kami, memberikan platform interaktif bagi pengguna untuk berbagi pengetahuan, mendapatkan informasi, dan memperluas wawasan."
-                    />
+                    <div data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+                        <AdvertismentV1
+                            ilustrasi = {imgAdvQna}
+                            judul = "Forum Tanya & Jawab"
+                            descPanjang = "Temukan ide, jawaban, dan pertanyaan terkini seputar berbagai topik di forum tanya jawab kami, memberikan platform interaktif bagi pengguna untuk berbagi pengetahuan, mendapatkan informasi, dan memperluas wawasan."
+                        />
+                    </div>
                     <AdvertismentV2 />
                 </div>
             </div>
