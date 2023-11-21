@@ -5,6 +5,9 @@ import ButtonWithIcon from '../../components/button/button';
 import { FiArrowRight } from 'react-icons/fi';
 import CardMentor from '../../components/card/Card';
 import mentor1 from '../../assets/image/mentor1.png'
+import mentor2 from '../../assets/image/mentor2.png'
+import mentor3 from '../../assets/image/mentor3.png'
+import mentor4 from '../../assets/image/mentor4.png'
 import Benefits from '../../components/benefits/Benefits';
 import AdvertismentV1 from '../../components/advertisment/AdvertismentV1';
 import AdvertismentV2 from '../../components/advertisment/AdvertismentV2';
@@ -13,20 +16,36 @@ import imgAdvQna from '../../assets/image/img-advQna.png'
 const Home = () => {
     const mentorsData = [
         {
-            nama: "Aulia Safitri",
-            jenisMentor: "Mentor Informatika",
+            nama: "Salsabila Fourgatri",
+            jenisMentor: "Mentor UX Design",
             ketTambah: "Mentor Baru",
-            harga: "5.000",
+            harga: "50.000",
             rating: "4/5",
             foto: mentor1
         },
         {
-            nama: "Aulia Safitri",
+            nama: "Akbar Budiana",
+            jenisMentor: "Mentor Teknik Industri",
+            ketTambah: "Mentor Baru",
+            harga: "50.000",
+            rating: "4/5",
+            foto: mentor2
+        },
+        {
+            nama: "Siti Nurabaya",
             jenisMentor: "Mentor Informatika",
             ketTambah: "Mentor Baru",
-            harga: "5.000",
+            harga: "50.000",
             rating: "4/5",
-            foto: mentor1
+            foto: mentor3
+        },
+        {
+            nama: "Budi Ashari",
+            jenisMentor: "Mentor Design Thingking",
+            ketTambah: "Mentor Baru",
+            harga: "50.000",
+            rating: "4/5",
+            foto: mentor4
         },
     ];
 
@@ -44,7 +63,7 @@ const Home = () => {
                         <img className='img-intro' src={profile} alt="Mentors" />
                     </div>
                 </div>
-                <div id="recomend-mentors" className='d-flex justify-content-between row mx-auto mb-5'>
+                <div id="recomend-mentors" className='d-flex justify-content-start row mx-auto mb-5'>
                     {/* Map over the mentorsData array to dynamically render CardMentor components */}
                     {mentorsData.map((mentor, index) => (
                         <CardMentor
