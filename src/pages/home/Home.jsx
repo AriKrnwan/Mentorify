@@ -3,7 +3,7 @@ import "../home/Home.css"
 import profile from "../../assets/image/img-intro.svg";
 import ButtonWithIcon from '../../components/button/button';
 import { FiArrowRight } from 'react-icons/fi';
-import CardMentor from '../../components/card/card';
+import CardMentor from '../../components/card/Card';
 import mentor1 from '../../assets/image/mentor1.png'
 
 const Home = () => {
@@ -22,16 +22,6 @@ const Home = () => {
                     </div>
                 </div>
                 <div id="recomend-mentors" className='d-flex justify-content-between row mx-auto'>
-                    <CardMentor 
-                        nama = "Aulia Safitri"
-                        jenisMentor = "Mentor Informatika"
-                        ketTambah = "Mentor Baru"
-                        harga = "5.000"
-                        rating = "4/5"
-                        foto = {mentor1}
-                    />
-                    <CardMentor />
-                    <CardMentor />
                     <CardMentor />
                 </div>
             </div>
