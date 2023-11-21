@@ -1,11 +1,13 @@
 import Navbar from'../../components/navbar/Navbar'
+import { Container, Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap';
+import Card from '../../components/Card'
 
 const Save = () => {
     return ( 
         <div>
-            <Navbar/>   
-            <Container fluid="xxl">
-                <Row className=' gap-3  justify-content-center  '>
+            <Navbar/>
+            <Container className="">
+                <Row className='justify-content-md-center my-5'>
                     <Card/>
                     <Card/>
                     <Card/>

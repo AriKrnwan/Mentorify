@@ -11,8 +11,8 @@ const Notification = () => {
                 <Row className="gap-2">
                     <Col md={3}>
                     <Card>
-                        
-                        <Card.Header>Notifikasi</Card.Header>
+                        {/* <Card.Header>Notifikasi</Card.Header> */}
+                        <h2>notifikasi</h2>
                         <Card.Body>
                             <Button variant="primary">Mentoring</Button>
                             <Button variant="primary">Tanya dan Jawab</Button>
