@@ -1,0 +1,25 @@
+.col-4 {
+    box-sizing: border-box;
+}
+
+.isi-benefit {
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.icon-benefit {
+    width: 50px;
+    height: 50px;
+}
+
+.isi-benefit h6,
+.isi-benefit p {
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.isi-benefit p {
+    color: #4F4F4F;
+    font-weight: 500;
+}
