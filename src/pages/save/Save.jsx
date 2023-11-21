@@ -4,12 +4,6 @@ const Save = () => {
     return ( 
         <div>
             <Navbar/>   
-            <CardMentor/>  
-            <CardMentor/> 
-            <CardMentor/> 
-            <CardMentor/>   
-          
-            <Navbar/>
             <Container fluid="xxl">
                 <Row className=' gap-3  justify-content-center  '>
                     <Card/>
