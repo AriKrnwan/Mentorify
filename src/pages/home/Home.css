@@ -7,12 +7,14 @@
     width: 95%;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 #intro,
 #recomend-mentor,
 #benefits,
-#iklan {
+#iklan,
+.iklan {
     margin-bottom: 100px;
 }
 
@@ -23,7 +25,7 @@
     padding: 0 !important;
 }
 
-.col-6 {
+#intro .col-6 {
     padding: 0 !important;
 }
 

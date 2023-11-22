@@ -80,7 +80,7 @@ const Mentoring = () => {
                 <br />
                 <h3>Rekomendasi Untukmu</h3>
                 <br />
-            <div className='d-flex justify-content-start row mx-auto mb-5'>
+                <div className='d-flex justify-content-start row mx-auto mb-5'>
                     {mentorsData.map((mentor, index) => (
                         <CardMentor
                             key={index}

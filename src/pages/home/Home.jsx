@@ -12,6 +12,8 @@ import Benefits from '../../components/benefits/Benefits';
 import AdvertismentV1 from '../../components/advertisment/AdvertismentV1';
 import AdvertismentV2 from '../../components/advertisment/AdvertismentV2';
 import imgAdvQna from '../../assets/image/img-advQna.png'
+import imgAdvInst from '../../assets/image/img-advInst.png'
+import imgAdvJoin from '../../assets/image/img-advJoin.png'
 
 const Home = () => {
     const mentorsData = [
@@ -54,12 +56,12 @@ const Home = () => {
             <Navbar/>
             <div className="container-xxl mx-auto">
                 <div id='intro' className='row mx-auto'>
-                    <div className="col-6 text-start mt-5">
+                    <div className="col-sm-6 text-start mt-5">
                         <h1>Dapatkan Bimbingan dari Para Profesional.</h1>
                         <p className='fs-6'>Aplikasi mentoring kami membantu anda mencapai potensi penuh anda dengan dukungan pribadi dari mentor berpengalaman, kurikulum yang disesuaikan, dan komunitas yang mendukung pertumbuhan Anda secara holistik.</p>
                         <ButtonWithIcon text="Cari Mentor" icon={FiArrowRight} />
                     </div>
-                    <div className="col-6 text-end">
+                    <div className="col-sm-6 text-end">
                         <img className='img-intro' src={profile} alt="Mentors" />
                     </div>
                 </div>
@@ -86,14 +88,30 @@ const Home = () => {
                     </div>
                 </div>
                 <div id="iklan" className='row mx-auto'>
-                    <div data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+                    <div data-aos="fade-right">
                         <AdvertismentV1
                             ilustrasi = {imgAdvQna}
                             judul = "Forum Tanya & Jawab"
                             descPanjang = "Temukan ide, jawaban, dan pertanyaan terkini seputar berbagai topik di forum tanya jawab kami, memberikan platform interaktif bagi pengguna untuk berbagi pengetahuan, mendapatkan informasi, dan memperluas wawasan."
+                            textButton='Masuk Forum'
                         />
                     </div>
-                    <AdvertismentV2 />
+                    <div data-aos="fade-left">
+                        <AdvertismentV2
+                            ilustrasi = {imgAdvInst}
+                            judul = "Download Aplikasi untuk Memulai Mentoring"
+                            descPanjang = "Jelajahi potensi penuhmu! Unduh aplikasi kami sekarang untuk memulai perjalanan pengembangan diri dan kesuksesan. Bergabunglah dengan akses bimbingan langsung, materi eksklusif, serta peluang pertumbuhan karir yang tak terbatas!"
+                            textButton='Download'
+                        />
+                    </div>
+                    <div data-aos="fade-right">
+                        <AdvertismentV1
+                            ilustrasi = {imgAdvJoin}
+                            judul = "Gabung Bersama Kami"
+                            descPanjang = "Jadi mentor di aplikasi kami dan bagikan pengetahuan serta pengalamanmu untuk menginspirasi dan membimbing generasi berikutnya. Bergabunglah sekarang dan jadilah bagian dari komunitas yang saling mendukung dan tumbuh bersama"
+                            textButton='Gabung Yuk!'
+                        />
+                    </div>
                 </div>
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

@@ -7,8 +7,8 @@ function CardMentor(props) {
     const { nama, jenisMentor, ketTambah, harga, rating, foto } = props;
 
     return(
-        <div className="col-3">
-            <Card style={{ width: "18rem" }} className="gap-3">
+        <div className="col-6 col-lg-3">
+            <Card className="gap-3">
                 <Card.Img variant="top" src={foto} />
                 <Card.Body className="p-0 gap-1">
                     <Card.Title className="d-flex justify-content-between align-items-start">

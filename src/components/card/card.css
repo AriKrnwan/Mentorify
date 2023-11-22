@@ -1,5 +1,6 @@
 .card {
     padding: 12px;
+    height: 348px;
 }
 
 .card-title h6 {
@@ -15,7 +16,6 @@
 .info-harga h4 {
     color: #00A9B8;
     font-weight: 600;
-
 }
 
 .rating {
