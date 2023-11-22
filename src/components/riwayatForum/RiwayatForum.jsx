@@ -11,7 +11,7 @@ const RiwayatForum = () => {
   // };
 
   return (
-    <div>
+    <div className="d-flex flex-column gap-4">
       <div className="d-flex">
         <div
           onClick={() => setUbahMenu("post_dibuat")}
