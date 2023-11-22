@@ -24,7 +24,7 @@ const SidebarJadwal = ({ setMentoring }) => {
     <div>
       <Row>
         <Col>
-        <div className="navigasiJadwal">
+        <div className="navigasiJadwal w-100">
             <div className="jadwal"> Jadwal</div>
             <div
               className={handleMentoringAktif ? "mAktif aktif" : "mAktif-f"}

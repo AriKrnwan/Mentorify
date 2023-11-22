@@ -143,7 +143,7 @@ const Schedule = () => {
                 <hr />
                 <div className="d-flex flex-column gap-2">
                   <div className="penilaian">Berikan Penilaian</div>
-                  <div className="rating d-flex gap-4 align-items-center">
+                  <div className="rating-mentor d-flex gap-4 align-items-center">
                     <span>Kualitas mentor</span>
                     <div className="d-flex gap-2">
                       {[...Array(5)].map((star, index) => {
