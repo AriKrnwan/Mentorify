@@ -17,7 +17,7 @@ function ButtonIconLeft(props) {
 
 ButtonIconLeft.propTypes = {
     text: PropTypes.string.isRequired,
-    icon: PropTypes.elementType, // Memastikan properti icon merupakan tipe elemen React
+    icon: PropTypes.elementType,
 };
 
 export default ButtonIconLeft;

@@ -8,6 +8,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
+    box-sizing: border-box;
 }
 
 .img-profile img {
@@ -20,10 +21,18 @@
 
 .nama-profile p {
     color: #bdbdbd;
-    font-size: 0.850rem;
+    font-size: 0.750rem;
 }
 
 .isi-postingan p,
 .action-group p {
     font-size: 0.9rem;
+}
+
+.comment {
+    cursor: pointer;
+}
+
+.tes {
+    width: 100%;
 }

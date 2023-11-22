@@ -30,7 +30,11 @@ const Qna = () => {
             <Navbar />
             <div className="container-xxl mx-auto">
                 <Row className="mt-4 mb-3 wrapper-all">
-                    <div className="col-3"></div>
+                    <div className="col-3">
+                        <div className='border'>
+                            <h1 className=' '>WOIIII</h1>
+                        </div>
+                    </div>
                     <div className="col-9 content-qna">
                         {/* <h2 className='fs-4 text-center'>Selamat Datang di Forum Tanya Jawab</h2>
                         <p className='fs-6 text-center mb-4'>Eksplorasi Ide, Temukan Jawaban, dan Ajukan Pertanyaan - Platform Interaktif untuk Berbagi Pengetahuan dan Memperluas Wawasan.</p> */}
@@ -54,6 +58,7 @@ const Qna = () => {
                     items={"Teknik Industri, Psikologi, Manajemen, Teknik Informatika, Sistem Informasi"} 
                 /> */}
             </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
     );
 }

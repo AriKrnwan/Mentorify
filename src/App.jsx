@@ -9,11 +9,13 @@ import Qna from './pages/qna/Qna';
 import Register from './pages/register/Register';
 import Save from './pages/save/Save';
 import Schedule from './pages/schedule/Schedule';
+import DetailPostingan from './pages/qna/DetailPostingan'
 import Error from './pages/error/Error';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import { DetailMentor } from './components/detailMentor/DetailMentor';
+
 
 function App() {
   useEffect (() => {
@@ -36,6 +38,7 @@ function App() {
         <Route path="/schedule" element={<Schedule/>}/>
         <Route path="/detail-mentor" element={<DetailMentor/>}/>
         <Route path="*" element={<Error/>}/>
+        <Route path="/detail-postingan" element={<DetailPostingan />} />
       </Routes>
     </div>
   );
