@@ -1,0 +1,29 @@
+.content-qna h2 {
+    font-weight: 500;
+}
+
+/* POSTINGAN */
+
+.img-profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.img-profile img {
+    width: 100%;
+}
+
+.nama-profile h6 {
+    margin-bottom: 4px;
+}
+
+.nama-profile p {
+    color: #bdbdbd;
+    font-size: 0.850rem;
+}
+
+.isi-postingan p,
+.action-group p {
+    font-size: 0.9rem;
+}

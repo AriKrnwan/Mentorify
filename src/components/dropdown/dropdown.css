@@ -1,0 +1,16 @@
+/* Dropdown.css */
+
+.filter-dropdown {
+    position: absolute;
+}
+
+.dropdown {
+    height: 50px;
+}
+
+.dropdown-toggle,
+.dropdown-toggle:hover {
+    background-color: white;
+    color: #282828;
+    box-shadow: none;
+}

@@ -4,23 +4,23 @@ import ButtonWithIcon from '../button/button';
 import PropTypes from 'prop-types';
 
 function AdvertismentV1(props) {
-    const { ilustrasi, judul, descPanjang } = props;
+    const { ilustrasi, judul, descPanjang, textButton } = props;
 
     return (
         <>
-            <div className="d-flex align-items-center row mx-auto">
-                <div className="col-1"></div>
-                <div className="col-3">
+            <div className="iklan d-flex align-items-center row column-sm mx-auto">
+                <div className="col-lg-1"></div>
+                <div className="col-lg-3">
                     <div className='img-advQna'>
                         <img src={ilustrasi} alt="" />
                     </div>
                 </div>
-                <div className="col-7">
+                <div className="col-lg-7">
                     <h2 className='fs-2'>{judul}</h2>
                     <p className='fs-6'>{descPanjang}</p>
-                    <ButtonWithIcon text="Masuk Forum" icon={FiArrowRight} />
+                    <ButtonWithIcon text={textButton} icon={FiArrowRight} />
                 </div>
-                <div className="col-1"></div>
+                <div className="col-lg-1"></div>
             </div>
         </>
     )
@@ -29,7 +29,8 @@ function AdvertismentV1(props) {
 AdvertismentV1.propTypes = {
     ilustrasi: PropTypes.string.isRequired,
     judul: PropTypes.string.isRequired,
-    descPanjang: PropTypes.string.isRequired
+    descPanjang: PropTypes.string.isRequired,
+    textButton: PropTypes.string.isRequired
 };
 
 export default AdvertismentV1

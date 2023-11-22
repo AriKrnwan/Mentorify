@@ -4,7 +4,6 @@ const Mentoring = () => {
     return ( 
         <div>
             <Navbar/>
-            <h1>mentoring</h1>
         </div>
     );
 }
