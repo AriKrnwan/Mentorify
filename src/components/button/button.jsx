@@ -8,7 +8,7 @@ function ButtonWithIcon(props) {
     return (
         <Button 
             variant="primary" 
-            className='border-0 outline-0' 
+            className='border-0 outline-0 atur-height' 
         >
             {text} {Icon && <Icon size="20px" />}
         </Button>

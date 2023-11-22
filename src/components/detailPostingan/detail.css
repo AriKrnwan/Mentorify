@@ -1,0 +1,28 @@
+.add-komentar .atur-height {
+    height: 100%;
+    font-size: 0.9rem;
+}
+
+.input-bar {
+    width: 90%;
+}
+
+.input-komen {
+    width: 80%;
+}
+
+.komen p {
+    font-size: 0.9rem;
+}
+
+.balas p {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #828282;
+}
+
+.btn-more-komen p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #282828;
+}

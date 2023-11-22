@@ -4,7 +4,6 @@
     height: 60px;
     padding: 0 20px;
     font-weight: 500;
-    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.20);
 }
 
 .btn:hover {
@@ -18,5 +17,4 @@
     height: 52px;
     padding: 0 20px;
     font-weight: 500;
-    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.20);
 }

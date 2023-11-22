@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 
 const SidebarJadwal = ({ setMentoring }) => {
-
+  
     // const [mentoring, setMentoring] = useState(false);
 
     const handleMentoringAktif = () => {
@@ -55,3 +55,79 @@ SidebarJadwal.propTypes = {
 };
 
 export default SidebarJadwal;
+
+// const Buttons = (props) => {
+//   const [active, setActive] = useState();
+
+//   const handleClick = (event) => {
+//     event.preventDefault();
+//     setActive(event.target.id);
+//   }
+
+//   const buttons = props.buttons.map((btn, index) => {
+//     return (
+//       <button
+//         key={btn.id}
+//         className={active === btn.id ? "active" : undefined}
+//         id={btn.id}
+//         onClick={handleClick}
+//       >
+//         {btn.name}
+//       </button>
+//     );
+//   });
+//   return <div>{buttons}</div>;
+// };
+
+// export default Buttons;
+// syntax 2
+
+
+// const {useState,Fragment} = React;
+
+// const App = () => {
+//   const [active, setActive] = useState("");
+ 
+//   const handleClick = (event) => {
+//     setActive(event.target.id);
+
+//   }
+
+//     return (
+//       <Fragment>
+//       <button
+//         key={1}
+//         className={active === "1" ? "active" : undefined}
+//         id={"1"}
+//         onClick={handleClick}
+//       >
+//         Solution
+//       </button>
+
+//        <button
+//        key={2}
+//        className={active === "2" ? "active" : undefined}
+//        id={"2"}
+//        onClick={handleClick}
+//      >
+//       By
+//      </button>
+
+//       <button
+//       key={3}
+//       className={active === "3" ? "active" : undefined}
+//       id={"3"}
+//       onClick={handleClick}
+//     >
+//         Jamal
+//     </button>
+// </Fragment>
+
+//     );
+// }
+
+
+//  ReactDOM.render(
+//   <App/>,
+//   document.getElementById("react")
+// );
