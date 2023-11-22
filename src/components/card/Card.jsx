@@ -2,12 +2,14 @@ import { Card } from "react-bootstrap"
 import { FiBookmark, FiBriefcase, FiStar } from 'react-icons/fi';
 import "../card/card.css"
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 function CardMentor(props) {
     const { nama, jenisMentor, ketTambah, harga, rating, foto } = props;
 
     return(
-        <div className="col-6 col-lg-3">
+        <div className="col-6 col-lg-3 mb-4">
+            <Link to='/detail-mentor' className="card-mentor">
             <Card className="gap-3">
                 <Card.Img variant="top" src={foto} />
                 <Card.Body className="p-0 gap-1">
@@ -36,6 +38,7 @@ function CardMentor(props) {
                     </Card.Text>
                 </Card.Body>
             </Card>
+            </Link>
         </div>
         
     );

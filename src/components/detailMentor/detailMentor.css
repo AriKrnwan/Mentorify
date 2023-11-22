@@ -1,0 +1,25 @@
+.overview.active, .review.active {
+    display: flex;
+    padding: 12px  60px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #00a9b8;
+    color: #00a9b8;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .overview, .review {
+    display: flex;
+    padding: 12px  60px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #e0e0e0;
+    color: #e0e0e0;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }

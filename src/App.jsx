@@ -13,6 +13,7 @@ import Error from './pages/error/Error';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import { DetailMentor } from './components/detailMentor/DetailMentor';
 
 function App() {
   useEffect (() => {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/save" element={<Save/>}/>
         <Route path="/schedule" element={<Schedule/>}/>
+        <Route path="/detail-mentor" element={<DetailMentor/>}/>
         <Route path="*" element={<Error/>}/>
       </Routes>
     </div>
