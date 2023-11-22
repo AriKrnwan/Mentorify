@@ -19,7 +19,7 @@
   font-weight: 600;
 }
 
-.data-diri {
+.data-dirif.active, .riwayat-forum.active, .riwayat-transaksi.active {
   padding: 10px;
   border-radius: 10px;
   background: var(--brand-colors-primary);
@@ -30,7 +30,18 @@
   cursor: pointer;
 }
 
-.riwayat-forum {
+/* .active {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--brand-colors-primary);
+  color: var(--black-colors-white);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+} */
+
+.data-dirif, .riwayat-forum, .riwayat-transaksi {
   padding: 10px;
   border-radius: 10px;
   color: var(--black-colors-black-3);
@@ -40,7 +51,7 @@
   cursor: pointer;
 }
 
-.riwayat-transaksi {
+/* .riwayat-transaksi {
   padding: 10px;
   border-radius: 10px;
   color: var(--black-colors-black-3);
@@ -48,4 +59,9 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+} */
+
+
+.data-diri {
+  background-color: #00a9b8;
 }

@@ -2,7 +2,10 @@
   --brand-colors-primary: #00a9b8;
   --grey-colors-gray-3: #828282;
   --grey-colors-gray-4: #bdbdbd;
+  --black-colors-white: #fff;
 }
+
+
 
 .data-diri-user {
   padding: 32px;
@@ -32,14 +35,26 @@
   height: 140px;
 }
 
-.nama-lengkap span {
+.nama-lengkap span,
+.tanggal-lahir label,
+.jenis-kelamin label,
+.nomor-hp label,
+.alamat label,
+.email label,
+.universitas label {
   color: #000;
   font-family: Poppins;
   font-size: 16px;
   font-weight: 500;
 }
 
-.nama-lengkap input {
+.nama-lengkap input,
+.tanggal-lahir input,
+.jenis-kelamin select,
+.nomor-hp input,
+.alamat input,
+.email input,
+.universitas input {
   height: 40px;
   padding: 20px 10px 20px 15px;
   border-radius: 10px;
@@ -50,4 +65,19 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+
+.btn-data-diri {
+  width: 210px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--brand-colors-primary);
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
+  color: var(--black-colors-white);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
