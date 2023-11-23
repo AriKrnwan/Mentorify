@@ -54,17 +54,21 @@ const Home = () => {
     return ( 
         <>
             <Navbar/>
-            <div className="container-xxl mx-auto">
-                <div id='intro' className='row mx-auto'>
-                    <div className="col-sm-6 text-start mt-5">
-                        <h1>Dapatkan Bimbingan dari Para Profesional.</h1>
-                        <p className='fs-6'>Aplikasi mentoring kami membantu anda mencapai potensi penuh anda dengan dukungan pribadi dari mentor berpengalaman, kurikulum yang disesuaikan, dan komunitas yang mendukung pertumbuhan Anda secara holistik.</p>
-                        <ButtonWithIcon text="Cari Mentor" icon={FiArrowRight} />
-                    </div>
-                    <div className="col-sm-6 text-end">
-                        <img className='img-intro' src={profile} alt="Mentors" />
+            <div className="wrapper-intro">
+                <div className="container-xxl mx-auto intro">
+                    <div id='intro' className='row mx-auto'>
+                        <div className="col-sm-6 text-start mt-5">
+                            <h1>Dapatkan Bimbingan dari Para Profesional.</h1>
+                            <p className='fs-6'>Aplikasi mentoring kami membantu anda mencapai potensi penuh anda dengan dukungan pribadi dari mentor berpengalaman, kurikulum yang disesuaikan, dan komunitas yang mendukung pertumbuhan Anda secara holistik.</p>
+                            <ButtonWithIcon text="Cari Mentor" icon={FiArrowRight} />
+                        </div>
+                        <div className="col-sm-6 text-end">
+                            <img className='img-intro' src={profile} alt="Mentors" />
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div className="container-xxl mx-auto">
                 <div id="recomend-mentor" className='mx-auto'>
                     <p className='text-center fs-2'>Rekomendasi Mentor</p>
                     <div className='d-flex justify-content-start row mx-auto mb-5'>

@@ -7,15 +7,40 @@ import "../navbar/Navbar.css";
 import { FiBell } from "react-icons/fi";
 import { FiBookmark } from "react-icons/fi";
 import Logo from '../../assets/image/Logo.svg'
+import { useState, useEffect } from "react";
 
 function OffcanvasExample() {
+  const [navbarTransparent, setNavbarTransparent] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const threshold = 100; // Ubah sesuai kebutuhan
+
+      if (scrollPosition > threshold) {
+        setNavbarTransparent(true);
+      } else {
+        setNavbarTransparent(false);
+      }
+    };
+
+    // Panggil handleScroll saat komponen pertama kali dimuat
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       {["lg"].map((expand) => (
         <Navbar
           key={expand}
           expand={expand}
-          className=" mb-3 fixed-top px-4"
+          className={`mb-3 fixed-top px-4 ${navbarTransparent ? 'navbar-transparent' : ''}`}
         >
           <Container fluid>
             <Navbar.Brand>
