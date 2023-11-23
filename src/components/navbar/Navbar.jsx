@@ -15,7 +15,7 @@ function OffcanvasExample() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const threshold = 100; // Ubah sesuai kebutuhan
+      const threshold = 100; 
 
       if (scrollPosition > threshold) {
         setNavbarTransparent(true);
@@ -24,7 +24,6 @@ function OffcanvasExample() {
       }
     };
 
-    // Panggil handleScroll saat komponen pertama kali dimuat
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
