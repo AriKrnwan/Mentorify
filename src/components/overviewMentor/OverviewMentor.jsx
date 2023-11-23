@@ -4,7 +4,7 @@ const OverviewMentor = () => {
       <div>
         <h2>Tentang</h2>
         <span>
-         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis eaque, aperiam ipsa laborum, velit vel illo quod omnis officiis repudiandae numquam, voluptas illum voluptates praesentium eveniet ratione natus minus eos inventore voluptatum aut tempore suscipit nulla. Earum quidem distinctio, suscipit voluptates nemo eligendi voluptas ad nisi nam, neque ab facere! Veniam praesentium laborum itaque! Eius perferendis repudiandae sequi id neque assumenda nemo animi, optio, unde consequatur, iste dolore. Nobis nihil quae consequuntur dolor similique, cupiditate odio officia hic aut eaque labore cumque facilis exercitationem vel consectetur asperiores. Debitis ullam eaque laboriosam alias, eligendi unde odit iusto dignissimos quasi nam nobis!
+        I would describe myself as a self-motivated individual to keep growing, love new challenges, has the ability to survive in all situations, problem solver, logical thinker, and able to work with team or individually.Now I'm exploring further and deeper about myself, but my mindset is that we don't have to be great first to start trying new things.I'd love to expand my knowledge in the field of digital and technology development especially web development, and now I'm focusing on frontend with reactjs.Actually full stack wanna be.
         </span>
       </div>
 
