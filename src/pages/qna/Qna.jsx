@@ -32,7 +32,7 @@ const Qna = () => {
                 <Row className="mt-4 mb-3 wrapper-all">
                     <div className="col-3">
                         <div className='border'>
-                            <h1 className=' '>WOIIII</h1>
+                            <h1 className=' '>progress</h1>
                         </div>
                     </div>
                     <div className="col-9 content-qna">
