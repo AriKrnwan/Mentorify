@@ -13,7 +13,7 @@ const Notification = () => {
                 <Container fluid="xxl">
                     <Row className="gap-2">
                             <Tab.Container id="list-group-tabs-example" defaultActiveKey="#mentoring">
-                                <Card className='card'>
+                                <Card className='ca'>
                                     <h4>Notification</h4>
                                         <Col sm={12}>
                                             <ListGroup>
