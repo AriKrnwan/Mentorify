@@ -2,6 +2,29 @@
     display: flex;
 }
 
-div{
+/* div{
     line-height: normal;
+} */
+
+:root {
+--brand-colors-primary: #00a9b8;
+}
+
+h4 {
+color: var(--brand-colors-primary);
+font-weight: 600;
+}
+
+.card {
+height: 150px;
+width: 320px;
+position: fixed;
+}
+
+.list-group-item.active {
+background-color: var(--brand-colors-primary);
+}
+
+.mentor {
+    margin-left: 320px;
 }

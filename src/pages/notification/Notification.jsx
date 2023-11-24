@@ -1,99 +1,66 @@
 import Navbar from'../../components/navbar/Navbar'
-import { Container, Row, Col, Button, Card, ListGroup, Image } from 'react-bootstrap';
-import SidebarNotifikasi from '../../components/sidebarNotifikasi/SidebarNotifikasi';
-import picture from '../../assets/image/profile picture.jpg'
+import { Container, Row, Col, Card, ListGroup, Tab, } from 'react-bootstrap';
 import '../notification/Notification.css'
-import List from '../../components/listNotification/List';
+import List from '../../components/listNotificationMentoring/List';
+import ListQna from '../../components/listNotificationQ&a/listQna';
+import { FaRegUser } from "react-icons/fa6";
+import { PiClockCounterClockwiseBold } from "react-icons/pi";
 
 const Notification = () => {
     return ( 
         <div>
             <Navbar/>
-            <Container fluid="xxl">
-                <Row className="gap-2">
-                    <Col md={3} >
-                        <SidebarNotifikasi/>
-                    </Col>
-
-                    <Col >
-                        <ListGroup >
-                            
-                            <ListGroup.Item>
-                                Proses pembayaran selesai
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                                <List />
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Mentoring sekarang
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                Proses pembayaran kadaluarsa
-                                <br />
-                                <small>18-11-2023 14:07</small>
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Col>
-                </Row>
-            </Container>
+                <Container fluid="xxl">
+                    <Row className="gap-2">
+                            <Tab.Container id="list-group-tabs-example" defaultActiveKey="#mentoring">
+                                <Card className='card'>
+                                    <h4>Notification</h4>
+                                        <Col sm={12}>
+                                            <ListGroup>
+                                                <ListGroup.Item className="flex align-items-center gap-2" action href="#mentoring">
+                                                    <FaRegUser/>
+                                                    <div>Mentoring</div>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="flex align-items-center gap-2" action href="#qna">
+                                                    <PiClockCounterClockwiseBold/>
+                                                    <div>Tanya & Jawab</div>
+                                                </ListGroup.Item>
+                                            </ListGroup>
+                                        </Col>
+                                </Card>
+                                <Col sm={9} className="mentor">
+                                    <ListGroup >
+                                        <Tab.Content>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                                <Tab.Pane eventKey="#mentoring">{<List/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#qna">{<ListQna/>}</Tab.Pane>
+                                        </Tab.Content>
+                                    </ListGroup>
+                                </Col>
+                            </Tab.Container>
+                    </Row>
+                </Container>
         </div>
     );
 }
