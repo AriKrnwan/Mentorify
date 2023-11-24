@@ -8,6 +8,7 @@ import { FiBell } from "react-icons/fi";
 import { FiBookmark } from "react-icons/fi";
 import Logo from '../../assets/image/Logo.svg'
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 function OffcanvasExample() {
   const [navbarTransparent, setNavbarTransparent] = useState(true);
@@ -57,26 +58,26 @@ function OffcanvasExample() {
               <Offcanvas.Header closeButton />
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1  align-items-center gap-5">
-                  <Nav.Link href="/home">Home</Nav.Link>
-                  <Nav.Link href="/mentoring">Mentoring</Nav.Link>
-                  <Nav.Link href="/qna">Tanya & Jawab</Nav.Link>
-                  <Nav.Link href="/schedule">Jadwal</Nav.Link>
-                  <div className="d-flex">
-                    <Nav.Link href="/save">
+                  <NavLink to="/home" activeClassName='active'>Home</NavLink>
+                  <NavLink to="/mentoring" activeClassName='active'>Mentoring</NavLink>
+                  <NavLink to="/qna" activeClassName='active'>Tanya & Jawab</NavLink>
+                  <NavLink to="/schedule" activeClassName='active'>Jadwal</NavLink>
+                  <div className="d-flex gap-3">
+                    <NavLink to="/save">
                       <FiBookmark size="20px" />
-                    </Nav.Link>
-                    <Nav.Link href="/notification">
+                    </NavLink>
+                    <NavLink to="/notification" activeClassName='active'>
                       <FiBell size="20px" />
-                    </Nav.Link>
+                    </NavLink>
                   </div>
-                  <Nav.Link href="/profile">
+                  <NavLink to="/profile" activeClassName='active'>
                     <img className="profile"
                       src={profile}
                       alt="profile picture"
                       width="40px"
                       height="40px"
                     />
-                  </Nav.Link>
+                  </NavLink>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

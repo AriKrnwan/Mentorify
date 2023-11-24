@@ -5,13 +5,13 @@ import { LuCalendarClock } from "react-icons/lu";
 import { Col, Row } from "react-bootstrap";
 import PropTypes from "prop-types";
 
-const SidebarProfile = ({ setActive }) => {
+const SidebarProfile = ({ setActive, active }) => {
 
   const changeTab = (tab) => {
     setActive(tab);
   };
   return (
-    <div>
+    <div className="position-fixed" style={{width: '306px'}}>
       <Row>
         <Col>
           <div className="nav-porfile d-flex flex-column gap-3 p-2">
@@ -23,7 +23,7 @@ const SidebarProfile = ({ setActive }) => {
                 console.log("Clicked on Data Diri");
               }}
               className={`data-dirif d-flex gap-3 align-items-center ${
-                setActive === "data_diri" ? "active" : ""
+                active === "data_diri" ? "active" : ""
               }`}
             >
               <FiUser size="24px" />
@@ -32,7 +32,7 @@ const SidebarProfile = ({ setActive }) => {
             <div
               // className="riwayat-forum d-flex gap-3 align-items-center"
               className={`riwayat-forum d-flex gap-3 align-items-center ${
-                setActive === "riwayat_forum" ? "riwayat-forum active" : ""
+                active === "riwayat_forum" ? " active" : ""
               }`}
               onClick={() => setActive("riwayat_forum")}
             >
@@ -42,7 +42,7 @@ const SidebarProfile = ({ setActive }) => {
             <div
               // className="riwayat-transaksi d-flex gap-3 align-items-center"
               className={`riwayat-transaksi d-flex gap-3 align-items-center ${
-                setActive === "riwayat_transaksi"
+                active === "riwayat_transaksi"
                   ? "riwayat-transaksi active"
                   : ""
               }`}
@@ -60,6 +60,7 @@ const SidebarProfile = ({ setActive }) => {
 
 SidebarProfile.propTypes = {
   setActive: PropTypes.func.isRequired,
+  active: PropTypes.string.isRequired,
 };
 
 export default SidebarProfile;
