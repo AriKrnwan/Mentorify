@@ -8,8 +8,12 @@
   }
   
   .navbar a {
-    color: #303030;
     transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #303030;
+    font-size: 0.85rem;
+    background-color: rgba(255, 255, 255, 0);
   }
   
   .navbar a:hover {
@@ -34,7 +38,6 @@
     background-color: rgba(255, 255, 255, 0.80) !important;
   }
 
-  .navbar .nav-link.active {
-    color: #00A9B8;
+  a {
+    text-decoration: none;
   }
-  

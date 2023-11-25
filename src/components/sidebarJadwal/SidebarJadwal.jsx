@@ -6,37 +6,37 @@ import { LuHistory } from "react-icons/lu";
 import PropTypes from 'prop-types';
 
 
-const SidebarJadwal = ({ setMentoring }) => {
+const SidebarJadwal = ({ setMentoring, mentoring }) => {
   
     // const [mentoring, setMentoring] = useState(false);
 
-    const handleMentoringAktif = () => {
+    // const handleMentoringAktif = () => {
       
-      return (setMentoring(false))
-    };
+    //   return (setMentoring(false))
+    // };
   
-    const handleMentoringSelesai = () => {
-      return (setMentoring(true))
+    // const handleMentoringSelesai = () => {
+    //   return (setMentoring(true))
       
-    };
+    // };
 
   return (
-    <div>
+    <div className="position-fixed" style={{width: '306px'}}>
       <Row>
         <Col>
         <div className="navigasiJadwal w-100">
             <div className="jadwal"> Jadwal</div>
             <div
-              className={handleMentoringAktif ? "mAktif aktif" : "mAktif-f"}
-              onClick={handleMentoringAktif}
+              className={mentoring === 'mentoring_aktif' ? "mAktif aktif" : "mAktif"}
+              onClick={()=> setMentoring('mentoring_aktif')}
             >
               <span className=" d-flex gap-2 align-items-center">
                 <FiUser size="24px" /> Mentoring Aktif
               </span>
             </div>
             <div
-              className={handleMentoringSelesai ? "mSelesai-f" : "mSelesai aktif"}
-              onClick={handleMentoringSelesai}
+              className={mentoring === 'mentoring_selesai' ? "mSelesai aktif" : "mSelesai"}
+              onClick={()=> setMentoring('mentoring_selesai')}
             >
               <span className=" d-flex gap-2 align-items-center">
                 <LuHistory size={24} />
@@ -52,6 +52,7 @@ const SidebarJadwal = ({ setMentoring }) => {
 
 SidebarJadwal.propTypes = {
   setMentoring: PropTypes.func.isRequired,
+  mentoring: PropTypes.string.isRequired,
 };
 
 export default SidebarJadwal;

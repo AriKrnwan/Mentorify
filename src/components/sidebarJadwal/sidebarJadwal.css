@@ -49,7 +49,7 @@
   font-weight: 600;
 }
 
-.mAktif-f {
+.mAktif, .mSelesai {
   border-radius: 10px;
   color: var(--black-colors-black-3);
   font-family: Poppins;
@@ -68,10 +68,10 @@
   font-weight: 600;
 }
 
-.mSelesai-f {
+/* .mSelesai {
   color: var(--black-colors-black-3);
   font-family: Poppins;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-}
+} */
