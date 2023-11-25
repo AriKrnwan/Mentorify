@@ -12,7 +12,6 @@
     transition: color 0.3s ease;
   }
   
-  .navbar a.active,
   .navbar a:hover {
     color: #00A9B8;
   }
@@ -34,3 +33,8 @@
   .navbar-transparent {
     background-color: rgba(255, 255, 255, 0.80) !important;
   }
+
+  .navbar .nav-link.active {
+    color: #00A9B8;
+  }
+  
