@@ -1,0 +1,32 @@
+.carousel-inner {
+    overflow: visible;
+}
+
+.carousel-caption p {
+    color: #282828;
+    font-size: 0.850rem;
+    font-weight: 500;
+}
+
+.carousel-caption {
+    bottom: -6rem;
+}
+
+.carousel-item img {
+    margin: auto !important;
+}
+
+.carousel-indicators {
+    bottom: -7rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #e0e0e0;
+}
+
+.carousel-indicators .active {
+    background-color: #092C4C;
+}

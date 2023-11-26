@@ -3,12 +3,15 @@
     box-sizing: border-box;
 }
 
+.box-right {
+    box-shadow: -4px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+}
 .login {
-    height: 100vh;
-    overflow: hidden;
+    background-color: #fafafa;
 }
 
-.header h1 {
+/* .header h1 {
     color: #00A9B8;
     font-size: 32px;
     font-style: normal;
@@ -87,7 +90,7 @@ button:hover {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    /* margin: 35px 0 35px 0; */
+    margin: 35px 0 35px 0;
 }
 
 .login-form a{
@@ -148,16 +151,16 @@ button:hover {
     height: 100;
     background:#ffffff;
     clip-path: square(100px at right);
-}
+} */
 
-.login-right{
+/* .login-right{
     position: relative;
     width: 716px;
     height: 900px;
-}
+} */
 
 
-.logo-login {
+/* .logo-login {
     position:absolute;
     padding-left: 10%;
     margin: 20px;
@@ -187,4 +190,4 @@ button:hover {
     font-style: normal;
     font-family: Poppins;
     font-weight: 500;
-}
+} */
