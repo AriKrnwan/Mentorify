@@ -1,0 +1,15 @@
+.sidebar-filter {
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-filter h6 {
+    color: #00A9B8;
+}
+
+.form-check {
+    margin-bottom: 1rem;
+}
+
+.form-check-label {
+    font-size: 0.850rem;
+}

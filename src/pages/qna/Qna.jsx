@@ -6,6 +6,7 @@ import { HiChatBubbleLeftRight } from "react-icons/hi2";
 import "../qna/qna.css"
 import Postingan from '../../components/postingan/Postingan';
 import profile from "../../assets/image/profile picture.jpg"
+import SidebarFilter from '../../components/sidebarFilter/SidebarFilter';
 
 // import FilterDropdown from '../../components/dropdown/Dropdown';
 
@@ -31,9 +32,7 @@ const Qna = () => {
             <div className="container-xxl mx-auto">
                 <Row className="mt-4 mb-3 wrapper-all">
                     <div className="col-3">
-                        <div className='border'>
-                            <h1 className=' '>progress</h1>
-                        </div>
+                        <SidebarFilter />
                     </div>
                     <div className="col-9 content-qna">
                         {/* <h2 className='fs-4 text-center'>Selamat Datang di Forum Tanya Jawab</h2>
