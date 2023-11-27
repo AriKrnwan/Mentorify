@@ -11,6 +11,10 @@ function FilterDropdown(props) {
 
     const filteringTopik = items.split(',').map((item) => item.trim());
 
+// function genderDropdown(props) {
+//     const {}
+// }
+
     return (
         <Dropdown className="filter-dropdown">
             <Dropdown.Toggle variant="success" className='border'>
@@ -31,6 +35,7 @@ function FilterDropdown(props) {
 FilterDropdown.propTypes = {
   judul: PropTypes.string.isRequired,
   items: PropTypes.string.isRequired,
+  icon: PropTypes.elementType,
 };
 
 export default FilterDropdown;

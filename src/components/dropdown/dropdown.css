@@ -1,7 +1,7 @@
 /* Dropdown.css */
 
 .filter-dropdown {
-    position: absolute;
+    position: static;
 }
 
 .dropdown {
@@ -11,6 +11,6 @@
 .dropdown-toggle,
 .dropdown-toggle:hover {
     background-color: white;
-    color: #282828;
+    color: #303030;
     box-shadow: none;
 }

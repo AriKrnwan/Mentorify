@@ -17,7 +17,7 @@ export const DetailMentor = () => {
       <Navbar />
       <div className="container-xxl">
         <Row>
-          <Col lg='8'>
+          <Col lg='7'>
             <div className="d-flex gap-3 mb-5">
               <div>
                 <img src={Profile} alt="foto" className="foto-user" />
@@ -80,6 +80,46 @@ export const DetailMentor = () => {
       {ubahMenu === "overview" && <OverviewMentor />}
       {ubahMenu === "review" && <RieviewMentor />}
     </div>
+          </Col>
+          <Col>
+          <div className="border">
+            <div>
+            <h5>Jadwal tersedia</h5>
+            <h6>Tanggal</h6>
+            <Row>
+              <Col>
+              <div className="border">
+                <p>Sabtu</p>
+                <h6>18 NOV</h6>
+              </div>
+              </Col>
+              <Col>
+              <div className="border">
+                <p>Minggu</p>
+                <h6>19 NOV</h6>
+              </div>
+              </Col>
+              <Col>
+              <div>
+                <p>Rabu</p>
+                <h6>22 NOV</h6>
+              </div>
+              </Col>
+              <Col>
+              <div>
+                <p>Minggu</p>
+                <h6>26 NOV</h6>
+              </div>
+              </Col>
+              <Col>
+              <div>
+                <p>Sabtu</p>
+                <h6>18 NOV</h6>
+              </div>
+              </Col>
+            </Row>
+            </div>
+          </div>
           </Col>
         </Row>
       </div>
