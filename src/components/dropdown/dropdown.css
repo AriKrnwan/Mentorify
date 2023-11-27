@@ -4,8 +4,12 @@
     position: static;
 }
 
-.dropdown {
+.dropdown, .dropdown button {
     height: 50px;
+}
+
+.filter-dropdown {
+    position: static;
 }
 
 .dropdown-toggle,

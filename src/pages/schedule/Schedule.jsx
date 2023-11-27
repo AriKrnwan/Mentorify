@@ -9,7 +9,7 @@ import { useState } from "react";
 import SidebarJadwal from '../../components/sidebarJadwal/SidebarJadwal'
 
 const Schedule = () => {
-  const [mentoring, setMentoring] = useState(false);
+  const [mentoring, setMentoring] = useState('mentoring_aktif');
 
   // const handleMentoringAktif = () => {
   //   setMentoring(false);
@@ -20,7 +20,7 @@ const Schedule = () => {
   // };
 
   const MentoringAktif = () => {
-    if (mentoring === false) {
+    if (mentoring === 'mentoring_aktif') {
       
       return (
         <div>
@@ -104,7 +104,7 @@ const Schedule = () => {
   const [hover, setHover] = useState(null);
 
   const MentoringSelesai = () => {
-    if (mentoring === true) {
+    if (mentoring === 'mentoring_selesai') {
       
       return (
         <div>
@@ -195,7 +195,7 @@ const Schedule = () => {
       <div className="container-xxl mx-auto d-flex flex-column">
         <Row>
           <Col lg="3">
-            <SidebarJadwal setMentoring={setMentoring}/>
+            <SidebarJadwal setMentoring={setMentoring} mentoring={mentoring} />
             {/* <div className="navigasiJadwal">
               <div className="jadwal"> Jadwal</div>
               <div

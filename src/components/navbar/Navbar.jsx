@@ -8,6 +8,8 @@ import { FiBell } from "react-icons/fi";
 import { FiBookmark } from "react-icons/fi";
 import Logo from '../../assets/image/Logo.svg'
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function OffcanvasExample() {
   const [navbarTransparent, setNavbarTransparent] = useState(true);
@@ -57,26 +59,34 @@ function OffcanvasExample() {
               <Offcanvas.Header closeButton />
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1  align-items-center gap-5">
-                  <Nav.Link  to href="/home" activeclassName="active">Home</Nav.Link>
-                  <Nav.Link href="/mentoring" activeclassName="active">Mentoring</Nav.Link>
-                  <Nav.Link href="/qna" activeclassName="active">Tanya & Jawab</Nav.Link>
-                  <Nav.Link href="/schedule">Jadwal</Nav.Link>
-                  <div className="d-flex">
-                    <Nav.Link href="/save">
-                      <FiBookmark size="20px" />
-                    </Nav.Link>
-                    <Nav.Link href="/notification">
-                      <FiBell size="20px" />
-                    </Nav.Link>
+                  <NavLink to="/" activeClassName='active'>Home</NavLink>
+                  <NavLink to="/mentoring" activeClassName='active'>Mentoring</NavLink>
+                  <NavLink to="/qna" activeClassName='active'>Tanya & Jawab</NavLink>
+                  <NavLink to="/schedule" activeClassName='active'>Jadwal</NavLink>
+                  <div className="d-flex gap-3">
+                    <NavLink to="/save">
+                      <FiBookmark size="18px" />
+                    </NavLink>
+                    <NavLink to="/notification" activeClassName='active'>
+                      <FiBell size="18px" />
+                    </NavLink>
                   </div>
-                  <Nav.Link href="/profile">
-                    <img className="profile"
-                      src={profile}
-                      alt="profile picture"
-                      width="40px"
-                      height="40px"
-                    />
-                  </Nav.Link>
+                  <NavDropdown title={
+                      <img
+                        className="profile"
+                        src={profile}
+                        alt="profile picture"
+                        width="40px"
+                        height="40px"
+                      />
+                    }
+                    id="basic-nav-dropdown"
+                  >
+                    <NavDropdown.Item href="/profile">Profil</NavDropdown.Item>
+                    <NavDropdown.Item href="/change-password">Ganti Kata Sandi</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/login">Keluar</NavDropdown.Item>
+                  </NavDropdown>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
