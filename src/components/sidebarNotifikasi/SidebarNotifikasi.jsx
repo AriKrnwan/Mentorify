@@ -22,6 +22,6 @@ const SidebarNotifikasi = () => {
           </Col>
         </Row>
   );
-};z
+};
 
 export default SidebarNotifikasi;
