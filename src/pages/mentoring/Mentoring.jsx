@@ -8,7 +8,6 @@ import mentor4 from "../../assets/image/mentor4.png";
 import FilterDropdown from '../../components/dropdown/Dropdown';
 import { FaStar } from "react-icons/fa6";
 import ButtonWithIcon from "../../components/button/button";
-import Button from 'react-bootstrap/Button';
 import "../mentoring/mentoring.css";
 import ButtonIconLeft from "../../components/button/button2";
 

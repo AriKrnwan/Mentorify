@@ -40,10 +40,11 @@ background-color: var(--brand-colors-primary);
     font-weight: 600;
 }
 
-.border {
+/* .border {
     border: 1px solid black;
     padding: 59px 10px 0px 10px;
-}
+} */
+/* kamu telah di hack notif yg border jangan di pake itu berpengaruh ke filter mentoring */
 
 .title {
     color: black;

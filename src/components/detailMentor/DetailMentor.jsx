@@ -100,23 +100,26 @@ export const DetailMentor = () => {
               </div>
               </Col>
               <Col>
-              <div>
+              <div className="border">
                 <p>Rabu</p>
                 <h6>22 NOV</h6>
               </div>
               </Col>
               <Col>
-              <div>
+              <div className="border">
                 <p>Minggu</p>
                 <h6>26 NOV</h6>
               </div>
               </Col>
               <Col>
-              <div>
+              <div className="border">
                 <p>Sabtu</p>
                 <h6>18 NOV</h6>
               </div>
               </Col>
+              <div>
+              <h6>Jam</h6>
+              </div>
             </Row>
             </div>
           </div>
