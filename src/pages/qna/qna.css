@@ -36,3 +36,16 @@
 .tes {
     width: 100%;
 }
+
+/* MODAL */
+
+.modal-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #00A9B8;
+}
+
+.modal-body p, .modal-body textarea {
+    font-size: 0.85rem;
+}
+
