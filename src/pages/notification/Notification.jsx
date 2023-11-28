@@ -47,33 +47,43 @@ const Notification = () => {
                                     <h4 className='judul-mentoring'>{judul}</h4>
                                     <Tab.Content>
                                             <Tab.Pane eventKey="#mentoring">{<List 
-                                            judul="permintaan mentoring diterima"
+                                            judul="Permintaan mentoring diterima"
                                             status="permintaan mentoring kamu diterima, silakan lakukan proses proses pembayaran untuk memulai mentoring"
                                             waktu="18-11-2023 14:07"
                                             gambar={profile_mentor}/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<List judul="permintaan mentor diterima"
-                                            waktu="putri jelek banget"
-                                            status="mentoring aman"/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<List judul="permintaan mentor diterima"
-                                            waktu="putri jelek yeee aku jelekkkk"
-                                            status="mentoring aman"/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<List judul="permintaan mentor diterima"
-                                            waktu="putri jelek hahahha"
-                                            status="mentoring aman"/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<List judul="permintaan mentor diterima"
-                                            waktu="putri jelek banget bangettttttttt"
-                                            status="mentoring aman"/>}</Tab.Pane>
-                                        <Tab.Pane  eventKey="#qna">{<ListQna nama="Sambas Gaming"
-                                        waktu="18-11-2023 18:57"
-                                        keterangan="menyukai anda"
+                                            <Tab.Pane eventKey="#mentoring">{<List 
+                                            judul="Permintaan mentoring ditolak"
+                                            status="Permintaan mentoring kamu ditolak, cari mentor lain untuk melakukan mentoring."
+                                            waktu="18-11-2023 14:07"
+                                            gambar={profile_mentor}/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#mentoring">{<List 
+                                            judul="Proses pembayaran selesai"
+                                            status="Silahkan menunggu sampai waktu mentoring yang telah ditentukan."
+                                            waktu="18-11-2023 14:07"
+                                            gambar={profile_mentor}/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#mentoring">{<List 
+                                            judul="Mentoring sekarang"
+                                            status="Waktunya mentoring mentee! Silahkan masuk ke jadwal dan tekan tombol Mentoring Sekarang."
+                                            waktu="18-11-2023 14:07"
+                                            gambar={profile_mentor}/>}</Tab.Pane>
+                                            <Tab.Pane eventKey="#mentoring">{<List 
+                                            judul="Proses pembayaran kadaluarsa"
+                                            status="Kamu belum melakukan proses pembayaran dan batas waktu pembayaran telah habis."
+                                            waktu="18-11-2023 14:07"
+                                            gambar={profile_mentor}/>}</Tab.Pane>
+
+                                            
+                                        <Tab.Pane  eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
+                                        waktu="29-11-2023 11:00"
+                                        keterangan="menyukai postingan anda"
                                         gambar={profile_user}/>}</Tab.Pane>
-                                        <Tab.Pane eventKey="#qna">{<ListQna nama="putri alifia rizky"
-                                        waktu="18-11-2023 18:57"
-                                        keterangan="menyukai anda"
+                                        <Tab.Pane eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
+                                        waktu="28-11-2023 15:58"
+                                        keterangan="mengomentari postingan anda"
                                         gambar={profile_user}/>}</Tab.Pane>
-                                        <Tab.Pane eventKey="#qna">{<ListQna nama="Sambas Gaming"
-                                        waktu="18-11-2023 18:57"
-                                        keterangan="menyukai anda"
+                                        <Tab.Pane eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
+                                        waktu="28-11-2023 15:57"
+                                        keterangan="menyebut anda di sebuah postingan"
                                         gambar={profile_user}/>}</Tab.Pane>
                                     </Tab.Content>
                                 </ListGroup>
