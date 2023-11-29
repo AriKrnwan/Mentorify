@@ -9,11 +9,6 @@ small {
     font-size: 12px;
 }
 
-.judul {
-    font-size: 14px;
-    font-weight: 600;
-}
-
 h6 {
     font-size: 14px;
     font-weight: 400;
@@ -21,4 +16,38 @@ h6 {
 
 .em:hover {
     background: rgba(47, 128, 237, 0.05);
+}
+
+.em {
+    border: none;
+}
+
+.judulAccept {
+    color: var(--state-colors-succes, #27AE60);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.judulDenied {
+    color: var(--state-colors-error, #EB5757);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.judulPayDone {
+    color: var(--brand-colors-primary, #00A9B8);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.judulPayDenied {
+    color: var(--brand-colors-secondary, #092C4C);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.judulNow {
+    color: var(--state-colors-info, #2F80ED);
+    font-size: 14px;
+    font-weight: 600;
 }
