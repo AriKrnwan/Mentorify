@@ -84,15 +84,15 @@ const Mentoring = () => {
     <div>
       <Navbar />
       <div className="container-xxl mx-auto">
-        <div>
+        {/* <div>
           <h3>Rekomendasi Untukmu</h3>
-        </div>
+        </div> */}
 
         <div>
             <SearchBar/>
         </div>
 
-        <div className="d-flex gap-5 py-2">
+        <div className="d-flex gap-3 py-4">
           
           <FilterDropdown 
                     judul="Topik" 
@@ -117,6 +117,9 @@ const Mentoring = () => {
                     judul="Jam" 
                     items={"08.00, 09.00, 10.00, 11.00, 13.00, 14.00, 15.00, 16.00, 17.00 , 19.00, 20.00, 21.00, 22.00"} 
                 />
+        </div>
+        <div className="gap-2 py-2">
+          <h3>Rekomendasi Untukmu</h3>
         </div>
 
         <div className="d-flex justify-content-start row my-3 ">
