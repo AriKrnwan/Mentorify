@@ -1,13 +1,19 @@
 import Navbar from'../../components/navbar/Navbar'
 import { Container, Row, Col, Card, ListGroup, Tab, } from 'react-bootstrap';
 import '../notification/Notification.css'
-import List from '../../components/listNotificationMentoring/List';
+
 import ListQna from '../../components/listNotificationQ&a/listQna';
 import { FaRegUser } from "react-icons/fa6";
 import { PiClockCounterClockwiseBold } from "react-icons/pi";
 import { useState } from 'react';
 import profile_mentor from '../../assets/image/mentor2.png'
 import profile_user from '../../assets/image/profile_user.png'
+import List from '../../components/listNotificationMentoring/List';
+import ListAccept from '../../components/listNotificationMentoring/ListAccept';
+import ListDenied from '../../components/listNotificationMentoring/ListDenied';
+import ListPayDone from '../../components/listNotificationMentoring/ListPayDone';
+import ListPayDenied from '../../components/listNotificationMentoring/ListPayDenied'
+
 
 const Notification = () => {
 
@@ -46,17 +52,17 @@ const Notification = () => {
                                 <ListGroup className='border-notifikasi-notif'>
                                     <h4 className='judul-mentoring'>{judul}</h4>
                                     <Tab.Content>
-                                            <Tab.Pane eventKey="#mentoring">{<List 
+                                            <Tab.Pane eventKey="#mentoring">{<ListAccept 
                                             judul="Permintaan mentoring diterima"
                                             status="permintaan mentoring kamu diterima, silakan lakukan proses proses pembayaran untuk memulai mentoring"
                                             waktu="18-11-2023 14:07"
                                             gambar={profile_mentor}/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<List 
+                                            <Tab.Pane eventKey="#mentoring">{<ListDenied 
                                             judul="Permintaan mentoring ditolak"
                                             status="Permintaan mentoring kamu ditolak, cari mentor lain untuk melakukan mentoring."
                                             waktu="18-11-2023 14:07"
                                             gambar={profile_mentor}/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<List 
+                                            <Tab.Pane eventKey="#mentoring">{<ListPayDone
                                             judul="Proses pembayaran selesai"
                                             status="Silahkan menunggu sampai waktu mentoring yang telah ditentukan."
                                             waktu="18-11-2023 14:07"
@@ -66,7 +72,7 @@ const Notification = () => {
                                             status="Waktunya mentoring mentee! Silahkan masuk ke jadwal dan tekan tombol Mentoring Sekarang."
                                             waktu="18-11-2023 14:07"
                                             gambar={profile_mentor}/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<List 
+                                            <Tab.Pane eventKey="#mentoring">{<ListPayDenied
                                             judul="Proses pembayaran kadaluarsa"
                                             status="Kamu belum melakukan proses pembayaran dan batas waktu pembayaran telah habis."
                                             waktu="18-11-2023 14:07"
