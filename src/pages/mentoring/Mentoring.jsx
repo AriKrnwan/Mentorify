@@ -10,6 +10,7 @@ import { FaStar } from "react-icons/fa6";
 import ButtonWithIcon from "../../components/button/button";
 import "../mentoring/mentoring.css";
 import ButtonIconLeft from "../../components/button/button2";
+import DropdownComponent from '../../components/dropdown/Dropdown';
 
 
 const Mentoring = () => {
@@ -123,7 +124,9 @@ const Mentoring = () => {
 
         <div className="d-flex gap-3 py-4">
           
-          <FilterDropdown 
+          <DropdownComponent/>
+          
+          {/* <FilterDropdown 
                     judul="Topik" 
                     items={"Teknik Industri, Psikologi, Manajemen, Teknik Informatika, Sistem Informasi"} 
                 />
@@ -131,21 +134,22 @@ const Mentoring = () => {
           <FilterDropdown 
                     judul="Gender" 
                     items={"Perempuan, Laki-laki"} 
-                />
+                /> */}
           
-          <FilterDropdown 
+          {/* <FilterDropdown 
                     judul="Rating" 
                     items= {"Bintang 1, Bintang 2, Bintang 3, Bintang 4, Bintang 5"}
-                />
+                    
+                /> */}
           {/* cara masukin icon ? */}
-          <FilterDropdown 
+          {/* <FilterDropdown 
                     judul="Harga" 
                     items={"Rp. 30000, Rp. 50000"} 
                 />
           <FilterDropdown 
                     judul="Jam" 
                     items={"08.00, 09.00, 10.00, 11.00, 13.00, 14.00, 15.00, 16.00, 17.00 , 19.00, 20.00, 21.00, 22.00"} 
-                />
+                /> */}
         </div>
         <div className="gap-2 py-2">
           <h3>Rekomendasi Untukmu</h3>
