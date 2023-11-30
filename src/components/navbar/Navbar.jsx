@@ -83,7 +83,7 @@ function OffcanvasExample() {
                     id="basic-nav-dropdown"
                   >
                     <NavDropdown.Item href="/profile">Profil</NavDropdown.Item>
-                    <NavDropdown.Item href="/change-password">Ganti Kata Sandi</NavDropdown.Item>
+                    <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/login">Keluar</NavDropdown.Item>
                   </NavDropdown>
