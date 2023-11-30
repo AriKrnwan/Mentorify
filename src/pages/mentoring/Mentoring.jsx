@@ -11,6 +11,7 @@ import FilterDropdown from '../../components/dropdown/Dropdown';
 import "../mentoring/mentoring.css";
 // import ButtonIconLeft from "../../components/button/button2";
 import fotoBG from '../../assets/image/profile picture.jpg'
+import DropdownComponent from "../../components/dropdown/Dropdown";
 
 
 const Mentoring = () => {
