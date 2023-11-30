@@ -43,15 +43,13 @@ h4 {
 
 .border-notifikasi-notif {
     border: 1px solid var(--grey-colors-gray-5, #E0E0E0);
-    padding: 59px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .judul-mentoring {
     color: black;
     font-size: 18px;
-    top: 90px;
-    left: 437px;
-    position: absolute;
+    position: relative;
     font-weight: 500;
     font-family: var(--font);
 }
