@@ -50,7 +50,7 @@
 
 .nama-lengkap input,
 .tanggal-lahir input,
-.jenis-kelamin select,
+/* .jenis-kelamin select, */
 .nomor-hp input,
 .alamat input,
 .email input,
@@ -62,9 +62,17 @@
   color: #000;
   font-family: Poppins;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+}
+
+.custom-dropdown {
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--grey-colors-gray-4);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 

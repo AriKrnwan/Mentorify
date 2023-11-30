@@ -191,6 +191,7 @@
     border-radius: 10px;
     border: 1px solid var(--grey-colors-gray-4);
     padding: 15px;
+    resize: none;
   }
   
   .btn-kirimUlasan {

@@ -12,7 +12,7 @@ const Changepassword = () => {
       <br></br><br></br><br></br><br></br>
       <Form className='form'>
         <h4>Ganti Kata Sandi</h4>
-        <p>Anda akan keluar dari semua sesi kecuali sesi ini untuk melindungi akun Anda jika ada orang yang mencoba mendapatkan akses.
+        <p className='wrapper-desc-form'>Anda akan keluar dari semua sesi kecuali sesi ini untuk melindungi akun Anda jika ada orang yang mencoba mendapatkan akses.
            <br></br><br></br>Kata sandi Anda minimal harus 6 karakter dan harus menyertakan kombinasi angka, huruf, dan karakter khusus (!$@%)</p>
         <div className='haha'>
           <Form.Group className="input mb-3" controlId="formBasicEmail">

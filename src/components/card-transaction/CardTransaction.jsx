@@ -12,7 +12,7 @@ const CardTransaction = (props) => {
           <span>{nama}</span>
         </div>
         <div className="information-transaction d-flex flex-column text-end gap-4">
-          <span className="d-flex justify-content-center align-items-center"> {statusTransaction} </span>
+          <span className={`d-flex justify-content-center align-items-center ${statusTransaction}` }> {statusTransaction} </span>
           <span> {harga} </span>
         </div>
       </div>

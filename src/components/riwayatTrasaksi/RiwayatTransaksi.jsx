@@ -7,6 +7,13 @@ const RiwayatTransaksi = () => {
       noTransaction: "20231113-000000001",
       tanggal: "14 November 2023 pukul 19:34",
       harga: "Rp 30.000",
+      statusTransaction: "Menunggu Approve",
+    },
+    {
+      nama: "Siti Aulia - Mentor Design",
+      noTransaction: "20231113-000000001",
+      tanggal: "14 November 2023 pukul 19:34",
+      harga: "Rp 30.000",
       statusTransaction: "Diterima",
     },
     {

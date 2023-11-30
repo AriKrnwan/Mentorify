@@ -1,7 +1,16 @@
 import "./dataDiri.css";
 import FotoProfile from "../../assets/image/profile picture.jpg";
+import { useState } from "react";
 
 const DataDiri = () => {
+  const [selectedOption, setSelectedOption] = useState();
+
+  const options = ["Laki-Laki", "Perempuan"];
+
+  const handleDropdownChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   return (
     <div className="data-diri-user d-flex flex-column gap-4">
       <div className="heading-profile-user d-flex flex-column aling-items-center justify-content-center">
@@ -28,9 +37,12 @@ const DataDiri = () => {
             </div>
             <div className="jenis-kelamin d-flex flex-column w-100 gap-2">
               <label>Jenis Kelamin</label>
-              <select name="" id="">
-                <option value="">Laki - Laki</option>
-                <option value="">Perempuan</option>
+              <select className="custom-dropdown" value={selectedOption} onChange={handleDropdownChange}>
+                {options.map((option, index) => (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
