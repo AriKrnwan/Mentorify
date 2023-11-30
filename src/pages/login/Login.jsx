@@ -13,7 +13,7 @@ const Login = () => {
                     <UncontrolledExample />
                 </div>
                 
-                <div className="col-6 box-right rounded-start-5 d-flex align-items-center justify-content-center">
+                <div className=" z-1 col-6 box-right rounded-start-5 d-flex align-items-center justify-content-center">
                     <div className="row w-100">
                         <div className="col-10 mx-auto">
                                 <div className="header">
