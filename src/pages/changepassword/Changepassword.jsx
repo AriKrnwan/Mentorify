@@ -9,8 +9,7 @@ const Changepassword = () => {
   return (
     <div>
       <Navbar/> 
-      <br></br><br></br><br></br><br></br>
-      <Form className='form'>
+      <Form className='form mx-auto d-flex flex-column justify-content-center'>
         <h4>Ganti Kata Sandi</h4>
         <p className='wrapper-desc-form'>Anda akan keluar dari semua sesi kecuali sesi ini untuk melindungi akun Anda jika ada orang yang mencoba mendapatkan akses.
            <br></br><br></br>Kata sandi Anda minimal harus 6 karakter dan harus menyertakan kombinasi angka, huruf, dan karakter khusus (!$@%)</p>
