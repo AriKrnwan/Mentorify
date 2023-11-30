@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import FilterDropdown from '../../components/dropdown/Dropdown';
+// import FilterDropdown from '../../components/dropdown/Dropdown';
 
 const Qna = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -72,7 +72,7 @@ const Qna = () => {
                     </Modal.Header>
                     <Modal.Body>
                         <p>Apa yang anda pikirkan?</p>
-                        <textarea type="text" className='form-control' style={{height:"100px"}} />
+                        <textarea type="text" className='form-control' style={{height:"100px", resize:'none'}} />
                     </Modal.Body>
                     <Modal.Footer>
                         <ButtonIconLeft text="Kirim" onClick={handlePopupClose} />
