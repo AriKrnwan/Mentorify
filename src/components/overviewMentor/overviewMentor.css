@@ -1,0 +1,36 @@
+.keahlian-mentor,
+.disciplines-mentor {
+  color: #828282;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.wraperr-pengalaman-mentor {
+  background: rgba(47, 128, 237, 0.1);
+  color: #2f80ed;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pengalaman-mentor,
+.univ-pendidikan-mentor,
+.b-pemrograman {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tgl-pengalaman-mentor,
+.tgl-pendidikan-mentor,
+.wrapper-lokasi-mentor,
+.wrapper-pendidikan-mentor,
+.wrapper-sertif-mentor,
+.tgl-sertif-mentor {
+  color: #828282;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}

@@ -78,16 +78,45 @@ const Mentoring = () => {
       rating: "4/5",
       foto: mentor4,
     },
+    {
+      nama: "Salsabila Fourgatri",
+      jenisMentor: "Mentor UX Design",
+      ketTambah: "Mentor Baru",
+      harga: "50.000",
+      rating: "4/5",
+      foto: mentor1,
+    },
+    {
+      nama: "Akbar Budiana",
+      jenisMentor: "Mentor Teknik Industri",
+      ketTambah: "Mentor Baru",
+      harga: "50.000",
+      rating: "4/5",
+      foto: mentor2,
+    },
+    {
+      nama: "Siti Nurabaya",
+      jenisMentor: "Mentor Informatika",
+      ketTambah: "Mentor Baru",
+      harga: "50.000",
+      rating: "4/5",
+      foto: mentor3,
+    },
+    {
+      nama: "Budi Ashari",
+      jenisMentor: "Mentor Design Thingking",
+      ketTambah: "Mentor Baru",
+      harga: "50.000",
+      rating: "4/5",
+      foto: mentor4,
+    },
   ];
 
   return (
     <div>
       <Navbar />
       <div className="container-xxl mx-auto">
-        {/* <div>
-          <h3>Rekomendasi Untukmu</h3>
-        </div> */}
-
+        
         <div>
             <SearchBar/>
         </div>
@@ -135,18 +164,12 @@ const Mentoring = () => {
             />
           ))}      
         </div>
-        <div className="d-flex mb-2 justify-content-center ">
+        {/* <div className="d-flex mb-2 justify-content-center ">
         <ButtonIconLeft
         text="Lihat lebih banyak" 
         />
-        </div>
-        {/* <div className="d-flex mb-2 justify-content-center wraper-btn-mentoring">
-        <Button className="btn-mentoring" size="sm" style={{width:"200px"}} >
-        Lihat lebih banyak
-      </Button>
-      </div> */}
+        </div> */}
       </div>
-     
     </div>
   );
 };

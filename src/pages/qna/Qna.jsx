@@ -65,16 +65,6 @@ const Qna = () => {
                         ))}
                     </div>
                 </Row>
-                <div className="d-flex overflow-visible">
-                    <FilterDropdown 
-                        judul="Topik" 
-                        items={"Teknik Industri, Psikologi, Manajemen, Teknik Informatika, Sistem Informasi"} 
-                    />
-                    <FilterDropdown 
-                        judul="woi" 
-                        items={"Teknik Industri, Psikologi, Manajemen, Teknik Informatika, Sistem Informasi"} 
-                    />
-                </div>
                 
                 <Modal show={showPopup} onHide={handlePopupClose}>
                     <Modal.Header closeButton>
