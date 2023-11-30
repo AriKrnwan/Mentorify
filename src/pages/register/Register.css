@@ -5,7 +5,44 @@
 
 .login {
     height: 100vh;
+    display: flex;
     overflow: hidden;
+}
+
+.logo-regist {
+    position:absolute;
+    padding-left: 10%;
+    margin: 20px;
+    margin-top: 45px;
+}
+
+.logo2 {
+    width: 232px;
+    height: 40px;
+}
+
+.hero {
+    margin-top: 110px;
+    margin-left: 100px;
+    position: absolute;
+    width: 382px;
+    height: 422px;
+}
+
+.diksi {
+    margin-top: 70%;
+    margin-bottom: 45px;
+    padding: 10%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.login-right {
+    width: 50%;
+    padding: 35px;
+    border-radius: 50px 0px 0px 50px;
+    box-shadow: -4px 0px 20px 0px rgba(0, 0, 0, 0.05);
 }
 
 .header h1 {
@@ -16,8 +53,6 @@
     line-height: normal;
     margin-top: 0px;
 }
-
-
 
 .login-form label {
     color: #303030;
@@ -40,10 +75,6 @@
     font-weight: 400;
     line-height: normal;
     margin-top: 10px;
-}
-
-.login-form input ::placeholder{
-    font-style: italic;
 }
 
 .login-form a {
@@ -72,7 +103,7 @@
     margin-top: 15px;
 }
 
-.login-form .btn-login a{
+.login-form .btn-login a {
     color: white;
     border: none;
     font-size: 16px;
@@ -82,15 +113,12 @@
     text-decoration: none;
 }
 
-
-
 .login-form p {
     color: #BDBDBD;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    /* margin: 35px 0 35px 0; */
 }
 
 .login-form a{
@@ -105,12 +133,10 @@
     border: 1px solid #BDBDBD;
     background: #FFF;
     color: #000;
-    font-family: Poppins;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-top: 0px;
 }
 
 .google {
@@ -126,7 +152,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-
 }
 
 .login-form span a {
@@ -136,59 +161,4 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    
 }
-
-.square1 {
-    position: absolute;
-    border-radius: 30px;
-    box-shadow:1px 1px 1px 3px #cecaca;
-    top: 1px;
-    right: 0;
-    width: 100%;
-    padding: 50px;
-    padding-top: 50px;
-    height: 100;
-    background:#ffffff;
-    clip-path: square(100px at right);
-}
-
-.login-right{
-    position: relative;
-    width: 716px;
-    height: 900px;
-}
-
-
-.logo-regist {
-    position:absolute;
-    padding-left: 10%;
-    margin: 20px;
-    margin-top: 45px;
-
-}
-
-.logo2 {
-    width: 232px;
-    height: 40px;
-}
-
-
-.hero {
-    margin-top: 110px;
-    margin-left: 100px;
-    position: absolute;
-    width: 382px;
-    height: 422px;
-}
-
-.diksi{
-    margin-top: 70%;
-    margin-bottom: 45px;
-    padding: 10%;
-    text-align: center;
-    font-style: normal;
-    font-family: Poppins;
-    font-weight: 500;
-}
-
