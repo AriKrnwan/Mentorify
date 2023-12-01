@@ -5,6 +5,14 @@ import mentor1 from "../../assets/image/mentor1.png";
 import mentor2 from "../../assets/image/mentor2.png";
 import mentor3 from "../../assets/image/mentor3.png";
 import mentor4 from "../../assets/image/mentor4.png";
+import mentor5 from "../../assets/image/mentor 5.png";
+import mentor6 from "../../assets/image/mentor 6.png";
+import mentor7 from "../../assets/image/mentor 7.png";
+import mentor8 from "../../assets/image/mentor 8.png";
+import mentor10 from "../../assets/image/mentor 10.png";
+import mentor11 from "../../assets/image/mentor 11.png";
+import mentor12 from "../../assets/image/mentor 12.png";
+import mentor13 from "../../assets/image/mentor 13.png";
 import FilterDropdown from '../../components/dropdown/Dropdown';
 // import { FaStar } from "react-icons/fa6";
 // import ButtonWithIcon from "../../components/button/button";
@@ -23,38 +31,6 @@ const Mentoring = () => {
       ketTambah: "Mentor Baru",
       harga: "50.000",
       rating: "4/5",
-      foto: fotoBG,
-    },
-    {
-      nama: "Akbar Budiana",
-      jenisMentor: "Mentor Teknik Industri",
-      ketTambah: "Mentor Baru",
-      harga: "50.000",
-      rating: "4/5",
-      foto: mentor2,
-    },
-    {
-      nama: "Siti Nurabaya",
-      jenisMentor: "Mentor Informatika",
-      ketTambah: "Mentor Baru",
-      harga: "50.000",
-      rating: "4/5",
-      foto: mentor3,
-    },
-    {
-      nama: "Budi Ashari",
-      jenisMentor: "Mentor Design Thingking",
-      ketTambah: "Mentor Baru",
-      harga: "50.000",
-      rating: "4/5",
-      foto: mentor4,
-    },
-    {
-      nama: "Salsabila Fourgatri",
-      jenisMentor: "Mentor UX Design",
-      ketTambah: "Mentor Baru",
-      harga: "50.000",
-      rating: "4/5",
       foto: mentor1,
     },
     {
@@ -87,31 +63,63 @@ const Mentoring = () => {
       ketTambah: "Mentor Baru",
       harga: "50.000",
       rating: "4/5",
-      foto: mentor1,
+      foto: mentor5,
     },
     {
-      nama: "Akbar Budiana",
+      nama: "Putri Alifia Rizky",
       jenisMentor: "Mentor Teknik Industri",
       ketTambah: "Mentor Baru",
       harga: "50.000",
       rating: "4/5",
-      foto: mentor2,
+      foto: mentor6,
     },
     {
-      nama: "Siti Nurabaya",
+      nama: "Rehanah Yulianti",
       jenisMentor: "Mentor Informatika",
       ketTambah: "Mentor Baru",
       harga: "50.000",
       rating: "4/5",
-      foto: mentor3,
+      foto: mentor7,
     },
     {
-      nama: "Budi Ashari",
+      nama: "Farhan Alamsyah",
       jenisMentor: "Mentor Design Thingking",
       ketTambah: "Mentor Baru",
       harga: "50.000",
       rating: "4/5",
-      foto: mentor4,
+      foto: mentor8,
+    },
+    {
+      nama: "Sambas Purnama Endang",
+      jenisMentor: "Mentor UX Design",
+      ketTambah: "Mentor Baru",
+      harga: "50.000",
+      rating: "4/5",
+      foto: mentor10,
+    },
+    {
+      nama: "Faza",
+      jenisMentor: "Mentor Teknik Industri",
+      ketTambah: "Mentor Baru",
+      harga: "50.000",
+      rating: "4/5",
+      foto: mentor11,
+    },
+    {
+      nama: "Al Ikhsan",
+      jenisMentor: "Mentor Informatika",
+      ketTambah: "Mentor Baru",
+      harga: "50.000",
+      rating: "4/5",
+      foto: mentor12,
+    },
+    {
+      nama: "Irfan Wahendra",
+      jenisMentor: "Mentor Design Thingking",
+      ketTambah: "Mentor Baru",
+      harga: "50.000",
+      rating: "4/5",
+      foto: mentor13,
     },
   ];
 
