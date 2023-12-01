@@ -12,6 +12,7 @@ import "../mentoring/mentoring.css";
 // import ButtonIconLeft from "../../components/button/button2";
 import fotoBG from '../../assets/image/profile picture.jpg'
 import DropdownComponent from "../../components/dropdown/Dropdown";
+import Footer from "../../components/footer/Footer";
 
 
 const Mentoring = () => {
@@ -175,6 +176,7 @@ const Mentoring = () => {
         />
         </div> */}
       </div>
+      <Footer/>
     </div>
   );
 };

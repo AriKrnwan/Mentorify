@@ -6,6 +6,7 @@ import DataDiri from "../../components/data-diri/DataDiri";
 import { useState } from "react";
 import RiwayatForum from "../../components/riwayatForum/RiwayatForum";
 import RiwayatTransaksi from "../../components/riwayatTrasaksi/RiwayatTransaksi";
+import Footer from "../../components/footer/Footer";
 
 const Profile = () => {
   const [active, setActive] = useState("data_diri");
@@ -25,6 +26,7 @@ const Profile = () => {
           </Col>
         </Row>
       </div>
+      <Footer/>
     </div>
   );
 };
