@@ -25,7 +25,7 @@ const RieviewMentor = () => {
             <img src={Picture} alt="gambar" width={60} height={60} style={{ borderRadius: "50%", objectFit: "cover" }} />
           </div>
           <div className="d-flex flex-column">
-            <span className="nama-mentor-review">Ucup Silalahi</span>
+            <span className="nama-mentor-review">Rizki Akbar Maulana</span>
             <span className="wrapper-mentor-review">Mahasiswa di Universitas Negeri Surabaya</span>
           </div>
         </div>
@@ -53,7 +53,7 @@ const RieviewMentor = () => {
             <img src={Picture} alt="gambar" width={60} height={60} style={{ borderRadius: "50%", objectFit: "cover" }} />
           </div>
           <div className="d-flex flex-column">
-            <span className="nama-mentor-review">Ucup Silalahi</span>
+            <span className="nama-mentor-review">Rizki Akbar Maulana</span>
             <span className="wrapper-mentor-review">Mahasiswa di Universitas Negeri Surabaya</span>
           </div>
         </div>
@@ -81,7 +81,7 @@ const RieviewMentor = () => {
             <img src={Picture} alt="gambar" width={60} height={60} style={{ borderRadius: "50%", objectFit: "cover" }} />
           </div>
           <div className="d-flex flex-column">
-            <span className="nama-mentor-review">Ucup Silalahi</span>
+            <span className="nama-mentor-review">Rizki Akbar Maulana</span>
             <span className="wrapper-mentor-review">Mahasiswa di Universitas Negeri Surabaya</span>
           </div>
         </div>

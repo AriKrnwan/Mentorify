@@ -13,7 +13,7 @@ function Detail() {
             <img src={profile} alt="" />
           </div>
           <div className="nama-profile">
-            <h6 className="fs-6 ">Ucup</h6>
+            <h6 className="fs-6 ">Hansen Pangestu</h6>
             <p className="mb-0">21 jam</p>
           </div>
         </div>
@@ -38,9 +38,11 @@ function Detail() {
           <div className="img-profile overflow-hidden d-flex align-items-center">
             <img src={profile} alt="" />
           </div>
-          <div className="input-bar d-flex gap-2">
+          <div className="input-bar d-flex align-items-center gap-2">
             <input type="text" className="form-control input-komen" />
-            <ButtonWithIcon text="Tambah Komentar" />
+            <div className="d-flex btn-tambah-komentar ">
+              <ButtonWithIcon text="Tambah Komentar" />
+            </div>
           </div>
         </div>
         <div className="komentar d-flex gap-2 py-3 border-top">

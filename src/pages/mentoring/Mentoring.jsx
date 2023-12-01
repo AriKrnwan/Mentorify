@@ -19,6 +19,7 @@ import FilterDropdown from '../../components/dropdown/Dropdown';
 import "../mentoring/mentoring.css";
 import fotoBG from '../../assets/image/profile picture.jpg'
 import DropdownComponent from "../../components/dropdown/Dropdown";
+import Footer from "../../components/footer/Footer";
 
 
 const Mentoring = () => {
@@ -61,7 +62,7 @@ const Mentoring = () => {
       ketTambah: "Mentor Baru",
       harga: "50.000",
       rating: "4/5",
-      foto: mentor5,
+      foto: mentor1,
     },
     {
       nama: "Putri Alifia Rizky",

@@ -39,7 +39,7 @@ function App() {
         <Route path="/schedule" element={<Schedule/>}/>
         <Route path="/mentoring/detail-mentor" element={<DetailMentor/>}/>
         <Route path="*" element={<Error/>}/>
-        <Route path="/detail-postingan" element={<DetailPostingan />} />
+        <Route path="/qna/detail-postingan" element={<DetailPostingan />} />
         <Route path="/changepassword" element={<Changepassword/>}/>
       </Routes>
     </div>

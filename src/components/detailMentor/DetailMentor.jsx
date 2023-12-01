@@ -8,6 +8,7 @@ import { useState } from "react";
 import OverviewMentor from "../overviewMentor/OverviewMentor";
 import RieviewMentor from "../reviewMentor/RieviewMentor";
 import { FaLocationDot } from "react-icons/fa6";
+import Footer from "../footer/Footer";
 // import DownloadModal from "./DownloadModal";
 
 export const DetailMentor = () => {
@@ -155,7 +156,9 @@ export const DetailMentor = () => {
             </div>
           </Col>
         </Row>
+        
       </div>
+      <Footer/>
     </div>
   );
 };
