@@ -5,13 +5,10 @@ import mentor1 from "../../assets/image/mentor1.png";
 import mentor2 from "../../assets/image/mentor2.png";
 import mentor3 from "../../assets/image/mentor3.png";
 import mentor4 from "../../assets/image/mentor4.png";
-import FilterDropdown from '../../components/dropdown/Dropdown';
-// import { FaStar } from "react-icons/fa6";
-// import ButtonWithIcon from "../../components/button/button";
+import DropdownComponent from '../../components/dropdown/Dropdown';
 import "../mentoring/mentoring.css";
-// import ButtonIconLeft from "../../components/button/button2";
 import fotoBG from '../../assets/image/profile picture.jpg'
-import DropdownComponent from "../../components/dropdown/Dropdown";
+
 
 
 const Mentoring = () => {
@@ -136,8 +133,8 @@ const Mentoring = () => {
                     judul="Gender" 
                     items={"Perempuan, Laki-laki"} 
                 /> */}
-          
-          {/* <FilterDropdown 
+{/*           
+          <FilterDropdown 
                     judul="Rating" 
                     items= {"Bintang 1, Bintang 2, Bintang 3, Bintang 4, Bintang 5"}
                     
