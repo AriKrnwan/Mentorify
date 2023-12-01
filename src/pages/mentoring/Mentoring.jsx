@@ -176,11 +176,6 @@ const Mentoring = () => {
             />
           ))}      
         </div>
-        {/* <div className="d-flex mb-2 justify-content-center ">
-        <ButtonIconLeft
-        text="Lihat lebih banyak" 
-        />
-        </div> */}
       </div>
       <Footer/>
     </div>
