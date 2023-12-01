@@ -14,6 +14,7 @@ import AdvertismentV2 from '../../components/advertisment/AdvertismentV2';
 import imgAdvQna from '../../assets/image/img-advQna.png'
 import imgAdvInst from '../../assets/image/img-advInst.png'
 import imgAdvJoin from '../../assets/image/img-advJoin.png'
+import Footer from '../../components/footer/Footer';
 
 const Home = () => {
     const mentorsData = [
@@ -117,9 +118,8 @@ const Home = () => {
                         />
                     </div>
                 </div>
-                
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <Footer/>
         </>
     );
 }
