@@ -4,13 +4,13 @@
     height: 68px;
   }
   
+  
   .navbar a {
     transition: color 0.3s ease;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: #303030;
     font-size: 0.85rem;
-    background-color: rgba(255, 255, 255, 0);
   }
   
   .navbar a.active,
@@ -37,6 +37,10 @@
     height: 80px;
   }
 
+  .dropdown-toggle, .dropdown-toggle:hover {
+    background-color: transparent !important;
+  }
+
   a {
     text-decoration: none;
   }
@@ -44,3 +48,9 @@
   .dropdown-menu[data-bs-popper] {
     left: -100px;
   }
+
+  .navbar-nav .dropdown {
+    height: 60px;
+  }
+
+  
