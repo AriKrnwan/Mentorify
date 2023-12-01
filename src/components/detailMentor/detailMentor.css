@@ -1,25 +1,184 @@
-.overview.active, .review.active {
-    display: flex;
-    padding: 12px  60px;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 3px solid #00a9b8;
-    color: #00a9b8;
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .overview, .review {
-    display: flex;
-    padding: 12px  60px;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 3px solid #e0e0e0;
-    color: #e0e0e0;
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-  }
+.overview.active,
+.review.active {
+  display: flex;
+  padding: 12px 60px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #00a9b8;
+  color: #00a9b8;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.overview,
+.review {
+  display: flex;
+  padding: 12px 60px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #e0e0e0;
+  color: #e0e0e0;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.wrapper-nama span:nth-child(1) {
+  color: #000;
+font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+}
+
+.wrapper-nama span:nth-child(2) {
+color: #828282;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+}
+
+.loc-mentor, .univ-mentor, .jk-mentor, .email-mentor {
+  color: #000;
+font-family: Poppins;
+font-size: 14px;
+font-weight: 500;
+}
+
+.card-tgl-mentoring {
+  padding: 10px 6px;
+  border-radius: 6px;
+  border: 1px solid #bdbdbd;
+  background: #00a9b8;
+  height: 76px;
+  width: 87px;
+}
+.card-tgl-mentoring-1 {
+  padding: 10px 6px;
+  border-radius: 6px;
+  border: 1px solid #bdbdbd;
+  background: #ffff;
+  height: 76px;
+  width: 87px;
+}
+
+.tgl-mentoring {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-tgl-mentoring p {
+  font-size: 12px;
+}
+
+.tgl-metor-2 {
+  color: #00a9b8;
+  font-size: 16px;
+}
+
+.card-tgl-mentoring-1 p {
+  font-size: 12px;
+}
+
+.card-tgl-mentoring-2 {
+  display: flex;
+  width: 87px;
+  height: 76px;
+  padding: 10px 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #e0e0e0;
+}
+.card-tgl-mentoring-2 p {
+  color: #bdbdbd;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+.card-tgl-mentoring-2 h5 {
+  color: #bdbdbd;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-jam-mentoring {
+  display: flex;
+  width: 155px;
+  padding: 8px 10px;
+  align-items: center;
+  justify-content: center;
+}
+.card-jam-mentoring h6 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+}
+.card-jam-mentoring-1 {
+  display: flex;
+  width: 155px;
+  padding: 8px 10px;
+  align-items: center;
+  justify-content: center;
+  background: #e0e0e0;
+}
+.card-jam-mentoring-1 h6 {
+  color: #bdbdbd;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wrapper-harga-mentoring h2 {
+  color: #00a9b8;
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.wrapper-harga-mentoring h6 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+.wrapper-harga-mentoring h2 span {
+  color: #1d1d1d;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-unduh-app {
+  border: none;
+  height: 60px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #00a9b8;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.heading-tgl,
+.heading-jam {
+  color: #00a9b8;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.jdl-tersedia {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+}

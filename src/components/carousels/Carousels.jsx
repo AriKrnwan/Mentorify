@@ -6,7 +6,7 @@ import "../carousels/carousels.css"
 
 function UncontrolledExample() {
     return (
-        <Carousel interval={5000} style={{ width: '100%' }}>
+        <Carousel className='slider' interval={5000} style={{ width: '100%' }}>
             <Carousel.Item>
                 <img src={foto} style={{ width: '50%' }} className='d-block mx-auto' />
                 <Carousel.Caption>

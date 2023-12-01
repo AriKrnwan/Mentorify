@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa";
 // import { LuHistory } from "react-icons/lu";
 import { useState } from "react";
 import SidebarJadwal from '../../components/sidebarJadwal/SidebarJadwal'
+import Footer from "../../components/footer/Footer";
 
 const Schedule = () => {
   const [mentoring, setMentoring] = useState('mentoring_aktif');
@@ -141,9 +142,9 @@ const Schedule = () => {
                   </div>
                 </div>
                 <hr />
-                <div className="d-flex flex-column gap-2">
+                <div className="d-flex flex-column gap-3">
                   <div className="penilaian">Berikan Penilaian</div>
-                  <div className="rating-mentor d-flex gap-4 align-items-center">
+                  <div className="rating-mentor d-flex gap-1 align-items-start flex-column">
                     <span>Kualitas mentor</span>
                     <div className="d-flex gap-2">
                       {[...Array(5)].map((star, index) => {
@@ -189,10 +190,10 @@ const Schedule = () => {
   };
 
   return (
-    <div>
+    <div >
       <Navbar />
 
-      <div className="container-xxl mx-auto d-flex flex-column">
+      <div style={{height:"100vh"}} className="container-xxl mx-auto d-flex flex-column">
         <Row>
           <Col lg="3">
             <SidebarJadwal setMentoring={setMentoring} mentoring={mentoring} />
@@ -223,6 +224,7 @@ const Schedule = () => {
           </Col>
         </Row>
       </div>
+      <Footer/>
     </div>
   );
 };

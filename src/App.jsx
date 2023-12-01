@@ -9,6 +9,7 @@ import Qna from './pages/qna/Qna';
 import Register from './pages/register/Register';
 import Save from './pages/save/Save';
 import Schedule from './pages/schedule/Schedule';
+import Changepassword from './pages/changepassword/Changepassword';
 import DetailPostingan from './pages/qna/DetailPostingan'
 import Error from './pages/error/Error';
 import { useEffect } from 'react';
@@ -36,9 +37,10 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/save" element={<Save/>}/>
         <Route path="/schedule" element={<Schedule/>}/>
-        <Route path="/detail-mentor" element={<DetailMentor/>}/>
+        <Route path="/mentoring/detail-mentor" element={<DetailMentor/>}/>
         <Route path="*" element={<Error/>}/>
-        <Route path="/detail-postingan" element={<DetailPostingan />} />
+        <Route path="/qna/detail-postingan" element={<DetailPostingan />} />
+        <Route path="/changepassword" element={<Changepassword/>}/>
       </Routes>
     </div>
   );

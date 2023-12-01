@@ -10,8 +10,9 @@ import SidebarFilter from '../../components/sidebarFilter/SidebarFilter';
 import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../../components/footer/Footer';
 
-import FilterDropdown from '../../components/dropdown/Dropdown';
+// import FilterDropdown from '../../components/dropdown/Dropdown';
 
 const Qna = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -65,16 +66,6 @@ const Qna = () => {
                         ))}
                     </div>
                 </Row>
-                <div className="d-flex overflow-visible">
-                    <FilterDropdown 
-                        judul="Topik" 
-                        items={"Teknik Industri, Psikologi, Manajemen, Teknik Informatika, Sistem Informasi"} 
-                    />
-                    <FilterDropdown 
-                        judul="woi" 
-                        items={"Teknik Industri, Psikologi, Manajemen, Teknik Informatika, Sistem Informasi"} 
-                    />
-                </div>
                 
                 <Modal show={showPopup} onHide={handlePopupClose}>
                     <Modal.Header closeButton>
@@ -82,14 +73,14 @@ const Qna = () => {
                     </Modal.Header>
                     <Modal.Body>
                         <p>Apa yang anda pikirkan?</p>
-                        <textarea type="text" className='form-control' style={{height:"100px"}} />
+                        <textarea type="text" className='form-control' style={{height:"100px", resize:'none'}} />
                     </Modal.Body>
                     <Modal.Footer>
                         <ButtonIconLeft text="Kirim" onClick={handlePopupClose} />
                     </Modal.Footer>
                 </Modal>
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <Footer/>
         </div>
     );
 }

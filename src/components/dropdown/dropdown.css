@@ -1,7 +1,39 @@
 /* Dropdown.css */
 
-.filter-dropdown {
-    position: absolute;
+select {
+  width: 100%;
+  margin-bottom: 10px;  
+  height: 50px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid #BDBDBD;
+}
+
+/* Optional: Style the rating stars */
+select option::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url('path-to-star-icon.png') no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Optional: Style the time dropdown */
+select option {
+  padding: 5pt;
+}
+ /* .drop {
+   border-radius: 10px;
+ } */
+
+
+
+/* css awall */
+/* .filter-dropdown {
+    position: static;
 }
 
 .dropdown, .dropdown button {
@@ -9,12 +41,12 @@
 }
 
 .filter-dropdown {
-    position: static;
+     position: static;
 }
 
 .dropdown-toggle,
 .dropdown-toggle:hover {
     background-color: white;
-    color: #282828;
+    color: #303030;
     box-shadow: none;
-}
+} */

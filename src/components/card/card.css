@@ -4,7 +4,11 @@
 
 .card {
     padding: 12px;
-    height: 348px;
+}
+
+.card-img-top {
+    height: 193px;
+    object-fit: cover;
 }
 
 .card-title h6 {

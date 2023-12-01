@@ -1,6 +1,8 @@
 :root {
   --grey-colors-gray-3: #828282;
   --grey-colors-gray-4: #bdbdbd;
+  --state-colors-succes: #27ae60;
+  --state-colors-error: #eb5757;
 }
 
 .card-transaction {
@@ -9,7 +11,8 @@
 }
 
 .number-transaction span:nth-child(1),
-.mentoring-time span:nth-child(1), .mentoring-date span:nth-child(1) {
+.mentoring-time span:nth-child(1),
+.mentoring-date span:nth-child(1) {
   color: var(--grey-colors-gray-3);
   font-family: Poppins;
   font-size: 14px;
@@ -24,7 +27,7 @@
   font-weight: 500;
 }
 
-.information-transaction span:nth-child(1) {
+.information-transaction .Menunggu.Approve {
   display: inline-flex;
   padding: 6px 10px;
   color: #2f80ed;
@@ -35,6 +38,51 @@
   background: rgba(47, 128, 237, 0.2);
 }
 
+.information-transaction .Diterima {
+  color: var(--state-colors-succes, #27ae60);
+  display: inline-flex;
+  padding: 6px 10px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: rgba(39, 174, 96, 0.2);
+}
+
+.information-transaction .Telah.Dibayar {
+  color: var(--state-colors-succes, #27ae60);
+  display: inline-flex;
+  padding: 6px 10px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: rgba(39, 174, 96, 0.2);
+}
+
+.information-transaction .Ditolak {
+  color: var(--state-colors-error, #EB5757);
+  display: inline-flex;
+  padding: 6px 10px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: rgba(235, 87, 87, 0.20);
+}
+
+
+.information-transaction .Kadaluarsa {
+  color: var(--state-colors-error, #EB5757);
+  display: inline-flex;
+  padding: 6px 10px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: rgba(235, 87, 87, 0.20);
+}
+
 .information-transaction span:nth-child(2) {
   color: #000;
   font-family: Poppins;
@@ -42,11 +90,10 @@
   font-weight: 500;
 }
 
-.mentoring-time span:nth-child(2), .mentoring-date span:nth-child(2) {
+.mentoring-time span:nth-child(2),
+.mentoring-date span:nth-child(2) {
   color: #1d1d1d;
   font-family: Poppins;
   font-size: 16px;
   font-weight: 500;
 }
-
- 

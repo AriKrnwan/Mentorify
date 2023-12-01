@@ -59,15 +59,15 @@ function OffcanvasExample() {
               <Offcanvas.Header closeButton />
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1  align-items-center gap-5">
-                  <NavLink to="/" activeClassName='active'>Home</NavLink>
-                  <NavLink to="/mentoring" activeClassName='active'>Mentoring</NavLink>
-                  <NavLink to="/qna" activeClassName='active'>Tanya & Jawab</NavLink>
-                  <NavLink to="/schedule" activeClassName='active'>Jadwal</NavLink>
+                  <NavLink to="/" activeclassname='active'>Home</NavLink>
+                  <NavLink to="/mentoring" activeclassname='active'>Mentoring</NavLink>
+                  <NavLink to="/qna" activeclassname='active'>Tanya & Jawab</NavLink>
+                  <NavLink to="/schedule" activeclassname='active'>Jadwal</NavLink>
                   <div className="d-flex gap-3">
                     <NavLink to="/save">
                       <FiBookmark size="18px" />
                     </NavLink>
-                    <NavLink to="/notification" activeClassName='active'>
+                    <NavLink to="/notification" activeclassname='active'>
                       <FiBell size="18px" />
                     </NavLink>
                   </div>
@@ -83,7 +83,7 @@ function OffcanvasExample() {
                     id="basic-nav-dropdown"
                   >
                     <NavDropdown.Item href="/profile">Profil</NavDropdown.Item>
-                    <NavDropdown.Item href="/change-password">Ganti Kata Sandi</NavDropdown.Item>
+                    <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/login">Keluar</NavDropdown.Item>
                   </NavDropdown>
