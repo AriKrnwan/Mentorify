@@ -9,6 +9,7 @@ import OverviewMentor from "../overviewMentor/OverviewMentor";
 import RieviewMentor from "../reviewMentor/RieviewMentor";
 import { FaLocationDot } from "react-icons/fa6";
 import Footer from "../footer/Footer";
+import ModalComponent from "../advertisment/Popup";
 // import DownloadModal from "./DownloadModal";
 
 export const DetailMentor = () => {
@@ -144,13 +145,13 @@ export const DetailMentor = () => {
 
                 <div className="wrapper-harga-mentoring mt-3">
                   <h2>
-                    Rp.50000 <span>/Session (1 jam)</span>
+                    Rp50.000 <span>/Session (1 jam)</span>
                   </h2>
                   <h6>Untuk memulai pemesanan mentor unduh aplikasi</h6>
                 </div>
 
                 <div className="d-flex mb-2 justify-content-center">
-                  <button className="btn-unduh-app w-100">Unduh di Sini</button>
+                  <ModalComponent/>
                 </div>
               </div>
             </div>

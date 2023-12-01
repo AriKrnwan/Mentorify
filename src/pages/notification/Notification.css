@@ -14,7 +14,7 @@
     background-color: none;
 }
 
-h4 {
+.ca h4 {
     color: var(--brand-colors-primary);
     font-weight: 600;
     padding: 10px;
@@ -52,4 +52,6 @@ h4 {
     position: relative;
     font-weight: 500;
     font-family: var(--font);
+    padding-top: 20px;
+    padding-left: 16px;
 }

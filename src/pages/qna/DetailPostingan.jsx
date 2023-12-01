@@ -1,6 +1,7 @@
 import Navbar from '../../components/navbar/Navbar';
 import { Row } from 'react-bootstrap';
 import Detail from '../../components/detailPostingan/Detail';
+import Footer from '../../components/footer/Footer';
 
 
 function DetailPostingan() {
@@ -16,6 +17,7 @@ function DetailPostingan() {
                     </div>
                 </Row>
             </div>
+            <Footer/>
         </>
     )
 }

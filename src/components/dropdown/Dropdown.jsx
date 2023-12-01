@@ -12,7 +12,7 @@ const DropdownComponent = () => {
   const topics = ["Sistem Informasi", "Teknik Informatika", "Teknik Industri", "Psikologi", "Management"];
   const genders = ["Laki-laki", "Perempuan"];
   const ratings = [1, 2, 3, 4, 5];
-  const prices = ["Rp. 30000", "Rp. 50000"];
+  const prices = ["Rp. 30.000", "Rp. 50.000"];
   const times = Array.from({ length: 14 }, (_, index) => index + 8); // Generate an array from 8 to 21
 
   const handleTopicChange = (topic) => {
