@@ -44,3 +44,7 @@
   .dropdown-menu[data-bs-popper] {
     left: -100px;
   }
+
+  #basic-nav-dropdown::after {
+    display: none;
+  }
