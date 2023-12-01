@@ -6,12 +6,15 @@ import { FaUserGraduate, FaUserTie, FaStar } from "react-icons/fa";
 import { Col, Row } from "react-bootstrap";
 import { useState } from "react";
 import OverviewMentor from "../overviewMentor/OverviewMentor";
-import RieviewMentor from "../ReviewMentor/RieviewMentor";
+import RieviewMentor from "../reviewMentor/RieviewMentor";
 import { FaLocationDot } from "react-icons/fa6";
-
+import Footer from "../footer/Footer";
+// import DownloadModal from "./DownloadModal";
 
 export const DetailMentor = () => {
   const [ubahMenu, setUbahMenu] = useState("overview");
+
+
 
   return (
     <div>
@@ -153,7 +156,9 @@ export const DetailMentor = () => {
             </div>
           </Col>
         </Row>
+        
       </div>
+      <Footer/>
     </div>
   );
 };

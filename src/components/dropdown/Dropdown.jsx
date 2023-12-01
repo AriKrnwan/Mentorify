@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../dropdown/dropdown.css';
+// import { FaStar } from "react-icons/fa";
 
 const DropdownComponent = () => {
   const [selectedTopic, setSelectedTopic] = useState(null);
@@ -35,20 +36,18 @@ const DropdownComponent = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center container-filter">
+    <div className="d-flex gap-3">
       {/* Topic Dropdown */}
-      {/* <label>Topic:</label> */}
       <select onChange={(e) => handleTopicChange(e.target.value)}>
         <option value="">Topic</option>
         {topics.map((topic, index) => (
-          <option key={index} value={topic}>
+          <option  key={index} value={topic}>
             {topic}
           </option>
         ))}
       </select>
 
       {/* Gender Dropdown */}
-      {/* <label>Gender:</label> */}
       <select onChange={(e) => handleGenderChange(e.target.value)}>
         <option value="">Gender</option>
         {genders.map((gender, index) => (
@@ -59,7 +58,6 @@ const DropdownComponent = () => {
       </select>
 
       {/* Rating Dropdown */}
-      {/* <label>Rating:</label> */}
       <select onChange={(e) => handleRatingChange(e.target.value)}>
         <option value="">Rating</option>
         {ratings.map((rating, index) => (
@@ -70,23 +68,21 @@ const DropdownComponent = () => {
       </select>
 
       {/* Price Dropdown */}
-      {/* <label>Price:</label> */}
       <select onChange={(e) => handlePriceChange(e.target.value)}>
         <option value="">Harga</option>
         {prices.map((price, index) => (
-          <option key={index} value={price}>
+          <option  key={index} value={price}>
             {price}
           </option>
         ))}
       </select>
 
       {/* Time Dropdown */}
-      {/* <label>Time:</label> */}
       <select onChange={(e) => handleTimeChange(e.target.value)}>
         <option value="">Jam</option>
         {times.map((time, index) => (
           <option key={index} value={time}>
-            {`${time}:00 ${time < 12 ? "AM" : "PM"}`}
+            {`${time}:00 ${time < 12 ? "" : ""}`}
           </option>
         ))}
       </select>
@@ -96,6 +92,8 @@ const DropdownComponent = () => {
 
 export default DropdownComponent;
 
+
+// code awal
 // import Dropdown from 'react-bootstrap/Dropdown';
 // import '../dropdown/dropdown.css';
 // import PropTypes from 'prop-types';

@@ -5,6 +5,7 @@
 
 .input-bar {
     width: 90%;
+    height: 50px;
 }
 
 .input-komen {
@@ -25,4 +26,15 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: #282828;
+}
+
+.btn-tambah-komentar {
+    display: flex;
+    width: 210px;
+    height: 70px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
 }

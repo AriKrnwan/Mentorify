@@ -1,7 +1,6 @@
 import Navbar from'../../components/navbar/Navbar'
 import { Container, Row, Col, Card, ListGroup, Tab, } from 'react-bootstrap';
 import '../notification/Notification.css'
-
 import ListQna from '../../components/listNotificationQ&a/listQna';
 import { FaRegUser } from "react-icons/fa6";
 import { PiClockCounterClockwiseBold } from "react-icons/pi";
@@ -13,6 +12,7 @@ import ListAccept from '../../components/listNotificationMentoring/ListAccept';
 import ListDenied from '../../components/listNotificationMentoring/ListDenied';
 import ListPayDone from '../../components/listNotificationMentoring/ListPayDone';
 import ListPayDenied from '../../components/listNotificationMentoring/ListPayDenied'
+import Footer from '../../components/footer/Footer';
 
 
 const Notification = () => {
@@ -97,6 +97,7 @@ const Notification = () => {
                         </Tab.Container>h
                     </Row>
                 </Container>
+            <Footer/>
         </div>
     );
 }

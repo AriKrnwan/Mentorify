@@ -7,7 +7,7 @@ function Postingan(props) {
 
     const navigate = useNavigate();
     const handleCommentClick = () => {
-        navigate('/detail-postingan');
+        navigate('/qna/detail-postingan');
     };
 
     return (

@@ -1,32 +1,16 @@
 /* Dropdown.css */
 
-/* .container-filter {
-
-} */
-
-
-/* div {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  margin: 20px;
-} */
-
-/* label {
-  margin-bottom: 5px;
-} */
-
-/* select {
+select {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-} */
+  margin-bottom: 10px;  
+  height: 50px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid #BDBDBD;
+}
 
 /* Optional: Style the rating stars */
-/* select option::before {
+select option::before {
   content: '';
   display: inline-block;
   width: 1em;
@@ -35,19 +19,19 @@
   background-size: contain;
   vertical-align: middle;
   margin-right: 5px;
-} */
+}
 
 /* Optional: Style the time dropdown */
-/* select option {
-  padding: 10px;
-} */
+select option {
+  padding: 5pt;
+}
+ /* .drop {
+   border-radius: 10px;
+ } */
 
 
 
-
-
-
-
+/* css awall */
 /* .filter-dropdown {
     position: static;
 }
@@ -57,7 +41,7 @@
 }
 
 .filter-dropdown {
-    position: static;
+     position: static;
 }
 
 .dropdown-toggle,

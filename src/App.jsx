@@ -37,9 +37,9 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/save" element={<Save/>}/>
         <Route path="/schedule" element={<Schedule/>}/>
-        <Route path="/detail-mentor" element={<DetailMentor/>}/>
+        <Route path="/mentoring/detail-mentor" element={<DetailMentor/>}/>
         <Route path="*" element={<Error/>}/>
-        <Route path="/detail-postingan" element={<DetailPostingan />} />
+        <Route path="/qna/detail-postingan" element={<DetailPostingan />} />
         <Route path="/changepassword" element={<Changepassword/>}/>
       </Routes>
     </div>

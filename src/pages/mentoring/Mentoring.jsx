@@ -17,9 +17,9 @@ import FilterDropdown from '../../components/dropdown/Dropdown';
 // import { FaStar } from "react-icons/fa6";
 // import ButtonWithIcon from "../../components/button/button";
 import "../mentoring/mentoring.css";
-// import ButtonIconLeft from "../../components/button/button2";
 import fotoBG from '../../assets/image/profile picture.jpg'
 import DropdownComponent from "../../components/dropdown/Dropdown";
+import Footer from "../../components/footer/Footer";
 
 
 const Mentoring = () => {
@@ -62,7 +62,7 @@ const Mentoring = () => {
       ketTambah: "Mentor Baru",
       harga: "50.000",
       rating: "4/5",
-      foto: mentor5,
+      foto: mentor1,
     },
     {
       nama: "Putri Alifia Rizky",
@@ -144,8 +144,8 @@ const Mentoring = () => {
                     judul="Gender" 
                     items={"Perempuan, Laki-laki"} 
                 /> */}
-          
-          {/* <FilterDropdown 
+{/*           
+          <FilterDropdown 
                     judul="Rating" 
                     items= {"Bintang 1, Bintang 2, Bintang 3, Bintang 4, Bintang 5"}
                     
@@ -177,12 +177,8 @@ const Mentoring = () => {
             />
           ))}      
         </div>
-        {/* <div className="d-flex mb-2 justify-content-center ">
-        <ButtonIconLeft
-        text="Lihat lebih banyak" 
-        />
-        </div> */}
       </div>
+      <Footer/>
     </div>
   );
 };
