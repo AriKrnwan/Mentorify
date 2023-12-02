@@ -16,6 +16,8 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import { DetailMentor } from './components/detailMentor/DetailMentor';
+import Dashboard from './page_mentor/dashboard/Dashboard';
+import OrderSchedule from './page_mentor/orderSchedule/OrderSchedule';
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
         <Route path="*" element={<Error/>}/>
         <Route path="/qna/detail-postingan" element={<DetailPostingan />} />
         <Route path="/changepassword" element={<Changepassword/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/orderschedule" element={<OrderSchedule/>}/>
       </Routes>
     </div>
   );

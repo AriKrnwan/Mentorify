@@ -37,8 +37,9 @@ function OffcanvasExample() {
   
   const navigate = useNavigate();
   const handleSwitch = () => {
-    setIsNavMentor(!isNavMentor);
     navigate('/dashboard');
+    setIsNavMentor(!isNavMentor);
+   
   };
 
   return (
@@ -66,7 +67,7 @@ function OffcanvasExample() {
               <Nav className="justify-content-end flex-grow-1 align-items-center gap-5">
                 {isNavMentor ? (
                   <>
-                    <NavLink to="/" activeClassName='active'>Dashboard</NavLink>
+                    <NavLink to="/dashboard" activeClassName='active'>Dashboard</NavLink>
                     <NavLink to="/orderschedule" activeClassName='active'>Pesanan & Jadwal</NavLink>
                     <NavLink to="/notification" activeClassName='active'>
                       <FiBell size="18px" />
@@ -74,7 +75,7 @@ function OffcanvasExample() {
                   </>
                 ) : (
                   <>
-                    <NavLink to="/" activeClassName='active'>Home</NavLink>
+                    <NavLink to="/" exact activeClassName='active'>Home</NavLink>
                     <NavLink to="/mentoring" activeClassName='active'>Mentoring</NavLink>
                     <NavLink to="/qna" activeClassName='active'>Tanya & Jawab</NavLink>
                     <NavLink to="/schedule" activeClassName='active'>Jadwal</NavLink>
