@@ -8,6 +8,7 @@ import { FiBell, FiBookmark } from "react-icons/fi";
 import Logo from '../../assets/image/Logo.svg';
 import profile from "../../assets/image/profile picture.jpg";
 import "../navbar/Navbar.css";
+import { useNavigate } from 'react-router-dom';
 
 function OffcanvasExample() {
   const [navbarTransparent, setNavbarTransparent] = useState(true);
@@ -33,9 +34,11 @@ function OffcanvasExample() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  
+  const navigate = useNavigate();
   const handleSwitch = () => {
     setIsNavMentor(!isNavMentor);
+    navigate('/dashboard');
   };
 
   return (
@@ -97,11 +100,17 @@ function OffcanvasExample() {
                   id="basic-nav-dropdown"
                 >
                   {isNavMentor ? (
-                    <NavDropdown.Item href="/profile-mentor">Men</NavDropdown.Item>
+                    <>
+                      <NavDropdown.Item href="/profile-mentor">Men</NavDropdown.Item>
+                      <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
+                    </>
                   ) : (
-                    <NavDropdown.Item href="/profile">Profil</NavDropdown.Item>
+                    <>
+                      <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
+                      <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
+                    </>
                   )}
-                  <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
+                  
                   <NavDropdown.Item onClick={handleSwitch}>Switch</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="/login">Keluar</NavDropdown.Item>
