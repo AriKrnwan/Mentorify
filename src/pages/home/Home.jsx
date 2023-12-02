@@ -15,6 +15,7 @@ import imgAdvQna from '../../assets/image/img-advQna.png'
 import imgAdvInst from '../../assets/image/img-advInst.png'
 import imgAdvJoin from '../../assets/image/img-advJoin.png'
 import Footer from '../../components/footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const mentorsData = [
@@ -52,6 +53,15 @@ const Home = () => {
         },
     ];
 
+    const navigate = useNavigate();
+    const toMentoring = () => {
+        navigate('/mentoring');
+    };
+
+    const toQna = () => {
+        navigate('/qna');
+    };
+
     return ( 
         <>
             <Navbar/>
@@ -61,7 +71,7 @@ const Home = () => {
                         <div className="col-sm-6 text-start mt-5">
                             <h1>Dapatkan Bimbingan dari Para Profesional.</h1>
                             <p className='fs-6'>Aplikasi mentoring kami membantu anda mencapai potensi penuh anda dengan dukungan pribadi dari mentor berpengalaman, kurikulum yang disesuaikan, dan komunitas yang mendukung pertumbuhan Anda secara holistik.</p>
-                            <ButtonWithIcon text="Cari Mentor" icon={FiArrowRight} />
+                            <ButtonWithIcon text="Cari Mentor" icon={FiArrowRight} onClick={toMentoring} />
                         </div>
                         <div className="col-sm-6 text-end">
                             <img className='img-intro' src={profile} alt="Mentors" />
@@ -99,6 +109,7 @@ const Home = () => {
                             judul = "Forum Tanya & Jawab"
                             descPanjang = "Temukan ide, jawaban, dan pertanyaan terkini seputar berbagai topik di forum tanya jawab kami, memberikan platform interaktif bagi pengguna untuk berbagi pengetahuan, mendapatkan informasi, dan memperluas wawasan."
                             textButton='Masuk Forum'
+                            onClick={toQna}
                         />
                     </div>
                     <div data-aos="fade-left">

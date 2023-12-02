@@ -1,16 +1,16 @@
 /* Dropdown.css */
 
-select {
-
+/* select {
+  width: 100%;
   margin-bottom: 10px;  
-
+  height: 50px;
   padding: 10px 10px;
   border-radius: 10px;
   border: 1px solid #BDBDBD;
-}
+} */
 
 /* Optional: Style the rating stars */
-select option::before {
+/* select option::before {
   content: '';
   display: inline-block;
 
@@ -19,12 +19,12 @@ select option::before {
   background-size: contain;
   vertical-align: middle;
   margin-right: 5px;
-}
+} */
 
 /* Optional: Style the time dropdown */
-select option {
+/* select option {
   padding: 5pt;
-}
+} */
  /* .drop {
    border-radius: 10px;
  } */
@@ -32,7 +32,7 @@ select option {
 
 
 /* css awall */
-/* .filter-dropdown {
+.filter-dropdown {
     position: static;
 }
 
@@ -49,4 +49,4 @@ select option {
     background-color: white;
     color: #303030;
     box-shadow: none;
-} */
+}
