@@ -12,7 +12,6 @@ import { useNavigate } from 'react-router-dom';
 
 function OffcanvasExample() {
   const [navbarTransparent, setNavbarTransparent] = useState(true);
-  const [isNavMentor, setIsNavMentor] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,12 +33,10 @@ function OffcanvasExample() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   const navigate = useNavigate();
-  const handleSwitch = () => {
+  const toMentorMode = () => {
     navigate('/dashboard');
-    setIsNavMentor(!isNavMentor);
-   
   };
 
   return (
@@ -65,30 +62,18 @@ function OffcanvasExample() {
             <Offcanvas.Header closeButton />
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 align-items-center gap-5">
-                {isNavMentor ? (
-                  <>
-                    <NavLink to="/dashboard" activeClassName='active'>Dashboard</NavLink>
-                    <NavLink to="/orderschedule" activeClassName='active'>Pesanan & Jadwal</NavLink>
-                    <NavLink to="/notification" activeClassName='active'>
-                      <FiBell size="18px" />
-                    </NavLink>
-                  </>
-                ) : (
-                  <>
-                    <NavLink to="/" exact activeClassName='active'>Home</NavLink>
-                    <NavLink to="/mentoring" activeClassName='active'>Mentoring</NavLink>
-                    <NavLink to="/qna" activeClassName='active'>Tanya & Jawab</NavLink>
-                    <NavLink to="/schedule" activeClassName='active'>Jadwal</NavLink>
-                    <div className="d-flex gap-3">
-                      <NavLink to="/notification" activeClassName='active'>
-                        <FiBell size="18px" />
-                      </NavLink>
-                      <NavLink to="/save">
-                        <FiBookmark size="18px" />
-                      </NavLink>
-                    </div>
-                  </>
-                )}
+                <NavLink to="/" exact activeClassName='active'>Home</NavLink>
+                <NavLink to="/mentoring" activeClassName='active'>Mentoring</NavLink>
+                <NavLink to="/qna" activeClassName='active'>Tanya & Jawab</NavLink>
+                <NavLink to="/schedule" activeClassName='active'>Jadwal</NavLink>
+                <div className="d-flex gap-3">
+                  <NavLink to="/notification" activeClassName='active'>
+                    <FiBell size="18px" />
+                  </NavLink>
+                  <NavLink to="/save">
+                    <FiBookmark size="18px" />
+                  </NavLink>
+                </div>
                 <NavDropdown title={
                     <img
                       className="profile"
@@ -100,19 +85,9 @@ function OffcanvasExample() {
                   }
                   id="basic-nav-dropdown"
                 >
-                  {isNavMentor ? (
-                    <>
-                      <NavDropdown.Item href="/profile-mentor">Men</NavDropdown.Item>
-                      <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
-                    </>
-                  ) : (
-                    <>
-                      <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-                      <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
-                    </>
-                  )}
-                  
-                  <NavDropdown.Item onClick={handleSwitch}>Switch</NavDropdown.Item>
+                  <NavDropdown.Item href="/profile-mentor">Men</NavDropdown.Item>
+                  <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
+                  <NavDropdown.Item onClick={toMentorMode}>Switch</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="/login">Keluar</NavDropdown.Item>
                 </NavDropdown>

@@ -1,10 +1,10 @@
 
-import OffcanvasExample from "../../components/navbar/Navbar";
+import NavbarMentor from "../../components/navbar/NavbarMentor";
 
 const Dashboard = () => {
   return (
     <div>
-      <OffcanvasExample />
+      <NavbarMentor />
       <br />
       <br />
       <br />
