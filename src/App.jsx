@@ -19,7 +19,8 @@ import { DetailMentor } from './components/detailMentor/DetailMentor';
 import Dashboard from './page_mentor/dashboard/Dashboard';
 import OrderSchedule from './page_mentor/orderSchedule/OrderSchedule';
 import ProfileMentor from './page_mentor/profile-mentor/Profile-mentor';
-import NotificationMentor from './pages/notification/NotificationMentor'
+import NotificationMentor from './pages/notification/NotificationMentor';
+import ChangepasswordMentor from './pages/changepassword/ChangepasswordMentor'
 
 function App() {
   useEffect (() => {
@@ -48,6 +49,7 @@ function App() {
         <Route path="/orderschedule" element={<OrderSchedule/>}/>
         <Route path="/profile-mentor" element={<ProfileMentor/>}/>
         <Route path="/notification-mentor" element={<NotificationMentor/>}/>
+        <Route path="/changepasswordmentor" element={<ChangepasswordMentor/>}/>
       </Routes>
     </div>
   );
