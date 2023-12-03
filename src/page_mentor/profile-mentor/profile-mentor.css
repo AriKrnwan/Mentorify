@@ -1,0 +1,60 @@
+.wrapper-profile-mentor {
+    overflow-x: visible;
+}
+
+.welcome-mentor h5 {
+    color: #00A9B8;
+}
+
+.welcome-mentor p {
+    font-size: 0.9rem;
+    color: #828282;
+}
+
+.profile-mentor {
+    width: 150px;
+    height: 150px;
+}
+
+.icon-edit {
+    width: 25px;
+    height: 25px;
+    filter: drop-shadow(0px 2px 10px rgba(79, 79, 79, 0.20));
+    background-color: #fff;
+    right: 16px;
+}
+
+.form-mentor .form-control,
+.form-mentor .form-select {
+    height: 44px;
+    font-size: 0.9rem;
+}
+
+.form-mentor .form-control::placeholder,
+.form-mentor .form-select::placeholder {
+    color: #bdbdbd;
+}
+
+.form-mentor .form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.pengalaman p {
+    font-size: 0.9rem;
+    color: #00A9B8;
+    font-weight: 600;
+}
+
+.form-pengalaman .btn,
+.dynamic-field .btn {
+    height: 44px;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none !important;
+}
+
+.dynamic-field .btn:active {
+    background-color: #00A9B8;
+}
