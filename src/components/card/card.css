@@ -1,36 +1,246 @@
+:root {
+  --brand-colors-primary: #00a9b8;
+  --grey-colors-gray-3: #828282;
+  --grey-colors-gray-4: #bdbdbd;
+  --grey-colors-gray-5: #e0e0e0;
+  --state-colors-succes: #27ae60;
+  --state-colors-error: #eb5757;
+  --state-colors-info: #2f80ed;
+}
+
 .card-mentor {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card {
-    padding: 12px;
+  padding: 12px;
 }
 
 .card-img-top {
-    height: 193px;
-    object-fit: cover;
+  height: 193px;
+  object-fit: cover;
 }
 
 .card-title h6 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .card-text p {
-    font-weight: 500;
-    color: #303030;
-    font-size: 0.850rem;
+  font-weight: 500;
+  color: #303030;
+  font-size: 0.85rem;
 }
 
 .info-harga h4 {
-    color: #00A9B8;
-    font-weight: 600;
+  color: #00a9b8;
+  font-weight: 600;
 }
 
 .rating {
-    background: rgba(226, 185, 59, 0.10);
+  background: rgba(226, 185, 59, 0.1);
 }
 
 .rating p {
-    font-size: 0.850rem;
-    color: #282828;
+  font-size: 0.85rem;
+  color: #282828;
+}
+
+/* =======================Card pesanan mentor========================= */
+.fotoProfileMentor {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cardPesananName h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cardPesananTime p,
+.cardPesananDetail p {
+  color: var(--grey-colors-gray-4);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cardPesananTime h5,
+.cardPesananDetail h5 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cardPesananDetail {
+  width: 550px;
+}
+
+.cardPesananBtn .Diterima,
+.cardPesananBtn .Ditolak {
+  border-radius: 10px;
+  width: 190px;
+  height: 50px;
+  padding: 10px;
+  background: var(--state-colors-succes);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.cardPesananStatus .Ditolak {
+  color: var(--state-colors-error);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: rgba(235, 87, 87, 0.1);
+}
+
+.cardPesananStatus .Kadaluarsa {
+  color: var(--state-colors-error);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: rgba(235, 87, 87, 0.1);
+}
+
+.cardPesananStatus .Menunggu.Mentee.Membayar {
+  color: var(--state-colors-info);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: rgba(47, 128, 237, 0.1);
+}
+
+.cardPesananStatus .Mentee.Telah.Membayar {
+  color: var(--state-colors-succes);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: rgba(39, 174, 96, 0.1);
+}
+
+.cardPesananStatus h5 {
+  color: var(--brand-colors-primary);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cardPesananStatus h6 {
+  color: var(--grey-colors-gray-4);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =======================Card jadwal mentor========================= */
+
+.cardPesananStatus .Mentoring.Sekarang {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  display: flex;
+  height: 50px;
+  width: 190px;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background: var(--brand-colors-primary, #00a9b8);
+  cursor: pointer;
+}
+
+.cardPesananStatus .Masukan.Link {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  display: flex;
+  height: 50px;
+  width: 190px;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background: var(--state-colors-info);
+  cursor: pointer;
+}
+
+.cardPesananStatus .Belum.Waktunya {
+  color: var(--grey-colors-gray-3);
+  font-family: Poppins;
+  font-size: 14px;
+  display: flex;
+  height: 50px;
+  width: 190px;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background: var(--grey-colors-gray-5);
+  cursor: pointer;
+}
+
+/* ==================Mentoring Selesai================= */
+
+.penilaiMenteeSelesai h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.kualiatsMentorSelesai h5, .ulasanMentorSelesai h5 {
+  color: var(--grey-colors-gray-4, #bdbdbd);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ulasanMentorSelesai p {
+  color:  #1D1D1D;
+font-family: Poppins;
+font-size: 14px;
+font-weight: 500;
+}
+
+.btnMentoringSelesai {
+  color: var(--black-colors-white, #FFF);
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+height: 50px;
+padding: 10px;
+border-radius: 10px;
+background: var(--brand-colors-primary, #00A9B8);
 }

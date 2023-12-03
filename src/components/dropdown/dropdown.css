@@ -25,28 +25,38 @@
 /* select option {
   padding: 5pt;
 } */
- /* .drop {
+/* .drop {
    border-radius: 10px;
  } */
 
-
-
 /* css awall */
 .filter-dropdown {
-    position: static;
+  position: static;
 }
 
-.dropdown, .dropdown button {
-    height: 50px;
+.dropdown,
+.dropdown button {
+  height: 50px;
 }
 
 .filter-dropdown {
-     position: static;
+  position: static;
 }
 
 .dropdown-toggle,
 .dropdown-toggle:hover {
-    background-color: white;
-    color: #303030;
-    box-shadow: none;
+  background-color: white;
+  color: #303030;
+  box-shadow: none;
+}
+
+/* ==============Dropdown 3============= */
+
+.filterListBulan {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145.8%; /* 29.16px */
 }
