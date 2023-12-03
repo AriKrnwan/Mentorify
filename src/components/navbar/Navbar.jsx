@@ -85,7 +85,7 @@ function OffcanvasExample() {
                   }
                   id="basic-nav-dropdown"
                 >
-                  <NavDropdown.Item href="/profile-mentor">Men</NavDropdown.Item>
+                  <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                   <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
                   <NavDropdown.Item onClick={toMentorMode}>Switch</NavDropdown.Item>
                   <NavDropdown.Divider />
