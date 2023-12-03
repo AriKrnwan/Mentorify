@@ -1,7 +1,11 @@
+import { useState } from "react";
 import CardJadwalMentor from "../card/CardJadwalMentor";
-
+import PopupLink from "./PopupLink";
+import MyDropdown from "../dropdown/Dropdown3";
 
 const MentoringAkanDatang = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   const jadwalData = [
     {
       nama: "Rizky Akbar Maulana",
@@ -30,9 +34,11 @@ const MentoringAkanDatang = () => {
         "Saya ingin lebih mendalami Design UI/UX, terutama cara pembuatan design yang responsive.",
       status_mentoring: "Masukan Link",
     },
-    
   ];
+
   return (
+    <div>
+      <MyDropdown/>
     <div className="d-flex flex-column gap-3">
       {jadwalData.map((jadwal, index) => (
         <CardJadwalMentor
@@ -43,8 +49,14 @@ const MentoringAkanDatang = () => {
           harga={jadwal.harga}
           detail_materi={jadwal.detail_materi}
           status_mentoring={jadwal.status_mentoring}
+          onLinkClick={() => setShowPopup(true)}
         />
       ))}
+      {/* Tampilkan popup jika showPopup bernilai true */}
+      {showPopup && (
+        <PopupLink show={showPopup} onClose={() => setShowPopup(false)} />
+      )}
+    </div>
     </div>
   );
 };

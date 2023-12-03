@@ -1,4 +1,5 @@
 import CardPesanan from "../card/CardPesanan";
+import MyDropdown from "../dropdown/Dropdown3";
 
 const Order = () => {
   const orderData = [
@@ -59,6 +60,8 @@ const Order = () => {
     },
   ];
   return (
+    <div>
+      <MyDropdown/>
     <div className="d-flex flex-column gap-3">
       {orderData.map((order, index) => (
         <CardPesanan
@@ -73,6 +76,7 @@ const Order = () => {
           tombol_2={order.tombol_2}
         />
       ))}
+      </div>
     </div>
   );
 };
