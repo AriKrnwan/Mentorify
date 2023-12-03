@@ -19,6 +19,7 @@ import { DetailMentor } from './components/detailMentor/DetailMentor';
 import Dashboard from './page_mentor/dashboard/Dashboard';
 import OrderSchedule from './page_mentor/orderSchedule/OrderSchedule';
 import ProfileMentor from './page_mentor/profile-mentor/Profile-mentor';
+import NotificationMentor from './pages/notification/NotificationMentor'
 
 function App() {
   useEffect (() => {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/orderschedule" element={<OrderSchedule/>}/>
         <Route path="/profile-mentor" element={<ProfileMentor/>}/>
+        <Route path="/notification-mentor" element={<NotificationMentor/>}/>
       </Routes>
     </div>
   );
