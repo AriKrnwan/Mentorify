@@ -1,6 +1,6 @@
 
 import { Col, Row } from 'react-bootstrap'
-import OffcanvasExample from '../../components/navbar/Navbar'
+import NavbarMentor from '../../components/navbar/NavbarMentor'
 import SidebarOrderSchedule from '../../components/sidebarOrderSchedule/SidebarOrderSchedule'
 import { useState } from 'react';
 import Order from '../../components/order/Order';
@@ -10,7 +10,7 @@ const OrderSchedule = () => {
   const [pesananJadwal, setPesananJadwal] = useState("pesanan");
   return (
     <div>
-      <OffcanvasExample />
+      <NavbarMentor />
       <div className="container-xxl  mx-auto">
         <Row>
           <Col lg="3">
