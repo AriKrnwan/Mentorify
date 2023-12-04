@@ -12,19 +12,19 @@ import ListAccept from '../../components/listNotificationMentoring/ListAccept';
 import ListDenied from '../../components/listNotificationMentoring/ListDenied';
 import ListPayDone from '../../components/listNotificationMentoring/ListPayDone';
 import ListPayDenied from '../../components/listNotificationMentoring/ListPayDenied'
-// import Footer from '../../components/footer/Footer';
+import Footer from '../../components/footer/Footer';
 
 
 const Notification = () => {
 
-    const [judul, setJudul] = useState("Notifikasi Mentoring")
+    const [judul, setJudul] = useState("Notifikasi Pesanan & Mentoring")
 
     const changeTextTop = () => {
         setJudul('Notifikasi Tanya & Jawab');
     };
 
     const changeTextDown = () => {
-        setJudul('Notifikasi Mentoring');
+        setJudul('Notifikasi Pesanan & Mentoring');
     };
 
     return ( 
@@ -92,7 +92,7 @@ const Notification = () => {
                         </Tab.Container>h
                     </Row>
                 </Container>
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     );
 }

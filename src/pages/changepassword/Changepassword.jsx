@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar/Navbar'
 import '../changepassword/Changepassword.css'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Footer from '../../components/footer/Footer'
 
 
 const Changepassword = () => {
@@ -28,6 +29,7 @@ const Changepassword = () => {
           </Button>
           </div>
     </Form>
+    <Footer/>
     </div>
       
   )
