@@ -10,7 +10,7 @@ const ProfileMentor = () => {
                 <div className="row border rounded">
                     <div className="text-center welcome-mentor">
                         <h5 className="mt-4">Selamat Datang Rizky Akbar Maulana</h5>
-                        <p>Lengkapi Data Dirimu dan Mulau Mentoring</p>
+                        <p>Lengkapi Data Dirimu dan Mulai Mentoring</p>
                     </div>
                     <FormMentor />
                 </div>

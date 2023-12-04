@@ -94,7 +94,7 @@ const Notification = () => {
                                     </Tab.Content>
                                 </ListGroup>
                             </Col>
-                        </Tab.Container>h
+                        </Tab.Container>
                     </Row>
                 </Container>
             <Footer/>
