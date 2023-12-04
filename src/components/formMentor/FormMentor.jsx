@@ -24,7 +24,7 @@ const FormMentor = () => {
             <div className="col-lg-10">
                 <div className="row form-mentor">
                     <TextField label="Nama" placeholder="Masukkan Nama" lg="6" />
-                    <DropdownField label="Pilih Opsi" placeholder="Pilih..." lg="6" options={[
+                    <DropdownField label="Jenis Kelamin" placeholder="Pilih..." lg="6" options={[
                         { value: 'l', label: 'Laki-Laki' },
                         { value: 'p', label: 'Perempuan' },
                     ]} />
@@ -34,7 +34,7 @@ const FormMentor = () => {
                     <TextField label="Domisili" placeholder="Masukkan Domisili" lg="6" />
                     <TextField label="Alamat Domisili" placeholder="Masukkan Alamat Domisili" lg="6" />
                     <TextField label="Institusi" placeholder="Masukkan Institusi" lg="6" />
-                    <TextAreaField label="Tentang" placeholder="Isi tentang diri kamu" lg="12" />
+                    <TextAreaField label="Tentang" placeholder="Isi tentang diri kamu" lg="12"  />
                     <h6 className="h6 mt-5">Latar Belakang</h6>
                     <DynamicTextFields label="Keahlian" placeholder="Masukkan Keahlian" />
                     <DynamicTextFields label="Disciplines" placeholder="Masukkan Disciplines" />
