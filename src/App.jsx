@@ -19,6 +19,8 @@ import { DetailMentor } from './components/detailMentor/DetailMentor';
 import Dashboard from './page_mentor/dashboard/Dashboard';
 import OrderSchedule from './page_mentor/orderSchedule/OrderSchedule';
 import ProfileMentor from './page_mentor/profile-mentor/Profile-mentor';
+import NotificationMentor from './pages/notification/NotificationMentor';
+import ChangepasswordMentor from './pages/changepassword/ChangepasswordMentor'
 import AturJadwal from './page_mentor/aturJadwal/aturJadwal';
 import TambahJadwal from './page_mentor/tambahJadwal/tambahJadwal';
 
@@ -48,8 +50,6 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/orderschedule" element={<OrderSchedule/>}/>
         <Route path="/profile-mentor" element={<ProfileMentor/>}/>
-        <Route path="/atur-jadwal" element={<AturJadwal/>}/>
-        <Route path="/tambah-jadwal" element={<TambahJadwal/>}/>
       </Routes>
     </div>
   );

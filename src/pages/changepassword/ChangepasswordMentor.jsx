@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
-import '../changepassword/Changepassword.css'
+import Navbar from '../../components/navbar/NavbarMentor'
+import '../changepassword/ChangepasswordMentor.css'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Footer from '../../components/footer/Footer'
+import Footer from '../../components/footer/Footer';
 
 
 const Changepassword = () => {

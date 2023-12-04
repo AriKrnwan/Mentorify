@@ -53,7 +53,7 @@ const Register = () => {
                   Lupa Password?
                 </a>
                 <button className="btn-login">
-                  <a href="/">Masuk</a>
+                  <a href="/">Daftar</a>
                 </button>
                 <p className="text-center my-4">Atau</p>
                 <button className="btn-google bg-image hover-zoom">

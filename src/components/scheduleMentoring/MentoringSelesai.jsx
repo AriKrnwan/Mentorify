@@ -6,6 +6,7 @@ const MentoringSelesai = () => {
     {
       nama: "Rizky Akbar Maulana",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
@@ -16,6 +17,7 @@ const MentoringSelesai = () => {
     {
       nama: "Asep Ganteng",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
@@ -34,6 +36,7 @@ const MentoringSelesai = () => {
           nama={riwayat.nama}
           durasi={riwayat.durasi}
           tanggal={riwayat.tanggal}
+          topic={riwayat.topic}
           harga={riwayat.harga}
           detail_materi={riwayat.detail_materi}
           status_mentoring={riwayat.status_mentoring}

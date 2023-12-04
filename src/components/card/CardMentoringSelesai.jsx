@@ -3,7 +3,7 @@ import { FiStar } from "react-icons/fi";
 import PropTypes from "prop-types";
 
 const CardMentoringSelesai = (props) => {
-  const { nama, tanggal, harga, detail_materi, durasi, ulasan } = props;
+  const { nama, tanggal,topic, harga, detail_materi, durasi, ulasan } = props;
   return (
     <div className="border rounded p-4 d-flex flex-column gap-3">
       <div className="d-flex justify-content-between ">
@@ -18,6 +18,10 @@ const CardMentoringSelesai = (props) => {
             <div className="cardPesananTime d-flex flex-column gap-1">
               <p className="mb-0">Waktu</p>
               <h5 className="mb-0">{tanggal}</h5>
+            </div>
+            <div className="cardPesananDetail d-flex flex-column gap-1">
+              <p className="mb-0">Topik</p>
+              <h5 className="mb-0">{topic}</h5>
             </div>
             <div className="cardPesananDetail d-flex flex-column gap-1">
               <p className="mb-0">Detail materi</p>
@@ -45,7 +49,7 @@ const CardMentoringSelesai = (props) => {
           <h5 className="mb-0">Ulasan</h5>
           <p className="mb-0">{ulasan}</p>
         </div>
-        <button className="btnMentoringSelesai border-0">Sembunyikan Penilaian</button>
+        
       </div>
     </div>
   );
@@ -55,6 +59,7 @@ CardMentoringSelesai.propTypes = {
   nama: PropTypes.string.isRequired,
   durasi: PropTypes.string.isRequired,
   tanggal: PropTypes.string.isRequired,
+  topic: PropTypes.string.isRequired,
   harga: PropTypes.string.isRequired,
   detail_materi: PropTypes.string.isRequired,
   ulasan: PropTypes.string.isRequired,

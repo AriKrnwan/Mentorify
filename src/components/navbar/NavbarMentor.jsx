@@ -6,7 +6,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FiBell } from "react-icons/fi";
 import Logo from '../../assets/image/Logo.svg';
-import profile from "../../assets/image/profile picture.jpg";
+import profile from "../../assets/image/mentor2.png";
 import "../navbar/Navbar.css";
 import { useNavigate } from 'react-router-dom';
 
@@ -65,7 +65,7 @@ function NavbarMentor() {
                     <NavLink to="/dashboard" exact activeClassName='active'>Dashboard</NavLink>
                     <NavLink to="/orderschedule" activeClassName='active'>Pesanan & Jadwal</NavLink>
                     <div className="d-flex gap-3">
-                        <NavLink to="/notification" activeClassName='active'>
+                        <NavLink to="/notification-mentor" activeClassName='active'>
                             <FiBell size="18px" />
                         </NavLink>
                     </div>
@@ -80,8 +80,8 @@ function NavbarMentor() {
                     }
                     id="basic-nav-dropdown"
                     >
-                    <NavDropdown.Item href="/profile-mentor">Men</NavDropdown.Item>
-                    <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
+                    <NavDropdown.Item href="/profile-mentor">Profile</NavDropdown.Item>
+                    <NavDropdown.Item href="/changepasswordmentor">Ganti Kata Sandi</NavDropdown.Item>
                     <NavDropdown.Item onClick={toMenteeMode}>Switch</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/login">Keluar</NavDropdown.Item>
