@@ -1,0 +1,43 @@
+:root {
+  --brand-colors-primary: #00a9b8;
+}
+
+.nav-atur_jadwal .heading-atur_jadwal {
+  color: var(--brand-colors-primary, #00a9b8);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.1px;
+}
+
+.nav-atur_jadwal p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.1px;
+}
+
+.nav-atur_jadwal .atur_jadwal {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #00a9b8;
+  /* background: var(--brand-colors-primary, #00a9b8); */
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px; /* 166.667% */
+}
+
+.nav-atur_jadwal .atur_jadwal:hover {
+    background: var(--brand-colors-primary, #00a9b8);
+    color: white;
+    border: none;
+}
