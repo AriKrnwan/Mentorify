@@ -19,7 +19,7 @@ const OrderSchedule = () => {
               pesananJadwal={pesananJadwal}
             />
 
-            {pesananJadwal === "pesanan" && <SidebarAturJadwal />}
+            {pesananJadwal === "jadwal" && <SidebarAturJadwal />}
           </Col>
           <Col lg="9">
             {pesananJadwal === "pesanan" && <Order />}
