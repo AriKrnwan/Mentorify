@@ -6,6 +6,7 @@ const CardJadwalMentor2 = (props) => {
     nama,
     tanggal,
     status_mentoring,
+    topic,
     detail_materi,
     durasi,
     onLinkClick,
@@ -27,6 +28,10 @@ const CardJadwalMentor2 = (props) => {
         <div className="cardPesananTime">
           <p className="mb-0">Waktu</p>
           <h5 className="mb-0">{tanggal}</h5>
+        </div>
+        <div className="cardPesananDetail">
+          <p className="mb-0">Topik</p>
+          <h5 className="mb-0">{topic}</h5>
         </div>
         <div className="cardPesananDetail">
           <p className="mb-0">Detail materi</p>
@@ -51,6 +56,7 @@ CardJadwalMentor2.propTypes = {
   durasi: PropTypes.string.isRequired,
   tanggal: PropTypes.string.isRequired,
   harga: PropTypes.string.isRequired,
+  topic: PropTypes.string.isRequired,
   status_mentoring: PropTypes.string.isRequired,
   detail_materi: PropTypes.string.isRequired,
   onLinkClick: PropTypes.func.isRequired,

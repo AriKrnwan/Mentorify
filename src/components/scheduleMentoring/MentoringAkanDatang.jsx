@@ -10,6 +10,7 @@ const MentoringAkanDatang = () => {
     {
       nama: "Rizky Akbar Maulana",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
@@ -19,6 +20,7 @@ const MentoringAkanDatang = () => {
     {
       nama: "Rizky Akbar Maulana",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
@@ -28,11 +30,12 @@ const MentoringAkanDatang = () => {
     {
       nama: "Rizky Akbar Maulana",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
         "Saya ingin lebih mendalami Design UI/UX, terutama cara pembuatan design yang responsive.",
-      status_mentoring: "Masukan Link",
+      status_mentoring: "Belum Waktunya",
     },
   ];
 
@@ -46,6 +49,7 @@ const MentoringAkanDatang = () => {
           nama={jadwal.nama}
           durasi={jadwal.durasi}
           tanggal={jadwal.tanggal}
+          topic={jadwal.topic}
           harga={jadwal.harga}
           detail_materi={jadwal.detail_materi}
           status_mentoring={jadwal.status_mentoring}

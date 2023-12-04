@@ -5,6 +5,7 @@ const CardJadwalMentor = (props) => {
   const {
     nama,
     tanggal,
+    topic,
     harga,
     status_mentoring,
     detail_materi,
@@ -24,6 +25,10 @@ const CardJadwalMentor = (props) => {
           <div className="cardPesananTime">
             <p className="mb-0">Waktu</p>
             <h5 className="mb-0">{tanggal}</h5>
+          </div>
+          <div className="cardPesananDetail">
+            <p className="mb-0">Topik</p>
+            <h5 className="mb-0">{topic}</h5>
           </div>
           <div className="cardPesananDetail">
             <p className="mb-0">Detail materi</p>
@@ -48,6 +53,7 @@ CardJadwalMentor.propTypes = {
   nama: PropTypes.string.isRequired,
   durasi: PropTypes.string.isRequired,
   tanggal: PropTypes.string.isRequired,
+  topic: PropTypes.string.isRequired,
   harga: PropTypes.string.isRequired,
   status_mentoring: PropTypes.string.isRequired,
   detail_materi: PropTypes.string.isRequired,

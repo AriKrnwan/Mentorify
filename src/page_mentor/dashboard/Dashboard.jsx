@@ -8,6 +8,7 @@ import CardJadwalMentor2 from "../../components/card/CardJadwalMentor2";
 import { useState } from "react";
 import PopupLink from "../../components/scheduleMentoring/PopupLink";
 
+
 const Dashboard = () => {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -16,6 +17,7 @@ const Dashboard = () => {
     {
       nama: "Rizky Akbar Maulana",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
@@ -25,11 +27,12 @@ const Dashboard = () => {
     {
       nama: "Rizky Akbar Maulana",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
         "Saya ingin lebih mendalami Design UI/UX, terutama cara pembuatan design yang responsive.",
-      status_mentoring: "Masukan Link",
+      status_mentoring: "Mentoring Sekarang",
     },
   ];
 
@@ -38,6 +41,7 @@ const Dashboard = () => {
     {
       nama: "Rizky Akbar Maulana",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
@@ -49,6 +53,7 @@ const Dashboard = () => {
     {
       nama: "Rizky Akbar Maulana",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
       detail_materi:
@@ -86,14 +91,7 @@ const Dashboard = () => {
                 <p className="mb-0">15 November 2023</p>
               </div>
               <h3 className="mb-0">Rp280.000</h3>
-              <div className="d-flex justify-content-between spent">
-                <p className="mb-0">Spent</p>
-                <p className="mb-0">Rp140.000</p>
-              </div>
-              <div className="d-flex justify-content-between income">
-                <p className="mb-0">Income</p>
-                <p className="mb-0">Rp140.000</p>
-              </div>
+              
             </div>
           </Col>
         </Row>
@@ -138,7 +136,7 @@ const Dashboard = () => {
                 <FaFile fill="#E2B93B" size={24} />
               </div>
               <div className="keterangan">
-                <h3 className="mb-0">4,7/4 (25 ulasan) </h3>
+                <h3 className="mb-0">4,7/5 (25 ulasan) </h3>
                 <p className="mb-0">Total Pesanan Masuk</p>
               </div>
             </div>
@@ -155,6 +153,7 @@ const Dashboard = () => {
                   nama={order.nama}
                   durasi={order.durasi}
                   tanggal={order.tanggal}
+                  topic={order.topic}
                   harga={order.harga}
                   detail_materi={order.detail_materi}
                   status_pesanan={order.status_pesanan}
@@ -173,6 +172,7 @@ const Dashboard = () => {
                   nama={jadwal.nama}
                   durasi={jadwal.durasi}
                   tanggal={jadwal.tanggal}
+                  topic={jadwal.topic}
                   harga={jadwal.harga}
                   detail_materi={jadwal.detail_materi}
                   status_mentoring={jadwal.status_mentoring}

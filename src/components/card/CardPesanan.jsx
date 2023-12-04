@@ -5,6 +5,7 @@ const CardPesanan = (props) => {
   const {
     nama,
     tanggal,
+    topic,
     harga,
     status_pesanan,
     detail_materi,
@@ -27,6 +28,10 @@ const CardPesanan = (props) => {
             <h5 className="mb-0">{tanggal}</h5>
           </div>
           <div className="cardPesananDetail">
+            <p className="mb-0">Topik</p>
+            <h5 className="mb-0">{topic}</h5>
+          </div>
+          <div className="cardPesananDetail">
             <p className="mb-0">Detail materi</p>
             <h5 className="mb-0">{detail_materi}</h5>
           </div>
@@ -37,7 +42,7 @@ const CardPesanan = (props) => {
               {tombol_1}
             </div>
             <div
-              className={` d-flex justify-content-center align-items-center mb-0 ${tombol_1}`}
+              className={` d-flex justify-content-center align-items-center mb-0 ${tombol_2}`}
             >
               {tombol_2}
             </div>
@@ -57,6 +62,7 @@ CardPesanan.propTypes = {
   nama: PropTypes.string.isRequired,
   durasi: PropTypes.string.isRequired,
   tanggal: PropTypes.string.isRequired,
+  topic: PropTypes.string.isRequired,
   harga: PropTypes.string.isRequired,
   status_pesanan: PropTypes.string.isRequired,
   detail_materi: PropTypes.string.isRequired,
