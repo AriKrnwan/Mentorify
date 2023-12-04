@@ -1,0 +1,25 @@
+.add-jadwal .form-control {
+    height: 44px;
+    font-size: 0.9rem;
+}
+
+.add-jadwal .form-label::placeholder {
+    color: #bdbdbd;
+}
+
+.add-jadwal .form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.add-jadwal .btn {
+    height: 44px;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none !important;
+}
+
+.add-jadwal .btn:active {
+    background-color: #00A9B8;
+}

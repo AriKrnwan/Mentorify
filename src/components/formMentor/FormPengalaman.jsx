@@ -13,7 +13,7 @@ const FormPengalaman = () => {
     return (
         <>
             {pengalamanForms.map((formIndex) => (
-                <div key={formIndex} className='row pengalaman'>
+                <div key={formIndex} className='row pengalaman px-0 mx-auto'>
                     <p className="mt-2 mb-1">Pengalaman {formIndex}</p>
                     <TextField label="Posisi" placeholder="Masukkan Posisi" lg="6" />
                     <TextField label="Status" placeholder="Masukkan Status" lg="6" />

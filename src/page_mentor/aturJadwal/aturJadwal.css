@@ -1,0 +1,75 @@
+.form-harga .form-control {
+    height: 44px;
+    font-size: 0.9rem;
+}
+
+.form-harga .form-control::placeholder {
+    color: #bdbdbd;
+}
+
+.form-harga .form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.form-harga .btn {
+    height: 44px;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none !important;
+}
+
+.form-harga .btn:active {
+    background-color: #00A9B8;
+}
+
+.action-jadwal .icon-delete,
+.action-jadwal .icon-update {
+    width: 38px;
+    height: 38px;
+}
+
+.action-jadwal .icon-delete {
+    background-color: #EB5757;
+    box-shadow: none;
+}
+
+.action-jadwal .icon-delete:hover {
+    background-color: #c73c3c;
+}
+
+.action-jadwal .icon-update {
+    background-color: #2F80ED;
+    box-shadow: none;
+}
+
+.action-jadwal .icon-update:hover {
+    background-color: #1962c2;
+}
+
+.action-jadwal .tambah-jadwal {
+    font-size: 0.75rem;
+    height: 38px;
+}
+
+.table-jadwal {
+    font-size: 0.9rem;
+}
+
+.table-jadwal thead {
+    height: 50px;
+}
+
+.table>thead,
+.table>tbody {
+    vertical-align: middle;
+}
+
+.table-jadwal tbody td {
+    height: 50px;
+}
+
+.table-jadwal tr.selected-row {
+    background-color: #e6f7ff; /* Add your desired background color for the selected row */
+  }

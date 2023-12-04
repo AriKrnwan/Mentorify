@@ -13,7 +13,7 @@ const FormSertif = () => {
     return (
         <>
             {sertifForms.map((formIndex) => (
-                <div key={formIndex} className='row pengalaman'>
+                <div key={formIndex} className='row pengalaman px-0 mx-auto'>
                     <p className="mt-2 mb-1">Lisensi & Sertifikat {formIndex}</p>
                     <TextField label="Nama" placeholder="Masukkan Nama Sertifikat" lg="6" />
                     <TextField label="Instansi" placeholder="Masukkan Instansi" lg="6" />
