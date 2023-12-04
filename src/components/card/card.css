@@ -66,6 +66,7 @@
   font-family: Poppins;
   font-size: 12px;
   font-weight: 500;
+  line-height: 25px;
 }
 
 .cardPesananTime h5,
@@ -220,7 +221,8 @@
   font-weight: 600;
 }
 
-.kualiatsMentorSelesai h5, .ulasanMentorSelesai h5 {
+.kualiatsMentorSelesai h5,
+.ulasanMentorSelesai h5 {
   color: var(--grey-colors-gray-4, #bdbdbd);
   font-family: Poppins;
   font-size: 12px;
@@ -228,19 +230,102 @@
 }
 
 .ulasanMentorSelesai p {
-  color:  #1D1D1D;
-font-family: Poppins;
-font-size: 14px;
-font-weight: 500;
+  color: #1d1d1d;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .btnMentoringSelesai {
-  color: var(--black-colors-white, #FFF);
-font-family: Poppins;
-font-size: 16px;
-font-weight: 500;
-height: 50px;
-padding: 10px;
-border-radius: 10px;
-background: var(--brand-colors-primary, #00A9B8);
+  color: var(--black-colors-white, #fff);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--brand-colors-primary, #00a9b8);
+}
+
+/* =========Card Jadwal Mentor 2================= */
+
+.dashboad .fotoProfileMentor {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dashboad .cardPesananName h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dashboad .cardPesananName h6 {
+  color: var(--grey-colors-gray-4, #bdbdbd);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dashboad .cardPesananTime h5,
+.dashboad .cardPesananDetail h5 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.dashboad .cardPesananDetail h5 {
+  width: 265px;
+}
+
+.dashboard .cardPesananStatus .Mentoring.Sekarang {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 12px;
+  display: flex;
+  height: 44px;
+  width: 100%;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background: var(--brand-colors-primary, #00a9b8);
+  cursor: pointer;
+}
+
+.dashboard .cardPesananStatus .Masukan.Link {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 12px;
+  display: flex;
+  height: 44px;
+  width: 100%;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background: var(--state-colors-info);
+  cursor: pointer;
+}
+
+.dashboard .cardPesananStatus .Belum.Waktunya {
+  color: var(--grey-colors-gray-3);
+  font-family: Poppins;
+  font-size: 12px;
+  display: flex;
+  height: 44px;
+  width: 100%;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 10px;
+  background: var(--grey-colors-gray-5);
+  cursor: pointer;
 }

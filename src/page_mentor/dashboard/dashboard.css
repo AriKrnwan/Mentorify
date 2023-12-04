@@ -1,0 +1,146 @@
+:root {
+  --black-colors-black-3: #282828;
+  --brand-colors-primary: #00a9b8;
+  --grey-colors-gray-4: #bdbdbd;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.dashboard.atas {
+  margin-top: 90px;
+}
+
+.dashboard-hero {
+  height: 190px;
+  border-radius: 20px;
+  background: #fafaff;
+}
+
+.dashboard-img {
+  width: 600px;
+}
+
+.dashboard-img img {
+  top: 85px;
+  left: 60px;
+}
+
+.dashboard-heading h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 145.8%;
+  text-transform: capitalize;
+}
+
+.dashboard-heading p {
+  color: var(--black-colors-black-3);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145.8%; /* 20.412px */
+}
+
+.dashboard-saldo {
+  height: 190px;
+}
+
+.dashboard-saldo h3 {
+  color: var(--brand-colors-primary, #00a9b8);
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.dashboard-saldo .saldo-saya h5 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.dashboard-saldo .saldo-saya p {
+  color: var(--grey-colors-gray-4, #bdbdbd);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dashboard-saldo .spent p:nth-child(1),
+.dashboard-saldo .income p:nth-child(1) {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.dashboard-saldo .spent p:nth-child(2),
+.dashboard-saldo .income p:nth-child(2) {
+  color: var(--brand-colors-primary, #00a9b8);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.dashboard .pesanan-masuk,
+.dashboard .sesi-selesai,
+.dashboard .sesi-masuk,
+.dashboard .ulasan {
+  height: 112px;
+}
+
+.dashboard .pesanan-masuk .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(47, 128, 237, 0.1);
+}
+
+.dashboard .ulasan .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  background: rgba(226, 185, 59, 0.1);
+}
+
+.dashboard .sesi-masuk .icon,
+.dashboard .sesi-selesai .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  background: rgba(39, 174, 96, 0.1);
+}
+
+.dashboard .pesanan-masuk .keterangan h3,
+.dashboard .sesi-masuk .keterangan h3,
+.dashboard .sesi-selesai .keterangan h3 {
+  color: var(--black-colors-black-3, #282828);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dashboard .ulasan .keterangan h3 {
+  color: var(--black-colors-black-3, #282828);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dashboard .pesanan-masuk .keterangan p {
+  color: var(--grey-colors-gray-4, #bdbdbd);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dashboard .order-masuk h1, .dashboard .jadwal-mentoring h1 {
+  color: var(--brand-colors-primary, #00a9b8);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+}
