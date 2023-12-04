@@ -31,7 +31,7 @@ function FilterDropdown() {
         {
             id: 'harga',
             label: 'Harga',
-            items: ['Rp 50.000', 'Rp 30.000.000'],
+            items: ['Rp 50.000', 'Rp 30.000'],
         },
         {
             id: 'jam',
