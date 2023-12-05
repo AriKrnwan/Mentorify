@@ -16,7 +16,7 @@ const AturJadwal = () => {
 
   const navigate = useNavigate();
     const toAddJadwal = () => {
-      navigate('/tambah-jadwal');
+      navigate('/orderschedule/tambah-jadwal');
     };
 
   return (
