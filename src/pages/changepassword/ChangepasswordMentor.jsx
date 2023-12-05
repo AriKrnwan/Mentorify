@@ -29,7 +29,7 @@ const Changepassword = () => {
           </Button>
           </div>
     </Form>
-    <Footer/>
+    {/* <Footer/> */}
     </div>
       
   )

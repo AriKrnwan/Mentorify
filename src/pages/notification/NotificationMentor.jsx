@@ -19,33 +19,37 @@ const Notification = () => {
                                 <ListGroup className='border-notifikasi-notif'>
                                     <h4 className='judul-mentoring'>Notifikasi Pesanan & Mentoring</h4>
                                     <Tab.Content>
-                                            <Tab.Pane eventKey="#mentoring">{<ListAccept 
-                                            judul="Pesanan Mentoring Masuk"
-                                            status="Silahkan untuk menerima atau menolak pesanan ini."
-                                            waktu="18-11-2023 14:07"
-                                            gambar={profile_mentor}/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<ListDenied 
-                                            judul="Pembayaran Kadaluarsa"
-                                            status="Mentee tidak melakukan pembayaran dalam kurun waktu tertentu."
-                                            waktu="18-11-2023 14:07"
-                                            gambar={profile_mentor}/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<ListPayDone
-                                            judul="Proses pembayaran selesai"
-                                            status="Mentee telah melakukan pembayaran. Sekarang Masukkan link untuk memulai mentoring."
-                                            waktu="18-11-2023 14:07"
-                                            gambar={profile_mentor}/>}</Tab.Pane>
-                                            <Tab.Pane eventKey="#mentoring">{<List 
-                                            judul="Mentoring sekarang"
-                                            status="Waktunya mentoring bersama mentee!"
-                                            waktu="18-11-2023 14:07"
-                                            gambar={profile_mentor}/>}</Tab.Pane>
+                                        <Tab.Pane eventKey="#mentoring">{<ListAccept 
+                                        judul="Pesanan Mentoring Masuk"
+                                        status="Silahkan untuk menerima atau menolak pesanan ini."
+                                        waktu="18-11-2023 14:07"
+                                        gambar={profile_mentor}/>}
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="#mentoring">{<ListDenied 
+                                        judul="Pembayaran Kadaluarsa"
+                                        status="Mentee tidak melakukan pembayaran dalam kurun waktu tertentu."
+                                        waktu="18-11-2023 14:07"
+                                        gambar={profile_mentor}/>}
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="#mentoring">{<ListPayDone
+                                        judul="Proses pembayaran selesai"
+                                        status="Mentee telah melakukan pembayaran. Sekarang Masukkan link untuk memulai mentoring."
+                                        waktu="18-11-2023 14:07"
+                                        gambar={profile_mentor}/>}
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="#mentoring">{<List 
+                                        judul="Mentoring sekarang"
+                                        status="Waktunya mentoring bersama mentee!"
+                                        waktu="18-11-2023 14:07"
+                                        gambar={profile_mentor}/>}
+                                        </Tab.Pane>
                                     </Tab.Content>
                                 </ListGroup>
                             </Col>
                         </Tab.Container>
                     </Row>
                 </Container>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     );
 }

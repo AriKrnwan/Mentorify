@@ -6,9 +6,9 @@ const Footer = () => {
     <div className="mt-5">
       <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="1437"
+            width="100%"
             height="150"
-            viewBox="0 0 1437 150"
+            viewBox="0 0 1000 150"
             fill="none"
             style={{marginBottom: '-60px'}}
           >

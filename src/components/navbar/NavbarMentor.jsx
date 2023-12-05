@@ -81,7 +81,7 @@ function NavbarMentor() {
                     id="basic-nav-dropdown"
                     >
                     <NavDropdown.Item href="/profile-mentor">Profile</NavDropdown.Item>
-                    <NavDropdown.Item href="/changepasswordmentor">Ganti Kata Sandi</NavDropdown.Item>
+                    <NavDropdown.Item href="/ganti-password">Ganti Kata Sandi</NavDropdown.Item>
                     <NavDropdown.Item onClick={toMenteeMode}>Switch</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="/login">Keluar</NavDropdown.Item>

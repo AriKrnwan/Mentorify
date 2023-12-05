@@ -50,7 +50,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/orderschedule" element={<OrderSchedule/>}/>
         <Route path="/profile-mentor" element={<ProfileMentor/>}/>
-        <Route path="/notifikasi-mentor" element={<NotificationMentor/>}/>
+        <Route path="/notification-mentor" element={<NotificationMentor/>}/>
         <Route path="/ganti-password" element={<ChangepasswordMentor/>}/>
         <Route path="/atur-jadwal" element={<AturJadwal/>}/>
         <Route path="/tambah-jadwal" element={<TambahJadwal/>}/>
