@@ -52,8 +52,8 @@ function App() {
         <Route path="/profile-mentor" element={<ProfileMentor/>}/>
         <Route path="/notification-mentor" element={<NotificationMentor/>}/>
         <Route path="/ganti-password" element={<ChangepasswordMentor/>}/>
-        <Route path="/atur-jadwal" element={<AturJadwal/>}/>
-        <Route path="/tambah-jadwal" element={<TambahJadwal/>}/>
+        <Route path="/orderschedule/atur-jadwal" element={<AturJadwal/>}/>
+        <Route path="/orderschedule/tambah-jadwal" element={<TambahJadwal/>}/>
       </Routes>
     </div>
   );

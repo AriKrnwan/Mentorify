@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const SidebarAturJadwal = () => {
     const navigate = useNavigate();
     const toMentoring = () => {
-        navigate('/mentoring');
+        navigate('/orderschedule/atur-jadwal');
     };
   return (
     <div className="position-fixed " style={{ width: "306px", top: "300px" }}>

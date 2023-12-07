@@ -131,7 +131,10 @@
   font-weight: 600;
 }
 
-.dashboard .pesanan-masuk .keterangan p {
+.dashboard .pesanan-masuk .keterangan p, 
+.dashboard .sesi-masuk .keterangan p, 
+.dashboard .sesi-selesai .keterangan p, 
+.dashboard .ulasan .keterangan p {
   color: var(--grey-colors-gray-4, #bdbdbd);
   font-family: Poppins;
   font-size: 12px;
