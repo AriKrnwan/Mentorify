@@ -36,7 +36,7 @@ function FilterDropdown() {
         {
             id: 'jam',
             label: 'Jam',
-            items: ['09:00', '10:00', '11:00', '12:00'],
+            items: ['09:00 pm', '10:00 pm', '11:00 pm', '12:00 pm'],
         },
     ];
 
