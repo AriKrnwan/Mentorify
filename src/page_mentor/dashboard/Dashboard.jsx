@@ -24,16 +24,6 @@ const Dashboard = () => {
         "Saya ingin lebih mendalami Design UI/UX, terutama cara pembuatan design yang responsive.",
       status_mentoring: "Mentoring Sekarang",
     },
-    {
-      nama: "Rizky Akbar Maulana",
-      tanggal: "14 November 2023 pukul 09:00 - 10:00",
-      topic: "UX Design",
-      harga: "Rp50.000",
-      durasi: "60 Menit",
-      detail_materi:
-        "Saya ingin lebih mendalami Design UI/UX, terutama cara pembuatan design yang responsive.",
-      status_mentoring: "Mentoring Sekarang",
-    },
   ];
 
   // Data untuk card pesanan masuk
@@ -49,18 +39,6 @@ const Dashboard = () => {
       status_pesanan: "",
       tombol_1: "Diterima",
       tombol_2: "Ditolak",
-    },
-    {
-      nama: "Rizky Akbar Maulana",
-      tanggal: "14 November 2023 pukul 09:00 - 10:00",
-      topic: "UX Design",
-      harga: "Rp50.000",
-      durasi: "60 Menit",
-      detail_materi:
-        "Saya ingin lebih mendalami Design UI/UX, terutama cara pembuatan design yang responsive.",
-      status_pesanan: "Menunggu Mentee Membayar",
-      tombol_1: "",
-      tombol_2: "",
     },
   ];
 

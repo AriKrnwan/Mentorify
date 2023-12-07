@@ -62,12 +62,12 @@ function OffcanvasExample() {
             <Offcanvas.Header closeButton />
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 align-items-center gap-5">
-                <NavLink to="/" exact activeClassName='active'>Home</NavLink>
-                <NavLink to="/mentoring" activeClassName='active'>Mentoring</NavLink>
-                <NavLink to="/qna" activeClassName='active'>Tanya & Jawab</NavLink>
-                <NavLink to="/schedule" activeClassName='active'>Jadwal</NavLink>
+                <NavLink to="/" activeclassname='active'>Home</NavLink>
+                <NavLink to="/mentoring" activeclassname='active'>Mentoring</NavLink>
+                <NavLink to="/qna" activeclassname='active'>Tanya & Jawab</NavLink>
+                <NavLink to="/schedule" activeclassname='active'>Jadwal</NavLink>
                 <div className="d-flex gap-3">
-                  <NavLink to="/notification" activeClassName='active'>
+                  <NavLink to="/notification" activeclassname='active'>
                     <FiBell size="18px" />
                   </NavLink>
                   <NavLink to="/save">

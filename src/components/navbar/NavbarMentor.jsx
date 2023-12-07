@@ -62,10 +62,10 @@ function NavbarMentor() {
                 <Offcanvas.Header closeButton />
                 <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 align-items-center gap-5">
-                    <NavLink to="/dashboard" exact activeClassName='active'>Dashboard</NavLink>
-                    <NavLink to="/orderschedule" activeClassName='active'>Pesanan & Jadwal</NavLink>
+                    <NavLink to="/dashboard" activeclassname='active'>Dashboard</NavLink>
+                    <NavLink to="/orderschedule" activeclassname='active'>Pesanan & Jadwal</NavLink>
                     <div className="d-flex gap-3">
-                        <NavLink to="/notification-mentor" activeClassName='active'>
+                        <NavLink to="/notification-mentor" activeclassname='active'>
                             <FiBell size="18px" />
                         </NavLink>
                     </div>
