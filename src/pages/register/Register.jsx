@@ -1,11 +1,38 @@
 import Logo from "../../assets/image/Logo.svg";
-// import Amico from "../login/amico.svg";
-import Google from "../login/google.png";
+import Google from "../../assets/image/google.png";
 import "../register/Register.css";
 import { FiEye } from "react-icons/fi";
 import UncontrolledExample from "../../components/carousels/Carousels";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const Register = () => {
+const Register= () => {
+
+  const [inputData, setinputData] = useState({
+    name:"",
+    email:"",
+    password:""
+  });
+
+  const navigate = useNavigate();
+
+  const inputChange = (e) =>{
+    setinputData((prev) => ({...prev, [e.target.name]: e.target.value}));
+  };
+
+  const sendData = async e => {
+    e.preventDefault();
+    try{
+      await axios.post("http://localhost:3000/senddata", inputData);
+      navigate("/");
+    }catch(err){
+      console.log(err);
+    }
+  }
+
+  console.log(inputData);
+
   return (
     <div>
       <section className="login d-flex">
@@ -32,6 +59,8 @@ const Register = () => {
                   className="form-control"
                   id="name"
                   placeholder="Masukan Nama Lengkap"
+                  name="name"
+                  onChange={inputChange}
                 />
                 <label className="form-label">Email</label>
                 <input
@@ -39,6 +68,8 @@ const Register = () => {
                   className="form-control"
                   id="email"
                   placeholder="Masukan Email"
+                  name="email"
+                  onChange={inputChange}
                 />
                 <label className="form-label">Password</label>
                 <input
@@ -46,13 +77,16 @@ const Register = () => {
                   className="form-control"
                   id="password"
                   placeholder="Masukan Password"
-                  icon={FiEye}
-                />{" "}
-                <a icon={FiEye}></a>
+                  name="password"
+                  onChange={inputChange}
+                  // icon={FiEye}
+                />
+                {/* {" "} */}
+                {/* <a icon={FiEye}></a> */}
                 <a href="#" className="text-end d-block">
                   Lupa Password?
                 </a>
-                <button className="btn-login">
+                <button className="btn-login" onClick={sendData}>
                   <a href="/">Daftar</a>
                 </button>
                 <p className="text-center my-4">Atau</p>

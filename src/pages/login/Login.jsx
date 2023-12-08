@@ -1,7 +1,6 @@
 import Logo from "../../assets/image/Logo.svg";
 import UncontrolledExample from "../../components/carousels/Carousels";
-// import Amico from '../login/amico.svg';
-import Google from "../login/google.png";
+import Google from "../../assets/image/google.png";
 import "../login/Login.css";
 import { FiEye } from "react-icons/fi";
 

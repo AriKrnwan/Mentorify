@@ -1,5 +1,6 @@
 import Express from "express";
-import Mysql from   "mysql";
+import Mysql from "mysql";
+import Cors from "cors";
 
 const app = Express();
 
@@ -10,7 +11,8 @@ const db = Mysql.createConnection({
     database:"massive_database"
 });
 
-app.use(Express.json())
+app.use(Express.json());
+app.use(Cors());
 
 app.get("/", (req, res)=> {
     res.json("hello world and hello");
@@ -25,10 +27,10 @@ app.get("/getdata", (req,res)=> {
 });
 
 app.post("/senddata", (req,res)=> {
-    const q = "INSERT INTO data (`name`, `class`, `password`) VALUES(?)";
+    const q = "INSERT INTO data (`name`, `email`, `password`) VALUES(?)";
     const values = [
         req.body.name,
-        req.body.class,
+        req.body.email,
         req.body.password
     ]
     db.query(q, [values], (err) => {
@@ -38,5 +40,5 @@ app.post("/senddata", (req,res)=> {
 });
 
 app.listen (3000, () => {
-    console.log("Server is running cuyyy");
+    console.log("Server is running");
 });
