@@ -61,57 +61,72 @@ const Register = () => {
                 <h1>Daftar</h1>
               </div>
 
-              <div className="login-form">
-                <label className="form-label">Nama Lengkap</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  placeholder="Masukan Nama Lengkap"
-                />
-                <label className="form-label">Email</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  placeholder="Masukan Email"
-                />
-                <label className="form-label">Password</label>
-                <div className="password-input-wrapper">
+              <div className="login-form d-flex flex-column gap-3">
+                <div>
+                  <label className="form-label mb-0">Nama Lengkap</label>
                   <input
-                    type={showPassword ? "text" : "password"}
+                    type="text"
                     className="form-control"
-                    id="password"
-                    placeholder="Masukan Password"
-                    value={password}
-                    onChange={handlePasswordChange}
+                    id="name"
+                    placeholder="Masukan Nama Lengkap"
                   />
-                  <div className="eye-icon" onClick={togglePasswordVisibility}>
-                    {showPassword ? <FiEyeOff /> : <FiEye />}
+                </div>
+                <div>
+                  <label className="form-label mb-0">Email</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    placeholder="Masukan Email"
+                  />
+                </div>
+                <div>
+                  <label className="form-label mb-0">Password</label>
+                  <div className="password-input-wrapper">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      className="form-control"
+                      id="password"
+                      placeholder="Masukan Password"
+                      value={password}
+                      onChange={handlePasswordChange}
+                    />
+                    <div
+                      className="eye-icon"
+                      onClick={togglePasswordVisibility}
+                    >
+                      {showPassword ? <FiEyeOff /> : <FiEye />}
+                    </div>
                   </div>
                 </div>
-                <label className="form-label">Konfirmasi Password</label>
-                <input
-                  type="password"
-                  className={`form-control ${passwordMismatch ? "is-invalid" : ""}`}
-                  id="confirmPassword"
-                  placeholder="Konfirmasi Password"
-                  value={confirmPassword}
-                  onChange={handleConfirmPasswordChange}
-                />
-                {passwordMismatch && (
-                  <div className="invalid-feedback">Password tidak sesuai.</div>
-                )}
+                <div>
+                  <label className="form-label mb-0">Konfirmasi Password</label>
+                  <input
+                    type="password"
+                    className={`form-control ${
+                      passwordMismatch ? "is-invalid" : ""
+                    }`}
+                    id="confirmPassword"
+                    placeholder="Konfirmasi Password"
+                    value={confirmPassword}
+                    onChange={handleConfirmPasswordChange}
+                  />
+                  {passwordMismatch && (
+                    <div className="invalid-feedback">
+                      Password tidak sesuai.
+                    </div>
+                  )}
+                </div>
                 <button className="btn-login" onClick={handleSubmit}>
                   Daftar
                 </button>
-                <p className="text-center my-4">Atau</p>
-                <button className="btn-google bg-image hover-zoom">
+                <p className="text-center mb-0">Atau</p>
+                <button className="btn-google bg-image hover-zoom d-flex align-items-center justify-content-center gap-2">
                   <img className="google" src={Google} alt="Google" />
                   Masuk dengan Google
                 </button>
                 <span className="text-center d-block mt-2">
-                  Belum punya akun? <a href="/register">Daftar Sekarang</a>
+                  Sudah punya akun? <a href="/login">Masuk Sekarang</a>
                 </span>
               </div>
             </div>
