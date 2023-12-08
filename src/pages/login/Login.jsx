@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../../assets/image/Logo.svg";
 import UncontrolledExample from "../../components/carousels/Carousels";
-import Google from "../login/google.png";
+import Google from "../../assets/image/google.png";
 import "../login/Login.css";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 
