@@ -34,7 +34,7 @@ const DynamicNumberFields = (props) => {
                 </Form.Group>
             ))}
             <Button variant="primary" onClick={handleAddTextField}>
-                Tambah Field
+                Tambah
             </Button>
         </div>
     );

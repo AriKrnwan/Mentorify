@@ -6,23 +6,19 @@ import ProfileMentor from "../../assets/image/Mentor.png";
 import { FaStar } from "react-icons/fa";
 // import { LuHistory } from "react-icons/lu";
 import { useState } from "react";
-import SidebarJadwal from '../../components/sidebarJadwal/SidebarJadwal'
+import SidebarJadwal from "../../components/sidebarJadwal/SidebarJadwal";
 import Footer from "../../components/footer/Footer";
 
 const Schedule = () => {
-  const [mentoring, setMentoring] = useState('mentoring_aktif');
+  const [mentoring, setMentoring] = useState("mentoring_aktif");
 
-  // const handleMentoringAktif = () => {
-  //   setMentoring(false);
-  // };
-
-  // const handleMentoringSelai = () => {
-  //   setMentoring(true);
-  // };
+  const handleClick = () => {
+    const zoomUrl = 'https://us05web.zoom.us/j/82951006716?pwd=uf0jtJToWATdlA76JKs7uvbFY7qbV8.1';
+    window.open(zoomUrl, '_blank');
+  };
 
   const MentoringAktif = () => {
-    if (mentoring === 'mentoring_aktif') {
-      
+    if (mentoring === "mentoring_aktif") {
       return (
         <div>
           <Row className="mb-4">
@@ -50,9 +46,12 @@ const Schedule = () => {
                   <div className="d-flex flex-column text-end gap-4">
                     <div className="profileHarga d-flex flex-column">
                       <span>Rp 50.000</span>
-                      <span>Silver Meet - 60 Menit</span>
+                      <span>60 Menit</span>
                     </div>
-                    <button className="btn-Aktif border-0">
+                    <button
+                      className="btn-Aktif border-0"
+                      onClick={handleClick}
+                    >
                       Mentoring Sekarang
                     </button>
                   </div>
@@ -86,7 +85,7 @@ const Schedule = () => {
                   <div className="d-flex flex-column text-end gap-4">
                     <div className="profileHarga d-flex flex-column">
                       <span>Rp 50.000</span>
-                      <span>Silver Meet - 60 Menit</span>
+                      <span>60 Menit</span>
                     </div>
                     <button className="btn-disable border-0">
                       Belum Waktunya
@@ -105,8 +104,7 @@ const Schedule = () => {
   const [hover, setHover] = useState(null);
 
   const MentoringSelesai = () => {
-    if (mentoring === 'mentoring_selesai') {
-      
+    if (mentoring === "mentoring_selesai") {
       return (
         <div>
           <Row className="mb-4">
@@ -134,11 +132,8 @@ const Schedule = () => {
                   <div className="d-flex flex-column text-end gap-4">
                     <div className="profileHarga d-flex flex-column">
                       <span>Rp 50.000</span>
-                      <span>Silver Meet - 60 Menit</span>
+                      <span>60 Menit</span>
                     </div>
-                    <button className="btn-Aktif border-0">
-                      Lihat Appoinment
-                    </button>
                   </div>
                 </div>
                 <hr />
@@ -190,33 +185,15 @@ const Schedule = () => {
   };
 
   return (
-    <div >
+    <div>
       <Navbar />
 
-      <div style={{height:"100vh"}} className="container-xxl mx-auto d-flex flex-column">
+      <div
+        className="container-xxl mx-auto d-flex flex-column"
+      >
         <Row>
           <Col lg="3">
             <SidebarJadwal setMentoring={setMentoring} mentoring={mentoring} />
-            {/* <div className="navigasiJadwal">
-              <div className="jadwal"> Jadwal</div>
-              <div
-                className={mentoring ? "mAktif-f" : "mAktif aktif"}
-                onClick={handleMentoringAktif}
-              >
-                <span className=" d-flex gap-2 align-items-center">
-                  <FiUser size="24px" /> Mentoring Aktif
-                </span>
-              </div>
-              <div
-                className={mentoring ? "mSelesai aktif" : "mSelesai-f"}
-                onClick={handleMentoringSelai}
-              >
-                <span className=" d-flex gap-2 align-items-center">
-                  <LuHistory size={24} />
-                  Mentoring Selesai
-                </span>
-              </div>
-            </div> */}
           </Col>
           <Col lg-9={mentoring.toString()}>
             {MentoringAktif()}
@@ -224,7 +201,7 @@ const Schedule = () => {
           </Col>
         </Row>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

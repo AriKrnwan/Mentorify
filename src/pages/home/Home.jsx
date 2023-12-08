@@ -17,6 +17,7 @@ import imgAdvJoin from '../../assets/image/img-advJoin.png'
 import Footer from '../../components/footer/Footer';
 import { useNavigate } from 'react-router-dom';
 
+
 const Home = () => {
     const mentorsData = [
         {
@@ -61,6 +62,10 @@ const Home = () => {
     const toQna = () => {
         navigate('/qna');
     };
+
+    const handleClick = ()=> {
+       alert('Haii ini masih dalam prosess')
+    }
 
     return ( 
         <>
@@ -118,6 +123,7 @@ const Home = () => {
                             judul = "Download Aplikasi untuk Memulai Mentoring"
                             descPanjang = "Jelajahi potensi penuhmu! Unduh aplikasi kami sekarang untuk memulai perjalanan pengembangan diri dan kesuksesan. Bergabunglah dengan akses bimbingan langsung, materi eksklusif, serta peluang pertumbuhan karir yang tak terbatas!"
                             textButton='Download'
+                            
                         />
                     </div>
                     <div data-aos="fade-right">
@@ -126,6 +132,7 @@ const Home = () => {
                             judul = "Gabung Bersama Kami"
                             descPanjang = "Jadi mentor di aplikasi kami dan bagikan pengetahuan serta pengalamanmu untuk menginspirasi dan membimbing generasi berikutnya. Bergabunglah sekarang dan jadilah bagian dari komunitas yang saling mendukung dan tumbuh bersama"
                             textButton='Gabung Yuk!'
+                            onClick={handleClick}
                         />
                     </div>
                 </div>

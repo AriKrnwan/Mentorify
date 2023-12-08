@@ -1,11 +1,17 @@
+import { useState } from "react";
 import Logo from "../../assets/image/Logo.svg";
 import UncontrolledExample from "../../components/carousels/Carousels";
-// import Amico from '../login/amico.svg';
 import Google from "../login/google.png";
 import "../login/Login.css";
-import { FiEye } from "react-icons/fi";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
   return (
     <div className="overflow-hidden">
       <section className="login row">
@@ -18,38 +24,48 @@ const Login = () => {
           </div>
         </div>
 
-        <div className=" z-1 col-6 box-right rounded-start-5 d-flex align-items-center justify-content-center">
+        <div className="z-1 col-6 box-right rounded-start-5 d-flex align-items-center justify-content-center">
           <div className="row w-100">
             <div className="col-10 mx-auto">
               <div className="header">
                 <h1>Masuk</h1>
               </div>
 
-              <div className="login-form">
-                <label className="form-label">Email</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  placeholder="Masukan Email"
-                />
-                <label className="form-label">Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  placeholder="Masukan Password"
-                  icon={FiEye}
-                />{" "}
-                <a icon={FiEye}></a>
+              <div className="login-form d-flex flex-column gap-3">
+                <div>
+                  <label className="form-label">Email</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    placeholder="Masukan Email"
+                  />
+                </div>
+                <div>
+                  <label className="form-label">Password</label>
+                  <div className="password-input-wrapper">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      className="form-control"
+                      id="password"
+                      placeholder="Masukan Password"
+                    />
+                    <div
+                      className="eye-icon"
+                      onClick={togglePasswordVisibility}
+                    >
+                      {showPassword ? <FiEyeOff /> : <FiEye />}
+                    </div>
+                  </div>
+                </div>
                 <a href="#" className="text-end d-block">
                   Lupa Password?
                 </a>
                 <button className="btn-login">
                   <a href="/">Masuk</a>
                 </button>
-                <p className="text-center my-4">Atau</p>
-                <button className="btn-google bg-image hover-zoom">
+                <p className="text-center mb-0">Atau</p>
+                <button className="btn-google bg-image hover-zoom d-flex align-items-center justify-content-center gap-2">
                   <img className="google" src={Google} alt="Google" />
                   Masuk dengan Google
                 </button>

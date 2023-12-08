@@ -18,7 +18,7 @@ function ButtonIconLeft(props) {
 
 ButtonIconLeft.propTypes = {
     text: PropTypes.string.isRequired,
-    onClick: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
     icon: PropTypes.elementType,
 };
 

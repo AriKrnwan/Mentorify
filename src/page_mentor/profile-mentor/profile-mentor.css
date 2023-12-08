@@ -24,16 +24,15 @@
     right: 16px;
 }
 
--size: 0.9rem;
-}
 
 .form-mentor .form-control::placeholder,
 .form-mentor .form-select::placeholder {
     color: #bdbdbd;
-}.form-mentor .form-control,
+}
+.form-mentor .form-control,
 .form-mentor .form-select {
     height: 44px;
-    font
+}
 
 .form-mentor .form-label {
     font-size: 0.9rem;

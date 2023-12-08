@@ -9,8 +9,12 @@ const CardJadwalMentor2 = (props) => {
     topic,
     detail_materi,
     durasi,
-    onLinkClick,
+    link_zoom,
   } = props;
+
+  const handleClick = ()=> {
+    window.open(link_zoom, '_blank');
+  }
   return (
     <div className="d-flex border rounded justify-content-between p-3 gap-3 dashboad flex-column">
       <div className="d-flex gap-3">
@@ -39,9 +43,9 @@ const CardJadwalMentor2 = (props) => {
         </div>
       </div>
       <div className="cardPesananStatus d-flex flex-column gap-3 text-end">
-        {status_mentoring === "Masukan Link" ? (
-          <p onClick={onLinkClick} className={`mb-0 ${status_mentoring}`}>
-            Masukkan Link
+        {status_mentoring === "Mentoring Sekarang" ? (
+          <p onClick={handleClick} className={`mb-0 ${status_mentoring}`}>
+            Mentoring Sekarang
           </p>
         ) : (
           <p className={`mb-0 ${status_mentoring}`}>{status_mentoring}</p>
@@ -59,7 +63,7 @@ CardJadwalMentor2.propTypes = {
   topic: PropTypes.string.isRequired,
   status_mentoring: PropTypes.string.isRequired,
   detail_materi: PropTypes.string.isRequired,
-  onLinkClick: PropTypes.func.isRequired,
+  link_zoom: PropTypes.string.isRequired,
 };
 
 export default CardJadwalMentor2;

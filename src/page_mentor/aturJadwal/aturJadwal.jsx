@@ -6,6 +6,8 @@ import { FiTrash, FiEdit2 } from 'react-icons/fi';
 import Table from 'react-bootstrap/Table';
 import '../aturJadwal/aturJadwal.css';
 import { useNavigate } from 'react-router-dom';
+import DynamicTextFields from '../../components/formMentor/FormLatarBelakang';
+import DropdownField from '../../components/InputField/DropdownField';
 
 const AturJadwal = () => {
   const [selectedRow, setSelectedRow] = useState(null);
@@ -23,12 +25,22 @@ const AturJadwal = () => {
     <>
       <NavbarMentor />
       <div className="container-xxl mx-auto wrapper-profile-mentor">
-        <div className="row">
-          <div className="col-lg-4 form-harga ps-0">
+        <div className="row ">
+          <div className="col-lg-4 form-harga ps-0 d-flex flex-column gap-4">
             <div className="border p-3">
               <h6 className="h6">Tentukan Harga</h6>
-              <NumberField label="Harga" placeholder="Masukan Harga" />
+              <NumberField label="Harga" placeholder="Masukan Harga" lg='12' />
               <Button variant="primary">Update Harga</Button>
+            </div>
+            <div>
+            <DropdownField label="Pilih Zona Waktu" placeholder="Pilih..." lg="12" options={[
+                        { value: 'WIB', label: 'WIB' },
+                        { value: 'WIT', label: 'WIT' },
+                        { value: 'WITA', label: 'WIT' },
+                    ]} />
+            </div>
+            <div>
+            <DynamicTextFields label="Tentukan Topik" placeholder="Masukkan Topik" />
             </div>
           </div>
           <div className="col-lg-8 pe-0">

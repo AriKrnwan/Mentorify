@@ -69,10 +69,10 @@ export const DetailMentor = () => {
             <div className="d-flex flex-column gap-4">
               <div className="d-flex">
                 <div onClick={() => setUbahMenu("overview")} className={ubahMenu === "overview" ? "overview active" : "overview"}>
-                  Overview
+                Ikhtisar
                 </div>
                 <div onClick={() => setUbahMenu("review")} className={ubahMenu === "review" ? "review active" : "review"}>
-                  Review
+                  Ulasan
                 </div>
               </div>
 
@@ -145,7 +145,7 @@ export const DetailMentor = () => {
 
                 <div className="wrapper-harga-mentoring mt-3">
                   <h2>
-                    Rp50.000 <span>/Session (1 jam)</span>
+                    Rp50.000 <span>/Sesi (1 jam)</span>
                   </h2>
                   <h6>Untuk memulai pemesanan mentor unduh aplikasi</h6>
                 </div>
