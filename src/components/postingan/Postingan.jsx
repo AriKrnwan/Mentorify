@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { FiHeart, FiMessageCircle, FiShare2 } from "react-icons/fi";
+import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare } from "react-icons/fa";
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,6 +10,31 @@ function Postingan(props) {
     const navigate = useNavigate();
     const handleCommentClick = () => {
         navigate('/qna/detail-postingan');
+    };
+
+    const [filled, setFilled] = useState(false);
+    const [likeCount, setLikeCount] = useState(0);
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+    const handleClick = () => {
+        setFilled(!filled);
+        setLikeCount((prevCount) => (filled ? prevCount - 1 : prevCount + 1));
+    };
+
+    const handleShareClick = () => {
+        setDropdownOpen(!isDropdownOpen);
+    };
+
+    const openFacebook = () => {
+        window.open("https://www.facebook.com/", "_blank");
+    };
+
+    const openWhatsapp = () => {
+        window.open("https://web.whatsapp.com/", "_blank");
+    };
+
+    const openInstagram = () => {
+        window.open("https://www.instagram.com/", "_blank");
     };
 
     return (
@@ -25,17 +52,26 @@ function Postingan(props) {
                 <p className='mb-0'>{isi}</p>
             </div>
             <div className="action-group d-flex gap-3">
-                <div className="action d-flex align-items-center gap-2 p-1">
-                    <FiHeart size={18} />
-                    <p className='mb-0'>0 Like</p>
+                <div className="action d-flex align-items-center gap-2 p-1" onClick={handleClick} style={{ cursor: 'pointer' }}>
+                    <FiHeart fill={filled ? 'red' : 'white'} size={18} stroke={filled ? 'red' : 'black'} />
+                    <p className='mb-0'>{likeCount} Suka</p>
                 </div>
                 <div className="comment d-flex align-items-center gap-2 p-1" onClick={handleCommentClick}>
                     <FiMessageCircle size={18} />
-                    <p className='mb-0'>0 Comment</p>
+                    <p className='mb-0'>0 Komentar</p>
                 </div>
-                <div className="action d-flex align-items-center gap-2 p-1">
-                    <FiShare2 size={18} />
-                    <p className='mb-0'>Share</p>
+                <div className="action d-flex align-items-center gap-3">
+                    <div className="d-flex align-items-center gap-2 p-1" onClick={handleShareClick} style={{ cursor: 'pointer' }}>
+                        <FiShare2 size={18} />
+                        <p className='mb-0'>Bagikan</p>
+                    </div>
+                    {isDropdownOpen && (
+                        <div className="dropdown border p-2 rounded d-flex align-items-center gap-3">
+                            <FaFacebookSquare size={25} style={{ cursor: 'pointer' }} onClick={openFacebook} />
+                            <FaWhatsappSquare size={25} style={{ cursor: 'pointer' }} onClick={openWhatsapp} />
+                            <FaInstagramSquare size={25} style={{ cursor: 'pointer' }} onClick={openInstagram} />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
@@ -47,6 +83,6 @@ Postingan.propTypes = {
     waktu: PropTypes.string.isRequired,
     isi: PropTypes.string.isRequired,
     foto: PropTypes.string.isRequired,
-  };
+};
 
-export default Postingan
+export default Postingan;

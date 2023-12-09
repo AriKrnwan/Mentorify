@@ -1,6 +1,6 @@
 import "./sidebarAturJadwal.css";
 import { Col, Row } from "react-bootstrap";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
 const SidebarAturJadwal = () => {
@@ -31,9 +31,10 @@ const SidebarAturJadwal = () => {
   );
 };
 
-SidebarAturJadwal.propTypes = {
-  setPesananJadwal: PropTypes.func.isRequired,
-  pesananJadwal: PropTypes.string.isRequired,
-};
+// SidebarAturJadwal.propTypes = {
+//   setPesananJadwal: PropTypes.func.isRequired,
+//   pesananJadwal: PropTypes.string.isRequired,
+// };
+
 
 export default SidebarAturJadwal;

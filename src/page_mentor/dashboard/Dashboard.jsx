@@ -5,12 +5,11 @@ import { Col, Row } from "react-bootstrap";
 import { FaFile } from "react-icons/fa6";
 import CardPesanan from "../../components/card/CardPesanan";
 import CardJadwalMentor2 from "../../components/card/CardJadwalMentor2";
-import { useState } from "react";
-import PopupLink from "../../components/scheduleMentoring/PopupLink";
+
 
 
 const Dashboard = () => {
-  const [showPopup, setShowPopup] = useState(false);
+
 
   // Data untuk card jadwal mentoring
   const jadwalData = [
@@ -23,6 +22,8 @@ const Dashboard = () => {
       detail_materi:
         "Saya ingin lebih mendalami Design UI/UX, terutama cara pembuatan design yang responsive.",
       status_mentoring: "Mentoring Sekarang",
+      link_zoom:
+        "https://us05web.zoom.us/j/82951006716?pwd=uf0jtJToWATdlA76JKs7uvbFY7qbV8.1",
     },
   ];
 
@@ -63,12 +64,12 @@ const Dashboard = () => {
             </div>
           </Col>
           <Col lg={3}>
-            <div className="d-flex flex-column border rounded dashboard-saldo justify-content-center gap-3 px-3">
+            <div className="d-flex flex-column border rounded dashboard-saldo justify-content-center gap-3 px-3" >
               <div className="d-flex saldo-saya justify-content-between">
                 <h5 className="mb-0">Saldo Saya</h5>
                 <p className="mb-0">15 November 2023</p>
               </div>
-              <h3 className="mb-0">Rp280.000</h3>
+              <h3 className="mb-0 text-center">Rp280.000</h3>
               
             </div>
           </Col>
@@ -154,16 +155,9 @@ const Dashboard = () => {
                   harga={jadwal.harga}
                   detail_materi={jadwal.detail_materi}
                   status_mentoring={jadwal.status_mentoring}
-                  onLinkClick={() => setShowPopup(true)}
+                  link_zoom={jadwal.link_zoom}
                 />
               ))}
-
-              {showPopup && (
-                <PopupLink
-                  show={showPopup}
-                  onClose={() => setShowPopup(false)}
-                />
-              )}
             </div>
           </Col>
         </Row>

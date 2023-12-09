@@ -18,7 +18,7 @@ const DynamicTextFields = (props) => {
     };
 
     return (
-        <div className='dynamic-field col-lg-6'>
+        <div className='dynamic-field col '>
             {textFields.map((text, index) => (
                 <Form.Group key={index} controlId={`Keahlian-${index}`} className='mb-3'>
                     {index === 0 ? (
@@ -34,7 +34,7 @@ const DynamicTextFields = (props) => {
                 </Form.Group>
             ))}
             <Button variant="primary" onClick={handleAddTextField}>
-                Tambah TextField
+                Tambah 
             </Button>
         </div>
     );

@@ -7,6 +7,7 @@ import TextAreaField from "../InputField/TextAreaField";
 import DynamicTextFields from "./FormLatarBelakang";
 import FormPengalaman from "./FormPengalaman";
 import FormSertif from "./FormSertif";
+import EmailField from "../InputField/EmailField";
 
 const FormMentor = () => {
     return (
@@ -30,7 +31,7 @@ const FormMentor = () => {
                     ]} />
                     <DateField label="Tanggal Lahir" placeholder="Masukkan Tanggal Lahir" lg="6" />
                     <TextField label="No. Hp" placeholder="Masukkan No. Hp" lg="6" />
-                    <TextField label="Email" placeholder="Masukkan Email" lg="6" />
+                    <EmailField label="Email" placeholder="Masukkan Email" lg="6" />
                     <TextField label="Domisili" placeholder="Masukkan Domisili" lg="6" />
                     <TextField label="Alamat Domisili" placeholder="Masukkan Alamat Domisili" lg="6" />
                     <TextField label="Institusi" placeholder="Masukkan Institusi" lg="6" />
@@ -41,14 +42,18 @@ const FormMentor = () => {
                     <h6 className="h6 mt-5">Pengalaman</h6>
                     <FormPengalaman />
                     <h6 className="h6 mt-5">Pendidikan</h6>
-                    <TextField label="Universitas" placeholder="Masukkan Universitas" lg="12" />
+                    <TextField label="Universitas" placeholder="Masukkan Universitas" lg="6" />
+                    <TextField label="Domisili" placeholder="Masukkan Domisili" lg="6" />
                     <DateField label="Dari Tanggal" placeholder="Masukkan Dari Tanggal" lg="6" />
                     <DateField label="Sampai Tanggal" placeholder="Masukkan Sampai Tanggal" lg="6" />
                     <h6 className="h6 mt-5">Sertifikat & Lisensi</h6>
                     <FormSertif />
                 </div>
+                <br />
+                <br />
+                <br />
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            
         </>
     )
 };

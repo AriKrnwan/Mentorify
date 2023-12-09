@@ -5,13 +5,11 @@ import "./overviewMentor.css";
 
 const OverviewMentor = () => {
   return (
-    <div className="d-flex flex-column gap-5">
+    <div className="d-flex flex-column gap-3">
       <div>
         <h2>Tentang</h2>
         <p>
-          I would describe myself as a self-motivated individual to keep growing, love new challenges, has the ability to survive in all situations, problem solver, logical thinker, and able to work with team or individually.Now I'm
-          exploring further and deeper about myself, but my mindset is that we don't have to be great first to start trying new things.I'd love to expand my knowledge in the field of digital and technology development especially web
-          development, and now I'm focusing on frontend with reactjs.Actually full stack wanna be.
+        Saya akan menggambarkan diri saya sebagai individu yang memiliki motivasi diri untuk terus berkembang, menyukai tantangan baru, memiliki kemampuan untuk bertahan dalam segala situasi, pemecah masalah, pemikir yang logis, dan mampu bekerja dengan tim maupun individu, tetapi pola pikir saya adalah bahwa kita tidak harus menjadi hebat terlebih dahulu untuk mulai mencoba hal-hal baru, saya ingin sekali mengembangkan pengetahuan saya di bidang pengembangan digital dan teknologi terutama pengembangan web, dan saat ini saya fokus pada frontend dengan reactjs.
         </p>
       </div>
 

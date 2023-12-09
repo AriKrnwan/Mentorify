@@ -8,13 +8,13 @@ function FilterDropdown() {
 
     const dropdowns = [
         {
-            id: 'topic',
-            label: 'Topics',
+            id: 'topik',
+            label: 'Topik',
             items: ["Sistem Informasi", "Teknik Informatika", "Teknik Industri"],
         },
         {
             id: 'gender',
-            label: 'Genders',
+            label: 'Jenis Kelamin',
             items: ["Laki-laki", "Perempuan"],
         },
         {
@@ -31,7 +31,7 @@ function FilterDropdown() {
         {
             id: 'harga',
             label: 'Harga',
-            items: ['Rp 50.000', 'Rp 30.000'],
+            items: ['Rp 50.000', 'Rp 40.000', 'Rp 30.000'],
         },
         {
             id: 'jam',

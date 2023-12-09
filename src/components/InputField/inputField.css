@@ -1,0 +1,13 @@
+.inputan-number {
+    -moz-appearance: textfield;
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .inputan-number::-webkit-inner-spin-button,
+  .inputan-number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  

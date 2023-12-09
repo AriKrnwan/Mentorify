@@ -1,6 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import PropTypes from "prop-types";
+import './inputField.css'
 
 const NumberField = (props) => {
     const {label, placeholder, lg} = props;
@@ -12,6 +13,7 @@ const NumberField = (props) => {
                     required
                     type="number"
                     placeholder={placeholder}
+                    className='inputan-number'
                 />
         </Form.Group>
     )
