@@ -24,4 +24,4 @@ DateField.propTypes = {
     lg: PropTypes.string.isRequired,
 };
 
-export default DateField
+export default DateField;
