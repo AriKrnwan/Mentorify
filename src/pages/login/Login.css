@@ -22,3 +22,7 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
+
+.icon-error {
+  display: none;
+}

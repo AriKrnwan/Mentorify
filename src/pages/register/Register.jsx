@@ -1,17 +1,22 @@
 import { useState } from "react";
 import Logo from "../../assets/image/Logo.svg";
-import Google from "../../assets/image/google.png";
 import "../register/Register.css";
 import UncontrolledExample from "../../components/carousels/Carousels";
 import axios from "axios";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
+// Perubahan terbaru
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState("");
   const [passwordMismatch, setPasswordMismatch] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfPassword, setShowConfPassword] = useState(false);
@@ -19,88 +24,94 @@ const Register = () => {
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
+
+
+  const navigate = useNavigate();
+
   const toggleConfPasswordVisibility = () => {
     setShowConfPassword((prevShowConfPassword) => !prevShowConfPassword);
   };
 
-  // Fungsi untuk menangani perubahan nilai input
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
+  const validateForm = () => {
+    let isValid = true;
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+    // Validasi Nama
+    if (!name.trim()) {
+      setNameError("Nama Lengkap harus diisi");
+      isValid = false;
+    } else {
+      setNameError("");
+    }
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-    setPasswordMismatch(false);
-  };
+    // Validasi Email
+    if (!email.trim()) {
+      setEmailError("Email harus diisi");
+      isValid = false;
+    } else {
+      setEmailError("");
+    }
 
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-    setPasswordMismatch(false);
+    // Validasi Password
+    if (!password.trim()) {
+      setPasswordError("Password harus diisi");
+      isValid = false;
+    } else {
+      setPasswordError("");
+    }
+
+    // Validasi Konfirmasi Password
+    if (!confirmPassword.trim()) {
+      setConfirmPasswordError("Konfirmasi Password harus diisi");
+      isValid = false;
+    } else if (password !== confirmPassword) {
+      setConfirmPasswordError("Password tidak sesuai");
+      setPasswordMismatch(true);
+      isValid = false;
+    } else {
+      setConfirmPasswordError("");
+      setPasswordMismatch(false);
+    }
+
+    return isValid;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (password !== confirmPassword) {
-        setPasswordMismatch(true);
-        return;
+    if (!validateForm()) {
+      // Jika formulir tidak valid, jangan melanjutkan pengiriman
+      return;
     }
 
     try {
-        // Kirim data ke backend
-        const response = await axios.post('http://localhost:4121/register', {
-            name: name,
-            password: password,
-            email: email,
-        })
-        .then(response => {
-          console.log(response.data);
-          if (response.status === 200) {
-              window.alert('Data berhasil masuk');
-          } else if (response.status === 409) {
-              window.alert('Email sudah terdaftar. Gunakan email lain.');
-          } else {
-              console.error('Registration failed:', response.data.message);
-              window.alert('Registrasi gagal. Silakan coba lagi.');
-          }
-      })
-      .catch(error => {
-          console.error('Error:', error);
-          if (error.response) {
-              console.log('Error response from server:', error.response.data);
-              window.alert('Terjadi kesalahan pada server. Silakan coba lagi.');
-          } else {
-              console.log('Error connecting to the server:', error.message);
-              window.alert('Terjadi kesalahan koneksi. Silakan coba lagi.');
-          }
+      // Kirim data ke backend
+      const response = await axios.post("http://localhost:4000/register", {
+        full_name: name,
+        password: password,
+        email: email,
       });
 
-        console.log(response.data);
-
-        // Tambahkan logika untuk menangani respons dari server
-        if (response.status === 200) {
-            // Sukses, tampilkan alert data berhasil masuk
-            window.alert('Data berhasil masuk');
-        } else if (response.status === 409) {
-            // Gagal karena email sudah terdaftar, tampilkan alert email sudah ada
-            window.alert('Email sudah terdaftar. Gunakan email lain.');
-        } else {
-            // Gagal dengan status lain, tampilkan pesan error dari server
-            console.error('Registration failed:', response.data.message);
-            window.alert('Registrasi gagal. Silakan coba lagi.');
-        }
-    } catch (error) {
-      console.error('Error:', error);
-      if (error.response) {
-          console.log('Error response from server:', error.response.data);
-          window.alert('Terjadi kesalahan pada server. Silakan coba lagi.');
+      // Tambahkan logika untuk menangani respons dari server
+      if (response.status === 200) {
+        // Sukses, tampilkan alert data berhasil masuk
+        window.alert("Data berhasil masuk");
+        navigate("/login");
+      } else if (response.status === 409) {
+        // Gagal karena email sudah terdaftar, tampilkan alert email sudah ada
+        window.alert("Email sudah terdaftar. Gunakan email lain.");
       } else {
-          console.log('Error connecting to the server:', error.message);
-          window.alert('Terjadi kesalahan koneksi. Silakan coba lagi.');
+        // Gagal dengan status lain, tampilkan pesan error dari server
+        console.error("Registration failed:", response.data.message);
+        window.alert("Registrasi gagal. Silakan coba lagi.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      if (error.response) {
+        console.log("Error response from server:", error.response.data);
+        window.alert("Terjadi kesalahan pada server. Silakan coba lagi.");
+      } else {
+        console.log("Error connecting to the server:", error.message);
+        window.alert("Terjadi kesalahan koneksi. Silakan coba lagi.");
       }
     }
 
@@ -110,64 +121,17 @@ const Register = () => {
     setPassword("");
     setConfirmPassword("");
     setPasswordMismatch(false);
-};
+  };
 
-  // const createUser = () => {
-  //   axios.post('http://localhost:4121/register', {
-  //     Name: name,
-  //     Email: email,
-  //     Password: password,
-  //   }).then(() => {
-  //     console.log('User has been created')
-  //   })
-  // }
-
-
-
-
-
-  // const [showPassword, setShowPassword] = useState(false);
-  // const [confirmPassword, setConfirmPassword] = useState("");
-  // const [passwordMismatch, setPasswordMismatch] = useState(false);
-
-  // const togglePasswordVisibility = () => {
-  //   setShowPassword((prevShowPassword) => !prevShowPassword);
-  // };
-
-  // const handlePasswordChange = (e) => {
-  //   setPassword(e.target.value);
-  //   setPasswordMismatch(false);
-  // };
-
-  // const handleConfirmPasswordChange = (e) => {
-  //   setConfirmPassword(e.target.value);
-  //   setPasswordMismatch(false);
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-    
-
-
-  //   // Check if password and confirm password match
-  //   // if (password !== confirmPassword) {
-  //   //   setPasswordMismatch(true);
-  //   //   return;
-  //   // }
-
-  //   // // Continue with your registration logic
-  //   // // ...
-
-  //   // // Reset password and confirm password fields
-  //   // setPassword("");
-  //   // setConfirmPassword("");
-  // };
-
+   if (passwordMismatch) {
+      window.alert("Password dan Konfirmasi Password tidak cocok.");
+    }
   
 
   return (
     <div>
       <section className="login d-flex">
+        {/* Bagian Kiri (Logo dan Carousel) */}
         <div className="login-left w-50 h-100 d-flex flex-column gap-5 justify-content-center">
           <div className="logo-regist w-100 d-flex justify-content-center">
             <img className="logo2" src={Logo} alt="Logo" />
@@ -177,6 +141,7 @@ const Register = () => {
           </div>
         </div>
 
+        {/* Bagian Kanan (Form Pendaftaran) */}
         <div className="z-1 col-6 box-right rounded-start-5 d-flex align-items-center justify-content-center">
           <div className="row w-100">
             <div className="col-10 mx-auto">
@@ -185,79 +150,114 @@ const Register = () => {
               </div>
 
               <div className="login-form d-flex flex-column gap-3">
+                {/* Input Nama */}
                 <div>
                   <label className="form-label mb-0">Nama Lengkap</label>
                   <input
                     type="text"
-                    className="form-control"
+                    className={`form-control ${nameError ? "is-invalid" : ""}`}
                     id="name"
                     name="name"
-                    placeholder="Masukan Nama Lengkap"
+                    placeholder="Masukkan Nama Lengkap"
                     value={name}
-                    onChange={handleNameChange}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                      setNameError("");
+                    }}
                   />
+                  {nameError && (
+                    <div className="invalid-feedback">{nameError}</div>
+                  )}
                 </div>
+
+                {/* Input Email */}
                 <div>
                   <label className="form-label mb-0">Email</label>
                   <input
                     type="email"
-                    className="form-control"
+                    className={`form-control ${emailError ? "is-invalid" : ""}`}
                     id="email"
                     name="email"
-                    placeholder="Masukan Email"
+                    placeholder="Masukkan Email"
                     value={email}
-                    onChange={handleEmailChange}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      setEmailError("");
+                    }}
                   />
+                  {emailError && (
+                    <div className="invalid-feedback">{emailError}</div>
+                  )}
                 </div>
+
+                {/* Input Password */}
                 <div>
                   <label className="form-label mb-0">Password</label>
                   <div className="password-input-wrapper">
                     <input
                       type={showPassword ? "text" : "password"}
-                      className="form-control"
+                      className={`form-control ${passwordError ? "is-invalid" : ""}`}
                       id="password"
                       name="password"
-                      placeholder="Masukan Password"
+                      placeholder="Masukkan Password"
                       value={password}
-                      onChange={handlePasswordChange}
+                      onChange={(e) => {
+                        setPassword(e.target.value);
+                        setPasswordError("");
+                      }}
                     />
-                    <div className="eye-icon" onClick={togglePasswordVisibility}>
+                    {passwordError && (
+                    <div className="invalid-feedback">{passwordError}</div>
+                  )}
+                    <div
+                      className={`eye-icon ${passwordError ? "icon-error" : ""}`}
+                      onClick={togglePasswordVisibility}
+                    >
                       {showPassword ? <FiEyeOff /> : <FiEye />}
                     </div>
                   </div>
+                  
                 </div>
+
+                {/* Input Konfirmasi Password */}
                 <div>
                   <label className="form-label mb-0">Konfirmasi Password</label>
                   <div className="password-input-wrapper">
                     <input
                       type={showConfPassword ? "text" : "password"}
                       className={`form-control ${
-                        passwordMismatch ? "is-invalid" : ""
+                        confirmPasswordError ? "is-invalid" : ""
                       }`}
                       id="confirmPassword"
                       name="confirmPassword"
                       placeholder="Konfirmasi Password"
                       value={confirmPassword}
-                      onChange={handleConfirmPasswordChange}
+                      onChange={(e) => {
+                        setConfirmPassword(e.target.value);
+                        setConfirmPasswordError("");
+                      }}
                     />
-                    <div className="eye-icon" onClick={toggleConfPasswordVisibility}>
-                      {showConfPassword ? <FiEyeOff /> : <FiEye />}
+                    {confirmPasswordError && (
+                    <div className="invalid-feedback">{confirmPasswordError}</div>
+                  )}
+                    <div
+                      className={`eye-icon ${passwordError ? "icon-error" : ""}`}
+                      onClick={togglePasswordVisibility}
+                    >
+                      {showPassword ? <FiEyeOff /> : <FiEye />}
                     </div>
                   </div>
-                  {passwordMismatch && (
-                    <div className="invalid-feedback">
-                      Password tidak sesuai.
-                    </div>
-                  )}
+                  
                 </div>
-                <button className="btn-login" onClick={handleSubmit}>
-                  Daftar
-                </button>
-                <p className="text-center mb-0">Atau</p>
-                <button className="btn-google bg-image hover-zoom d-flex align-items-center justify-content-center gap-2">
-                  <img className="google" src={Google} alt="Google" />
-                  Masuk dengan Google
-                </button>
+
+                {/* Tombol Daftar */}
+                <div>
+                  <button className="btn-login" onClick={handleSubmit}>
+                    Daftar
+                  </button>
+                </div>  
+
+                {/* Tautan Masuk Sekarang */}
                 <span className="text-center d-block mt-2">
                   Sudah punya akun? <a href="/login">Masuk Sekarang</a>
                 </span>
