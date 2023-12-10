@@ -2,9 +2,10 @@ import { useState } from "react";
 import Logo from "../../assets/image/Logo.svg";
 import Google from "../../assets/image/google.png";
 import "../register/Register.css";
-import { FiEye, FiEyeOff } from "react-icons/fi";
 import UncontrolledExample from "../../components/carousels/Carousels";
 import axios from "axios";
+import { FiEye, FiEyeOff } from "react-icons/fi";
+
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -12,6 +13,15 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordMismatch, setPasswordMismatch] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfPassword, setShowConfPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+  const toggleConfPasswordVisibility = () => {
+    setShowConfPassword((prevShowConfPassword) => !prevShowConfPassword);
+  };
 
   // Fungsi untuk menangani perubahan nilai input
   const handleNameChange = (e) => {
@@ -203,7 +213,7 @@ const Register = () => {
                   <label className="form-label mb-0">Password</label>
                   <div className="password-input-wrapper">
                     <input
-                      type="password"
+                      type={showPassword ? "text" : "password"}
                       className="form-control"
                       id="password"
                       name="password"
@@ -211,27 +221,29 @@ const Register = () => {
                       value={password}
                       onChange={handlePasswordChange}
                     />
-                    <div
-                      className="eye-icon"
-                      // onClick={togglePasswordVisibility}
-                    >
-                      {/* {showPassword ? <FiEyeOff /> : <FiEye />} */}
+                    <div className="eye-icon" onClick={togglePasswordVisibility}>
+                      {showPassword ? <FiEyeOff /> : <FiEye />}
                     </div>
                   </div>
                 </div>
                 <div>
                   <label className="form-label mb-0">Konfirmasi Password</label>
-                  <input
-                    type="password"
-                    className={`form-control ${
-                      passwordMismatch ? "is-invalid" : ""
-                    }`}
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    placeholder="Konfirmasi Password"
-                    value={confirmPassword}
-                    onChange={handleConfirmPasswordChange}
-                  />
+                  <div className="password-input-wrapper">
+                    <input
+                      type={showConfPassword ? "text" : "password"}
+                      className={`form-control ${
+                        passwordMismatch ? "is-invalid" : ""
+                      }`}
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      placeholder="Konfirmasi Password"
+                      value={confirmPassword}
+                      onChange={handleConfirmPasswordChange}
+                    />
+                    <div className="eye-icon" onClick={toggleConfPasswordVisibility}>
+                      {showConfPassword ? <FiEyeOff /> : <FiEye />}
+                    </div>
+                  </div>
                   {passwordMismatch && (
                     <div className="invalid-feedback">
                       Password tidak sesuai.
