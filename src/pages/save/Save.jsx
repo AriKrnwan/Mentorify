@@ -1,10 +1,10 @@
 import Navbar from'../../components/navbar/Navbar'
-import CardMentor from '../../components/card/Card';
 import mentor1 from '../../assets/image/mentor1.png'
 import mentor2 from '../../assets/image/mentor2.png'
 import mentor3 from '../../assets/image/mentor3.png'
 import mentor4 from '../../assets/image/mentor4.png'
 import Footer from '../../components/footer/Footer';
+import CardSave from '../../components/card/CardSave';
  
 const Save = () => {
     const mentorsData = [
@@ -49,7 +49,7 @@ const Save = () => {
           <h3 className="mx-3 wrapper-save-mentor py-2">Mentor yang Disimpan</h3>
           <div className="d-flex justify-content-start row mx-auto mb-5">
             {mentorsData.map((mentor, index) => (
-              <CardMentor key={index} nama={mentor.nama} jenisMentor={mentor.jenisMentor} ketTambah={mentor.ketTambah} harga={mentor.harga} rating={mentor.rating} foto={mentor.foto} />
+              <CardSave key={index} nama={mentor.nama} jenisMentor={mentor.jenisMentor} ketTambah={mentor.ketTambah} harga={mentor.harga} rating={mentor.rating} foto={mentor.foto} />
             ))}
           </div>
         </div>

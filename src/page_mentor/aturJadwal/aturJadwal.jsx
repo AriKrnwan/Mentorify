@@ -36,7 +36,7 @@ const AturJadwal = () => {
             <DropdownField label="Pilih Zona Waktu" placeholder="Pilih..." lg="12" options={[
                         { value: 'WIB', label: 'WIB' },
                         { value: 'WIT', label: 'WIT' },
-                        { value: 'WITA', label: 'WIT' },
+                        { value: 'WITA', label: 'WITA' },
                     ]} />
             </div>
             <div>

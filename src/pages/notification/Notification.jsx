@@ -13,6 +13,8 @@ import ListDenied from '../../components/listNotificationMentoring/ListDenied';
 import ListPayDone from '../../components/listNotificationMentoring/ListPayDone';
 import ListPayDenied from '../../components/listNotificationMentoring/ListPayDenied'
 import Footer from '../../components/footer/Footer';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Notification = () => {
@@ -27,6 +29,10 @@ const Notification = () => {
         setJudul('Notifikasi Mentoring');
     };
 
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/qna/detail-postingan');
+    };
     return ( 
         <div>
             <Navbar/>
@@ -79,15 +85,15 @@ const Notification = () => {
                                             gambar={profile_mentor}/>}</Tab.Pane>
 
                                             
-                                        <Tab.Pane  eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
+                                        <Tab.Pane  onClick={handleClick} eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
                                         waktu="29-11-2023 11:00"
                                         keterangan="menyukai postingan anda"
                                         gambar={profile_user}/>}</Tab.Pane>
-                                        <Tab.Pane eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
+                                        <Tab.Pane onClick={handleClick} eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
                                         waktu="28-11-2023 15:58"
                                         keterangan="mengomentari postingan anda"
                                         gambar={profile_user}/>}</Tab.Pane>
-                                        <Tab.Pane eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
+                                        <Tab.Pane onClick={handleClick} eventKey="#qna">{<ListQna nama="Rizky Pahlevi"
                                         waktu="28-11-2023 15:57"
                                         keterangan="menyebut anda di sebuah postingan"
                                         gambar={profile_user}/>}</Tab.Pane>

@@ -5,13 +5,13 @@ const PostDibuat = () => {
   const isiPostingan = [
     {
       foto: profile,
-      nama: "Salsabila Fourgatri",
+      nama: "Rizky Akbar Maulana",
       waktu: "5 menit",
       isi: "Saya akan melamar di perusahaan sebagai UI/UX Designer, tapi gak tau job desc nya. Mungkin teman - teman ada yang tau dan sudah pernah bekerja bisa sharing di sini.",
     },
     {
       foto: profile,
-      nama: "Ucup",
+      nama: "Rizky Akbar Maulana",
       waktu: "1 jam",
       isi: "Bahasa apa ya yang gampang dipelajari dalam waktu 1 jam?",
     },

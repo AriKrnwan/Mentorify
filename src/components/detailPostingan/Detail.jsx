@@ -1,6 +1,7 @@
 import { FiHeart, FiMessageCircle, FiShare2 } from "react-icons/fi";
 import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare } from "react-icons/fa";
 import profile from "../../assets/image/profile picture.jpg"
+import profile_user from"../../assets/image/profile_user.png"
 import ButtonWithIcon from "../button/button";
 import "../detailPostingan/detail.css"
 import { FiChevronDown } from "react-icons/fi";
@@ -10,7 +11,7 @@ function Detail() {
 
 
   const [filled, setFilled] = useState(false);
-  const [likeCount, setLikeCount] = useState(0);
+  const [likeCount, setLikeCount] = useState(1);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const handleClick = () => {
@@ -41,7 +42,7 @@ const openInstagram = () => {
             <img src={profile} alt="" />
           </div>
           <div className="nama-profile">
-            <h6 className="fs-6 ">Hansen Pangestu</h6>
+            <h6 className="fs-6 ">Rizky Akbar Maulana</h6>
             <p className="mb-0">21 jam</p>
           </div>
         </div>
@@ -55,7 +56,7 @@ const openInstagram = () => {
             </div>
           <div className="comment d-flex align-items-center gap-2 p-1">
             <FiMessageCircle size={18} />
-            <p className="mb-0">0 Komen</p>
+            <p className="mb-0">1 Komen</p>
           </div>
           <div className="action d-flex align-items-center gap-3">
                     <div className="d-flex align-items-center gap-2 p-1" onClick={handleShareClick} style={{ cursor: 'pointer' }}>
@@ -84,15 +85,15 @@ const openInstagram = () => {
         </div>
         <div className="komentar d-flex gap-2 py-3 border-top">
           <div className="img-profile overflow-hidden d-flex align-items-center">
-            <img src={profile} alt="" />
+            <img src={profile_user} alt="" />
           </div>
           <div className="data-komen d-flex flex-column gap-1">
             <div className="nama-profile d-flex gap-2">
-              <h6 className="fs-6 ">Ucup</h6>
+              <h6 className="fs-6 ">Rizky Pahlevi</h6>
               <p className="mb-0">21 jam</p>
             </div>
             <div className="komen">
-              <p className="mb-0">www.designerhandal.com</p>
+              <p className="mb-0">@rizkyakbar www.designerhandal.com</p>
             </div>
             <div className="balas">
               <p className="mb-0">balas</p>

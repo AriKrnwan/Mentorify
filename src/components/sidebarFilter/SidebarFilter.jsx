@@ -1,31 +1,28 @@
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import "../sidebarFilter/sidebarFilter.css";
 
 const SidebarFilter = () => {
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const handleCheckboxChange = (option) => {
+        setSelectedOption(option);
+    };
+
     return (
         <div className="sidebar-filter border p-4 rounded">
             <h6>Urutakan Berdasarkan</h6>
             <hr />
             <Form>
-                {['checkbox'].map((type) => (
-                    <div key={`default-${type}`} className="mb-3">
+                {['Belum Terjawab', 'Terbaru', 'Terlama'].map((option, index) => (
+                    <div key={index} className="mb-3">
                         <Form.Check
-                            type={type}
-                            id={`default-${type}-1`}
+                            type="checkbox"
+                            id={`default-checkbox-${index}`}
                             name="filterOption"
-                            label={`Pertanyaan Belum Terjawab`}
-                        />
-                        <Form.Check
-                            type={type}
-                            id={`default-${type}-2`}
-                            name="filterOption"
-                            label={`Pertanyaan Terbaru`}
-                        />
-                        <Form.Check
-                            type={type}
-                            id={`default-${type}-3`}
-                            name="filterOption"
-                            label={`Pertanyaan Terlama`}
+                            label={`Pertanyaan ${option}`}
+                            checked={selectedOption === option}
+                            onChange={() => handleCheckboxChange(option)}
                         />
                     </div>
                 ))}

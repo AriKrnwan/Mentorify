@@ -13,7 +13,7 @@ function Postingan(props) {
     };
 
     const [filled, setFilled] = useState(false);
-    const [likeCount, setLikeCount] = useState(0);
+    const [likeCount, setLikeCount] = useState(1);
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     const handleClick = () => {
@@ -58,7 +58,7 @@ function Postingan(props) {
                 </div>
                 <div className="comment d-flex align-items-center gap-2 p-1" onClick={handleCommentClick}>
                     <FiMessageCircle size={18} />
-                    <p className='mb-0'>0 Komentar</p>
+                    <p className='mb-0'>1 Komentar</p>
                 </div>
                 <div className="action d-flex align-items-center gap-3">
                     <div className="d-flex align-items-center gap-2 p-1" onClick={handleShareClick} style={{ cursor: 'pointer' }}>
