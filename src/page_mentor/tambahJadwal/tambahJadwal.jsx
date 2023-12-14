@@ -1,5 +1,5 @@
 import DynamicNumberFields from "../../components/InputField/dynamicNumberField";
-import DateField from "../../components/InputField/TextField";
+import DateField from "../../components/InputField/DateField";
 import NavbarMentor from "../../components/navbar/NavbarMentor";
 import "../tambahJadwal/tambahJadwal.css"
 import { Button } from "react-bootstrap";
