@@ -39,6 +39,32 @@ function OffcanvasExample() {
     navigate('/dashboard');
   };
 
+  const handleLogout = () => {
+    // Panggil endpoint logout di sisi server
+    fetch("http://localhost:4121/logout", {
+      method: "POST",
+      credentials: "include",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle respons dari server jika diperlukan
+        // Misalnya, membersihkan sesi di sisi klien
+        if (data.success) {
+          // Hapus data sesi atau token di sisi klien
+          localStorage.removeItem('userData');
+          
+          // Alihkan ke halaman login setelah logout
+          navigate('/login');
+        } else {
+          // Handle jika logout tidak berhasil
+          console.error("Logout failed:", data.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error logging out:", error);
+      });
+  };
+
   return (
     <>
       {["lg"].map((expand) => (
@@ -89,7 +115,7 @@ function OffcanvasExample() {
                   <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
                   <NavDropdown.Item onClick={toMentorMode}>Switch</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/login">Keluar</NavDropdown.Item>
+                  <NavDropdown.Item onClick={handleLogout}>Keluar</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </Offcanvas.Body>

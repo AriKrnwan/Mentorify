@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import PropTypes from "prop-types";
 
 const TextAreaField = (props) => {
-    const { label, placeholder, lg } = props;
+    const { label, placeholder, lg, value } = props;
 
     return (
         <Form.Group as={Col} lg={lg} controlId={label} className='mb-3'>
@@ -13,6 +13,7 @@ const TextAreaField = (props) => {
                 as="textarea" // Ganti dengan textarea
                 placeholder={placeholder}
                 style={{height:"140px", resize: "none"}}
+                value={value}
             />
         </Form.Group>
     )
@@ -22,6 +23,7 @@ TextAreaField.propTypes = {
     label: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     lg: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
 };
 
 export default TextAreaField;

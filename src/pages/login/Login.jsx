@@ -51,7 +51,7 @@ const Login = () => {
 
     try {
       // Kirim data ke backend
-      const response = await axios.post("http://localhost:4000/login", {
+      const response = await axios.post("http://localhost:4121/login", {
         email: email,
         password: password,
       });
@@ -61,6 +61,7 @@ const Login = () => {
         // Sukses, lakukan tindakan setelah login berhasil
         console.log("Login berhasil");
         navigate("/");
+        localStorage.setItem('userData', JSON.stringify(response.data.user));
       } else if (response.status === 401) {
         // Gagal karena kredensial tidak valid
         console.log("Login gagal: Invalid credentials");

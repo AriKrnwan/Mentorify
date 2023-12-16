@@ -1,14 +1,12 @@
-import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import PropTypes from 'prop-types';
 
 const DropdownField = (props) => {
-    const { label, placeholder, options, lg } = props;
-    const [selectedValue, setSelectedValue] = useState('');
+    const { label, placeholder, options, lg, value } = props;
 
     const handleSelectChange = (event) => {
-        setSelectedValue(event.target.value);
+        props.onChange(event.target.value);
     };
 
     return (
@@ -16,7 +14,7 @@ const DropdownField = (props) => {
             <Form.Label>{label}</Form.Label>
             <Form.Select
                 required
-                value={selectedValue}
+                value={value}
                 onChange={handleSelectChange}
                 className="custom-select"
             >
@@ -37,6 +35,8 @@ DropdownField.propTypes = {
     label: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     lg: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.string.isRequired,
     options: PropTypes.arrayOf(
         PropTypes.shape({
             value: PropTypes.string.isRequired,

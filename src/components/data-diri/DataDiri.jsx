@@ -5,12 +5,39 @@ import TextField from "../InputField/TextField";
 import DateField from "../InputField/DateField";
 import NumberField from "../InputField/NumberField";
 import EmailField from "../InputField/EmailField";
+import { useEffect, useState } from "react";
 
 const DataDiri = () => {
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const storedUserData = localStorage.getItem('userData');
+    if (storedUserData) {
+      setUserData(JSON.parse(storedUserData));
+    } else {
+      fetch("http://localhost:4121/profile", {
+        method: "GET",
+        credentials: "include",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.user) {
+            setUserData(data.user);
+          } else {
+            console.error("User not authenticated");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching profile data:", error);
+        });
+    }
+  }, []);
+
+  
   return (
     <div className="data-diri-user d-flex flex-column gap-4">
       <div className="heading-profile-user d-flex flex-column aling-items-center justify-content-center">
-        <h3 className="text-center">Selamat Datang, Rizky Akbar Maulana!</h3>
+        <h3 className="text-center">Selamat Datang, {userData?.full_name}</h3>
         <p className="text-center">Lengkapi data dirimu dan mulai mentoring!</p>
       </div>
       <div className="d-flex gap-3">
@@ -19,73 +46,62 @@ const DataDiri = () => {
         </div>
 
         <div className=" w-100 row form-user">
-          <TextField label="Nama" placeholder="Masukkan Nama" lg="12" />
+          <TextField 
+            label="Nama" 
+            value={userData?.full_name} 
+            placeholder="Masukkan Nama" lg="12" 
+            onChange={(newValue) => setUserData({ ...userData, full_name: newValue })}
+          />
           <DateField
             label="Tanggal Lahir"
-            placeholder="Masukkan Tanggal Lahir"
+            placeholder="Masukkan tanggal"
             lg="6"
+            value={userData?.birth_date}
+            onChange={(newValue) => setUserData({ ...userData, birth_date: newValue })}
           />
           <DropdownField
             label="Jenis Kelamin"
-            placeholder="Pilih..."
+            placeholder="pilih..."
             lg="6"
             options={[
               { value: "l", label: "Laki-Laki" },
               { value: "p", label: "Perempuan" },
             ]}
+            value={userData?.gender}
+            onChange={(selectedValue) => setUserData({ ...userData, gender: selectedValue })}
           />
-          <NumberField label="No.HP" placeholder="085678987689" lg="6" />
-          <TextField label="Alamat" placeholder="Masukkan Alamat" lg="6" />
-          <EmailField label="Email" placeholder="Masukkan Email" lg="12" />
-          <TextField label="Universitas" placeholder="Masukkan Universitas" lg="12" />
+          <NumberField 
+            label="No.HP" 
+            value={userData?.phone} 
+            placeholder="Masukkan Nomor HP" 
+            lg="6"  
+            onChange={(newValue) => setUserData({ ...userData, phone: newValue })}
+          />
+          <TextField 
+            label="Alamat" 
+            value={userData?.city} 
+            placeholder="Masukkan Alamat" 
+            lg="6"
+            onChange={(newValue) => setUserData({ ...userData, city: newValue })}
+          />
+          <EmailField
+            label="Email" 
+            value={userData?.email} 
+            placeholder="Masukkan Email" 
+            lg="12" 
+            onChange={(newValue) => setUserData({ ...userData, email: newValue })}
+          />
+          <TextField 
+            label="Universitas" 
+            value={userData?.institution} 
+            placeholder="Masukkan Universitas" 
+            lg="12"
+            onChange={(newValue) => setUserData({ ...userData, institution: newValue })} 
+          />
           <div className="d-flex justify-content-end">
             <button className="btn-data-diri border-0">Simpan Perubahan</button>
           </div>
-          
         </div>
-        
-
-        {/* <div className="w-100 d-flex flex-column gap-4">
-          <div className="nama-lengkap d-flex flex-column gap-2">
-          <TextField label="Nama" placeholder="Masukkan Nama"/>
-          </div>
-          <div className="d-flex gap-3">
-            <div className="tanggal-lahir d-flex flex-column w-100 gap-2">
-              <label id="">Tanggal Lahir</label>
-              <input type="date" name="" id="" />
-            </div>
-            <div className="jenis-kelamin d-flex flex-column w-100 gap-2">
-            <DropdownField label="Jenis Kelamin" placeholder="Pilih..." options={[
-                        { value: 'l', label: 'Laki-Laki' },
-                        { value: 'p', label: 'Perempuan' },
-                    ]} />
-            </div>
-          </div>
-          <div className="d-flex gap-3 ">
-            <div className="nomor-hp d-flex flex-column w-100 gap-2">
-              <label>No.HP</label>
-              <input type="number" name="" id="" defaultValue="" placeholder="0857989787654"/>
-            </div>
-            <div className="alamat d-flex flex-column w-100 gap-2">
-              <label>Alamat</label>
-              <input type="text" defaultValue="Surabaya" />
-            </div>
-          </div>
-
-          <div className="email d-flex flex-column gap-2">
-            <label>Email</label>
-            <input type="email" name="" id="" defaultValue="rizky@gmail.com" />
-          </div>
-
-          <div className="universitas d-flex flex-column gap-2">
-            <label>Universitas</label>
-            <input type="text" defaultValue="Universitas Indonesia" />
-          </div>
-
-          <div className="d-flex justify-content-end">
-            <button className="btn-data-diri border-0">Simpan Perubahan</button>
-          </div>
-        </div> */}
       </div>
     </div>
   );

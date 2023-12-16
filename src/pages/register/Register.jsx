@@ -85,7 +85,7 @@ const Register = () => {
 
     try {
       // Kirim data ke backend
-      const response = await axios.post("http://localhost:4000/register", {
+      const response = await axios.post("http://localhost:4121/register", {
         full_name: name,
         password: password,
         email: email,
