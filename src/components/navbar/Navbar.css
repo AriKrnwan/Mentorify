@@ -1,56 +1,79 @@
 .navbar {
-    font-family: 'Poppins', sans-serif;
-    transition: .3s;
-    height: 68px;
-  }
-  
-  
-  .navbar a {
-    transition: color 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: #303030;
-    font-size: 0.85rem;
-  }
-  
-  .navbar a.active,
-  .navbar a:hover {
-    color: #00A9B8;
-  }
-  
-  .navbar .toogle {
-    border: none;
-  }
-  
-  .navbar .logo {
-    height: 35px;
-  }
-  
-  .navbar .profile {
-    border-radius: 50%;
-    align-items: center;
-    object-fit: cover;
-  }
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+  height: 68px;
+}
 
-  .navbar-transparent {
-    background-color: rgba(255, 255, 255, 0.80) !important;
-    height: 80px;
-  }
+.navbar a {
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #303030;
+  font-size: 0.85rem;
+}
 
-  .dropdown-toggle, .dropdown-toggle:hover {
-    background-color: transparent !important;
-  }
+.navbar a.active,
+.navbar a:hover {
+  color: #00a9b8;
+}
 
-  a {
-    text-decoration: none;
-  }
+.navbar .toogle {
+  border: none;
+}
 
-  .dropdown-menu[data-bs-popper] {
-    left: -100px;
-  }
+.navbar .logo {
+  height: 35px;
+}
 
-  .navbar-nav .dropdown {
-    height: 60px;
-  }
+.navbar .profile {
+  border-radius: 50%;
+  align-items: center;
+  object-fit: cover;
+}
 
-  
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  height: 80px;
+}
+
+.dropdown-toggle,
+.dropdown-toggle:hover {
+  background-color: transparent !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -100px;
+}
+
+.navbar-nav .dropdown {
+  height: 60px;
+}
+
+/* =============Navbar Belum Login================== */
+.btn-masuk {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--Brand-Colors-Primary, #00a9b8);
+  color: var(--Brand-Colors-Primary, #00a9b8);
+  font-family: Poppins;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.btn-daftar {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: var(--Brand-Colors-Primary, #00a9b8);
+  color: var(--Black-Colors-White, #fff);
+  font-family: Poppins;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
