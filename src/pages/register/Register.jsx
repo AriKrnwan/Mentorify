@@ -242,7 +242,7 @@ const Register = () => {
                   )}
                     <div
                       className={`eye-icon ${passwordError ? "icon-error" : ""}`}
-                      onClick={togglePasswordVisibility}
+                      onClick={toggleConfPasswordVisibility}
                     >
                       {showPassword ? <FiEyeOff /> : <FiEye />}
                     </div>

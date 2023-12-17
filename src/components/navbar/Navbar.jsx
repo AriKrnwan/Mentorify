@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 function OffcanvasExample() {
   const [navbarTransparent, setNavbarTransparent] = useState(true);
+  const [userRoleId, setUserRoleId] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +33,14 @@ function OffcanvasExample() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    // Ambil role_id dari localStorage
+    const storedUserData = localStorage.getItem('userData');
+    const parsedUserData = storedUserData ? JSON.parse(storedUserData) : null;
+    const role_id = parsedUserData ? parsedUserData.role_id : null;
+    setUserRoleId(role_id);
   }, []);
 
   const navigate = useNavigate();
@@ -113,7 +122,9 @@ function OffcanvasExample() {
                 >
                   <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                   <NavDropdown.Item href="/changepassword">Ganti Kata Sandi</NavDropdown.Item>
-                  <NavDropdown.Item onClick={toMentorMode}>Switch</NavDropdown.Item>
+                  {userRoleId === 2 && (
+                    <NavDropdown.Item onClick={toMentorMode}>Switch</NavDropdown.Item>
+                  )}
                   <NavDropdown.Divider />
                   <NavDropdown.Item onClick={handleLogout}>Keluar</NavDropdown.Item>
                 </NavDropdown>

@@ -33,6 +33,29 @@ const DataDiri = () => {
     }
   }, []);
 
+  const handleSaveChanges = () => {
+    fetch("http://localhost:4121/profile", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify(userData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.user) {
+          setUserData(data.user);
+          // Tambahkan kode lain yang perlu dieksekusi setelah perubahan disimpan
+        } else {
+          console.error("User not authenticated");
+        }
+      })
+      .catch((error) => {
+        console.error("Error saving profile changes:", error);
+      });
+  };
+
   
   return (
     <div className="data-diri-user d-flex flex-column gap-4">
@@ -99,7 +122,7 @@ const DataDiri = () => {
             onChange={(newValue) => setUserData({ ...userData, institution: newValue })} 
           />
           <div className="d-flex justify-content-end">
-            <button className="btn-data-diri border-0">Simpan Perubahan</button>
+            <button className="btn-data-diri border-0" onClick={handleSaveChanges}>Simpan Perubahan</button>
           </div>
         </div>
       </div>

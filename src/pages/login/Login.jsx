@@ -54,6 +54,8 @@ const Login = () => {
       const response = await axios.post("http://localhost:4121/login", {
         email: email,
         password: password,
+      }, {
+        withCredentials: true,  // Mengizinkan pengiriman cookie
       });
 
       // Tambahkan logika untuk menangani respons dari server
