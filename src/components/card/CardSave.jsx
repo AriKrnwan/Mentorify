@@ -3,15 +3,15 @@ import { FiBookmark, FiBriefcase, FiStar } from "react-icons/fi";
 import "../card/card.css";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+
 
 
 function CardSave (props) {
-  const { nama, jenisMentor, ketTambah, harga, rating, foto, } = props;
+  const { nama, jenisMentor, ketTambah, harga, rating, foto, id, onClick, } = props;
 
   const navigate = useNavigate();
     const handleCardMentor = () => {
-        navigate('/mentoring/detail-mentor');
+      navigate(`/mentoring/detail-mentor/${id}`);
     };
 
 
@@ -23,7 +23,7 @@ function CardSave (props) {
           <Card.Body className="p-0 gap-1">
             <Card.Title className="d-flex justify-content-between align-items-start">
               <h6 className="mb-0">{nama}</h6>
-              <div className="action d-flex align-items-center gap-2 p-1" style={{ cursor: 'pointer' }}>
+              <div onClick={onClick} className="action d-flex align-items-center gap-2 p-1" style={{ cursor: 'pointer' }}>
                     <FiBookmark fill={'#00a9b8'} size={20} stroke="none" />
                 </div>
             </Card.Title>
@@ -54,6 +54,8 @@ function CardSave (props) {
 }
 
 CardSave.propTypes = {
+  id: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
   nama: PropTypes.string.isRequired,
   jenisMentor: PropTypes.string.isRequired,
   ketTambah: PropTypes.string.isRequired,

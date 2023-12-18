@@ -1,62 +1,62 @@
-import Navbar from'../../components/navbar/Navbar'
-import mentor1 from '../../assets/image/mentor1.png'
-import mentor2 from '../../assets/image/mentor2.png'
-import mentor3 from '../../assets/image/mentor3.png'
-import mentor4 from '../../assets/image/mentor4.png'
-import Footer from '../../components/footer/Footer';
-import CardSave from '../../components/card/CardSave';
- 
-const Save = () => {
-    const mentorsData = [
-        {
-            nama: "Salsabila Fourgatri",
-            jenisMentor: "Mentor UX Design",
-            ketTambah: "Mentor Baru",
-            harga: "50.000",
-            rating: "4/5",
-            foto: mentor1
-        },
-        {
-            nama: "Akbar Budiana",
-            jenisMentor: "Mentor Teknik Industri",
-            ketTambah: "Mentor Baru",
-            harga: "50.000",
-            rating: "4/5",
-            foto: mentor2
-        },
-        {
-            nama: "Siti Nurabaya",
-            jenisMentor: "Mentor Informatika",
-            ketTambah: "Mentor Baru",
-            harga: "50.000",
-            rating: "4/5",
-            foto: mentor3
-        },
-        {
-            nama: "Budi Ashari",
-            jenisMentor: "Mentor Design Thingking",
-            ketTambah: "Mentor Baru",
-            harga: "50.000",
-            rating: "4/5",
-            foto: mentor4
-        },
-    ];
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
+import CardSave from "../../components/card/CardSave";
+import { useState } from "react";
 
-    return (
-      <div>
-        <Navbar />
-        <div className="container-xxl mx-auto">
-          <h3 className="mx-3 wrapper-save-mentor py-2">Mentor yang Disimpan</h3>
-          <div className="d-flex justify-content-start row mx-auto mb-5">
-            {mentorsData.map((mentor, index) => (
-              <CardSave key={index} nama={mentor.nama} jenisMentor={mentor.jenisMentor} ketTambah={mentor.ketTambah} harga={mentor.harga} rating={mentor.rating} foto={mentor.foto} />
-            ))}
-          </div>
+const Save = () => {
+  
+  
+  const savedMentorsFromStorage =
+  JSON.parse(localStorage.getItem("savedMentors")) || [];
+  
+  const [savedMentors, setSavedMentors] = useState([]);
+
+    const handleBookmarkClick = (mentor) => {
+      // Lakukan logika penanganan bookmark sesuai kebutuhan
+      const isMentorSaved = savedMentors.some((savedMentor) => savedMentor.id === mentor.id);
+    
+      if (isMentorSaved) {
+        // Jika mentor sudah disimpan, hapus dari daftar savedMentors
+        const updatedMentors = savedMentors.filter((savedMentor) => savedMentor.id !== mentor.id);
+        setSavedMentors(updatedMentors);
+        // Simpan data ke Local Storage
+        localStorage.setItem("savedMentors", JSON.stringify(updatedMentors));
+      } else {
+        // Jika mentor belum disimpan, tambahkan ke daftar savedMentors
+        const newMentors = [...savedMentors, mentor];
+        setSavedMentors(newMentors);
+        // Simpan data ke Local Storage
+        localStorage.setItem("savedMentors", JSON.stringify(newMentors));
+      }
+    };
+    
+
+  return (
+    <div>
+      <Navbar />
+      <div className="container-xxl mx-auto">
+        <h3 className="mx-3 wrapper-save-mentor py-2">
+          Mentor yang Disimpan
+        </h3>
+        <div className="d-flex justify-content-start row mx-auto mb-5">
+          {savedMentorsFromStorage.map((mentor) => (
+            <CardSave
+              key={mentor.id}
+              nama={mentor.full_name}
+              jenisMentor={mentor.topic}
+              ketTambah={"Mentor Baru"}
+              harga={mentor.price}
+              rating={mentor.rating}
+              id={mentor.id}
+              onClick={() => handleBookmarkClick(mentor)}
+              foto={`http://localhost:4121/images/${mentor.image}`}
+            />
+          ))}
         </div>
-        <Footer />
       </div>
-    );
-}
+      <Footer />
+    </div>
+  );
+};
 
 export default Save;
-

@@ -6,44 +6,46 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FiBell, FiBookmark } from "react-icons/fi";
 import Logo from '../../assets/image/Logo.svg';
-import profile from "../../assets/image/profile picture.jpg";
+import profile from "../../assets/image/avatar.jpg";
 import "../navbar/Navbar.css";
 import { useNavigate } from 'react-router-dom';
 
 function OffcanvasExample() {
   const [navbarTransparent, setNavbarTransparent] = useState(true);
   const [userRoleId, setUserRoleId] = useState(null);
+  const [userData, setUserData] = useState(null);
 
   useEffect(() => {
+    // Ambil data pengguna dari penyimpanan lokal
+    const storedUserData = localStorage.getItem('userData');
+    if (storedUserData) {
+      setUserData(JSON.parse(storedUserData));
+    }
+
+    // Atur listener scroll pada window
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const threshold = 100;
-
-      if (scrollPosition > threshold) {
-        setNavbarTransparent(true);
-      } else {
-        setNavbarTransparent(false);
-      }
+      setNavbarTransparent(scrollPosition > threshold);
     };
 
-    handleScroll();
-
+    // Tambahkan listener saat komponen dimount
     window.addEventListener("scroll", handleScroll);
 
+    // Bersihkan listener saat komponen diunmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    // Ambil role_id dari localStorage
-    const storedUserData = localStorage.getItem('userData');
-    const parsedUserData = storedUserData ? JSON.parse(storedUserData) : null;
-    const role_id = parsedUserData ? parsedUserData.role_id : null;
+    // Ambil role_id dari data pengguna
+    const role_id = userData ? userData.role_id : null;
     setUserRoleId(role_id);
-  }, []);
+  }, [userData]);
 
   const navigate = useNavigate();
+
   const toMentorMode = () => {
     navigate('/dashboard');
   };
@@ -56,8 +58,6 @@ function OffcanvasExample() {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Handle respons dari server jika diperlukan
-        // Misalnya, membersihkan sesi di sisi klien
         if (data.success) {
           // Hapus data sesi atau token di sisi klien
           localStorage.removeItem('userData');
@@ -65,7 +65,6 @@ function OffcanvasExample() {
           // Alihkan ke halaman login setelah logout
           navigate('/login');
         } else {
-          // Handle jika logout tidak berhasil
           console.error("Logout failed:", data.message);
         }
       })
@@ -105,14 +104,14 @@ function OffcanvasExample() {
                   <NavLink to="/notification" activeclassname='active'>
                     <FiBell size="18px" />
                   </NavLink>
-                  <NavLink to="/save">
+                  <NavLink to="/save" activeclassname='active'>
                     <FiBookmark size="18px" />
                   </NavLink>
                 </div>
                 <NavDropdown title={
                     <img
                       className="profile"
-                      src={profile}
+                      src={userData?.image ? `http://localhost:4121/images/${userData.image}` : profile }
                       alt="profile picture"
                       width="40px"
                       height="40px"
