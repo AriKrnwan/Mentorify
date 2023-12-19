@@ -5,6 +5,7 @@ import "./Login.css";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import apiConfig from '../../config/config.js';
 
 const Login = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -51,7 +52,7 @@ const Login = () => {
 
     try {
       // Kirim data ke backend
-      const response = await axios.post("http://localhost:4121/login", {
+      const response = await axios.post(`${apiConfig.baseURL}/login`, {
         email: email,
         password: password,
       }, {

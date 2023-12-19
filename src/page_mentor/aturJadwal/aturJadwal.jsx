@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import NumberField from '../../components/InputField/NumberField';
 import NavbarMentor from '../../components/navbar/NavbarMentor';
@@ -8,18 +8,60 @@ import '../aturJadwal/aturJadwal.css';
 import { useNavigate } from 'react-router-dom';
 import DynamicTextFields from '../../components/formMentor/FormLatarBelakang';
 import DropdownField from '../../components/InputField/DropdownField';
+import apiConfig from '../../config/config.js';
 
 const AturJadwal = () => {
   const [selectedRow, setSelectedRow] = useState(null);
+  const [scheduleData, setScheduleData] = useState([]);
+  const navigate = useNavigate();
+
+  // Fungsi untuk mengambil data jadwal dari backend
+  const fetchScheduleData = async () => {
+    try {
+      const response = await fetch(`${apiConfig.baseURL}/schedule`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      });
+
+      
+  
+      if (!response.ok) {
+        console.error('Failed to fetch schedule data. Status:', response.status);
+        return;
+      }
+  
+      const data = await response.json();
+      console.log(data)
+      setScheduleData(data.schedule);
+    } catch (error) {
+      console.error('Error fetching schedule data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchScheduleData();
+  }, []);
 
   const handleRowClick = (rowIndex) => {
     setSelectedRow(selectedRow === rowIndex ? null : rowIndex);
   };
 
-  const navigate = useNavigate();
-    const toAddJadwal = () => {
-      navigate('/orderschedule/tambah-jadwal');
-    };
+  const toAddJadwal = () => {
+    navigate('/orderschedule/tambah-jadwal');
+  };
+
+  const dateFormat = (date) => {
+      let datenew = new Date(date)
+      return datenew.toLocaleDateString('id-ID', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
+  }
 
   return (
     <>
@@ -65,16 +107,13 @@ const AturJadwal = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr onClick={() => handleRowClick(1)} className={selectedRow === 1 ? 'selected-row' : ''}>
-                    <td>1</td>
-                    <td>04/12/2023</td>
-                    <td>09:00, 10:00, 11:00</td>
-                  </tr>
-                  <tr onClick={() => handleRowClick(1)} className={selectedRow === 1 ? 'selected-row' : ''}>
-                    <td>1</td>
-                    <td>04/12/2023</td>
-                    <td>09:00, 10:00, 11:00</td>
-                  </tr>
+                  {scheduleData.map((schedule, index) => (
+                    <tr key={index} onClick={() => handleRowClick(index + 1)} className={selectedRow === index + 1 ? 'selected-row' : ''}>
+                      <td>{index + 1}</td>
+                      <td>{dateFormat(schedule.date)}</td>
+                      <td>{schedule.time}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
             </div>

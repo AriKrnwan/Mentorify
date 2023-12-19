@@ -5,6 +5,7 @@ import UncontrolledExample from "../../components/carousels/Carousels";
 import axios from "axios";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import apiConfig from '../../config/config.js';
 
 // Perubahan terbaru
 
@@ -85,7 +86,7 @@ const Register = () => {
 
     try {
       // Kirim data ke backend
-      const response = await axios.post("http://localhost:4121/register", {
+      const response = await axios.post(`${apiConfig.baseURL}/register`, {
         full_name: name,
         password: password,
         email: email,

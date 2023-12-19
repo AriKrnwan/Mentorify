@@ -7,6 +7,7 @@ import EmailField from "../InputField/EmailField";
 import { CiEdit } from "react-icons/ci";
 import avatar from '../../assets/image/avatar.jpg'
 import { useEffect, useState } from "react";
+import apiConfig from "../../config/config";
 
 const DataDiri = () => {
   const [userData, setUserData] = useState(null);
@@ -16,7 +17,7 @@ const DataDiri = () => {
     if (storedUserData) {
       setUserData(JSON.parse(storedUserData));
     } else {
-      fetch("http://localhost:4121/profile", {
+      fetch(`${apiConfig.baseURL}/profile`, {
         method: "GET",
         credentials: "include",
       })

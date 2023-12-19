@@ -14,7 +14,7 @@ const TambahJadwal = () => {
                         <div className="row add-jadwal">
                             <h6 className="h6">Tambah Jadwal</h6>
                             <DateField label="Tanggal" placeholder="Masukkan Tanggal" lg="6" />
-                            <DynamicNumberFields label="Jam" placeholder="Masukkan Keahlian" />
+                            <DynamicNumberFields label="Jam" placeholder="Masukkan Jam" />
                             <div className="d-flex justify-content-end mt-5">
                                 <Button className="border-0 w-25">
                                     Simpan
