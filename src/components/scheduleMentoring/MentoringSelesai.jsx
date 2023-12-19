@@ -5,18 +5,7 @@ const MentoringSelesai = () => {
   const riwayatData = [
     {
       nama: "Rizky Akbar Maulana",
-      tanggal: "14 November 2023 pukul 09:00 - 10:00",
-      topic: "UX Design",
-      harga: "Rp50.000",
-      durasi: "60 Menit",
-      detail_materi:
-        "Saya ingin lebih mendalami Design UI/UX, terutama cara pembuatan design yang responsive.",
-      status_mentoring: "Mentoring Sekarang",
-      ulasan : 'Mantap, sangat memuaskan!!!'
-    },
-    {
-      nama: "Asep Ganteng",
-      tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      tanggal: "10 November 2023 pukul 09:00 - 10:00",
       topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",

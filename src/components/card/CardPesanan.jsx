@@ -1,4 +1,3 @@
-import foto from "../..//assets/image/profile picture.jpg";
 import PropTypes from "prop-types";
 
 const CardPesanan = (props) => {
@@ -12,6 +11,7 @@ const CardPesanan = (props) => {
     durasi,
     tombol_1,
     tombol_2,
+    foto,
   } = props;
   return (
     <div className="d-flex border rounded justify-content-between p-4">

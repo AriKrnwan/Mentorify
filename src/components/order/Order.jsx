@@ -1,5 +1,10 @@
 import CardPesanan from "../card/CardPesanan";
 import MyDropdown from "../dropdown/Dropdown3";
+import fotoramadhan from "../../assets/image/ramadhan.jpg";
+import fotocintya from "../../assets/image/cintya.jpg";
+import fotorizky from "../../assets/image/profile picture.jpg";
+import fotoamanda from "../../assets/image/amanda.jpg";
+import fotoserly from "../../assets/image/serly.jpg";
 
 const Order = () => {
   const orderData = [
@@ -14,9 +19,10 @@ const Order = () => {
       status_pesanan: "",
       tombol_1: "Diterima",
       tombol_2: "Ditolak",
+      foto: fotorizky
     },
     {
-      nama: "Rizky Akbar Maulana",
+      nama: "Ramadhan Muhammad",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
       topic: "UX Design",
       harga: "Rp50.000",
@@ -26,9 +32,10 @@ const Order = () => {
       status_pesanan: "Ditolak",
       tombol_1: "",
       tombol_2: "",
+      foto: fotoramadhan
     },
     {
-      nama: "Rizky Akbar Maulana",
+      nama: "Cintya sinta",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
       topic: "UX Design",
       harga: "Rp50.000",
@@ -38,9 +45,10 @@ const Order = () => {
       status_pesanan: "Menunggu Mentee Membayar",
       tombol_1: "",
       tombol_2: "",
+      foto: fotocintya
     },
     {
-      nama: "Rizky Akbar Maulana",
+      nama: "Serly Rizka",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
       topic: "UX Design",
       harga: "Rp50.000",
@@ -50,9 +58,10 @@ const Order = () => {
       status_pesanan: "Kadaluarsa",
       tombol_1: "",
       tombol_2: "",
+      foto: fotoserly
     },
     {
-      nama: "Rizky Akbar Maulana",
+      nama: "Amanda Putri",
       tanggal: "14 November 2023 pukul 09:00 - 10:00",
       topic: "UX Design",
       harga: "Rp50.000",
@@ -62,6 +71,7 @@ const Order = () => {
       status_pesanan: "Mentee Telah Membayar",
       tombol_1: "",
       tombol_2: "",
+      foto: fotoamanda
     },
   ];
   return (
@@ -80,6 +90,7 @@ const Order = () => {
           status_pesanan={order.status_pesanan}
           tombol_1={order.tombol_1}
           tombol_2={order.tombol_2}
+          foto={order.foto}
         />
       ))}
       </div>

@@ -1,6 +1,6 @@
 import Navbar from'../../components/navbar/NavbarMentor'
 import { Container, Row, Col, Card, ListGroup, Tab, } from 'react-bootstrap';
-import profile_mentor from '../../assets/image/mentor2.png'
+import profile_mentor from '../../assets/image/profile picture.jpg'
 import List from '../../components/listNotificationMentoring/List';
 import ListAccept from '../../components/listNotificationMentoring/ListAccept';
 import ListDenied from '../../components/listNotificationMentoring/ListDenied';

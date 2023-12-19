@@ -1,6 +1,6 @@
 import { FiHeart, FiMessageCircle, FiShare2 } from "react-icons/fi";
 import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare } from "react-icons/fa";
-import profile from "../../assets/image/profile picture.jpg"
+import profile from "../../assets/image/mentor 6.png"
 import profile_user from"../../assets/image/profile_user.png"
 import ButtonWithIcon from "../button/button";
 import "../detailPostingan/detail.css"
@@ -42,7 +42,7 @@ const openInstagram = () => {
             <img src={profile} alt="" />
           </div>
           <div className="nama-profile">
-            <h6 className="fs-6 ">Rizky Akbar Maulana</h6>
+            <h6 className="fs-6 ">Putri Alifia Rizky</h6>
             <p className="mb-0">21 jam</p>
           </div>
         </div>
@@ -93,7 +93,7 @@ const openInstagram = () => {
               <p className="mb-0">21 jam</p>
             </div>
             <div className="komen">
-              <p className="mb-0">@rizkyakbar www.designerhandal.com</p>
+              <p className="mb-0">@putrialifiarizky www.designerhandal.com</p>
             </div>
             <div className="balas">
               <p className="mb-0">balas</p>

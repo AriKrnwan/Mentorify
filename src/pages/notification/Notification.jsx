@@ -5,7 +5,7 @@ import ListQna from '../../components/listNotificationQ&a/listQna';
 import { FaRegUser } from "react-icons/fa6";
 import { PiClockCounterClockwiseBold } from "react-icons/pi";
 import { useState } from 'react';
-import profile_mentor from '../../assets/image/mentor2.png'
+import profile_mentor from '../../assets/image/mentor1.png'
 import profile_user from '../../assets/image/profile_user.png'
 import List from '../../components/listNotificationMentoring/List';
 import ListAccept from '../../components/listNotificationMentoring/ListAccept';

@@ -54,7 +54,7 @@ const Dashboard = () => {
                 <img src={heroImg} alt="Gambar" className="position-absolute" />
               </div>
               <div className="dashboard-heading px-4">
-                <h3 className="mb-0">Selamat Datang, Akbar Budiana!</h3>
+                <h3 className="mb-0">Selamat Datang, Putri Alifia Rizky!</h3>
                 <p className="mb-0">
                   Ayo ciptakan pengalaman mentoring terbaik bersama! Dengan
                   mendengarkan, berkolaborasi, dan komitmen penuh, kita bisa

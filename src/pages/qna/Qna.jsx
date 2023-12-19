@@ -5,8 +5,9 @@ import { Row } from "react-bootstrap";
 import { HiChatBubbleLeftRight } from "react-icons/hi2";
 import "../qna/qna.css"
 import Postingan from '../../components/postingan/Postingan';
-import profile from "../../assets/image/profile picture.jpg"
-import profile_user from "../../assets/image/profile_user.png"
+import profile from "../../assets/image/mentor 6.png"
+import fotofarhan from "../../assets/image/mentor 8.png"
+import fotosambas from "../../assets/image/mentor 10.png"
 import SidebarFilter from '../../components/sidebarFilter/SidebarFilter';
 import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
@@ -29,15 +30,21 @@ const Qna = () => {
     const isiPostingan = [
         {
             foto: profile,
-            nama: "Rizky Akbar Maulana",
+            nama: "Putri Alifia Rizky",
             waktu: "5 menit",
             isi: "Saya akan melamar di perusahaan sebagai UI/UX Designer, tapi gak tau job desc nya. Mungkin teman - teman ada yang tau dan sudah pernah bekerja bisa sharing di sini.",
         },
         {
-            foto: profile_user,
-            nama: "Rizky Pahlevi",
+            foto: fotofarhan,
+            nama: "Farhan Alamsyah",
             waktu: "1 jam",
             isi: "Bahasa apa ya yang gampang dipelajari dalam waktu 1 jam?",
+        },
+        {
+            foto: fotosambas,
+            nama: "Sambas Purnama Endang",
+            waktu: "2 jam",
+            isi: "Apa langkah-langkah menjadi UI/UX Design yang sukses?",
         },
     ];
 

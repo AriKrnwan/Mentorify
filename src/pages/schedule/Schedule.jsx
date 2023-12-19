@@ -124,7 +124,7 @@ const Schedule = () => {
                       </div>
                       <div className="profileTime d-flex flex-column gap-1">
                         <span>Waktu</span>
-                        <span>Waktu 14 November 2023 pukul 09:00 - 10:00</span>
+                        <span>Waktu 10 November 2023 pukul 09:00 - 10:00</span>
                       </div>
                     </div>
                   </div>

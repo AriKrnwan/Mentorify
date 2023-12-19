@@ -21,7 +21,7 @@ const MentoringAkanDatang = () => {
     },
     {
       nama: "Rizky Akbar Maulana",
-      tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      tanggal: "16 November 2023 pukul 09:00 - 10:00",
       topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",
@@ -33,7 +33,7 @@ const MentoringAkanDatang = () => {
     },
     {
       nama: "Rizky Akbar Maulana",
-      tanggal: "14 November 2023 pukul 09:00 - 10:00",
+      tanggal: "18 November 2023 pukul 09:00 - 10:00",
       topic: "UX Design",
       harga: "Rp50.000",
       durasi: "60 Menit",

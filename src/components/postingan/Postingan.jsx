@@ -3,6 +3,7 @@ import { FiHeart, FiMessageCircle, FiShare2 } from "react-icons/fi";
 import { FaFacebookSquare, FaInstagramSquare, FaWhatsappSquare } from "react-icons/fa";
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import './postingan.css'
 
 function Postingan(props) {
     const { nama, waktu, isi, foto } = props;
@@ -40,7 +41,7 @@ function Postingan(props) {
     return (
         <div className="d-flex flex-column gap-2 p-4 border rounded mb-3">
             <div className="profile-qna d-flex align-items-center gap-3">
-                <div className='img-profile overflow-hidden d-flex align-items-center'>
+                <div className='img-profile bg-warning overflow-hidden d-flex align-items-center'>
                     <img src={foto} alt="" />
                 </div>
                 <div className="nama-profile">
