@@ -1,4 +1,4 @@
-import profile from "../../assets/image/mentor2.png";
+import profile from "../../assets/image/mentor 6.png";
 import { FiEdit2 } from "react-icons/fi";
 import TextField from "../InputField/TextField";
 import DropdownField from "../InputField/DropdownField";
@@ -24,26 +24,26 @@ const FormMentor = () => {
             </div>
             <div className="col-lg-10">
                 <div className="row form-mentor">
-                    <TextField label="Nama" placeholder="Masukkan Nama" lg="6" />
+                    <TextField label="Nama" placeholder="Putri Alifia Rizky" lg="6" />
                     <DropdownField label="Jenis Kelamin" placeholder="Pilih..." lg="6" options={[
-                        { value: 'l', label: 'Laki-Laki' },
                         { value: 'p', label: 'Perempuan' },
+                        { value: 'l', label: 'Laki-Laki' }
                     ]} />
                     <DateField label="Tanggal Lahir" placeholder="Masukkan Tanggal Lahir" lg="6" />
-                    <TextField label="No. Hp" placeholder="Masukkan No. Hp" lg="6" />
-                    <EmailField label="Email" placeholder="Masukkan Email" lg="6" />
-                    <TextField label="Domisili" placeholder="Masukkan Domisili" lg="6" />
-                    <TextField label="Alamat Domisili" placeholder="Masukkan Alamat Domisili" lg="6" />
-                    <TextField label="Institusi" placeholder="Masukkan Institusi" lg="6" />
-                    <TextAreaField label="Tentang" placeholder="Isi tentang diri kamu" lg="12"  />
+                    <TextField label="No. Hp" placeholder="081997214952" lg="6" />
+                    <EmailField label="Email" placeholder="alifiarizky08@gmail.com" lg="6" />
+                    <TextField label="Domisili" placeholder="Palembang" lg="6" />
+                    <TextField label="Alamat Domisili" placeholder="Jalan Letnan Hadin" lg="6" />
+                    <TextField label="Institusi" placeholder="Politeknik Negeri Sriwijaya" lg="6" />
+                    <TextAreaField label="Tentang" placeholder="Saya seorang desainer UI/UX dengan pengalaman lebih dari 2 tahun di industri desain. Sejak awal karir saya, saya telah memimpin dan berkontribusi pada berbagai proyek desain yang mencakup berbagai industri, mulai dari teknologi hingga e-commerce." lg="12"  />
                     <h6 className="h6 mt-5">Latar Belakang</h6>
-                    <DynamicTextFields label="Keahlian" placeholder="Masukkan Keahlian" />
-                    <DynamicTextFields label="Disciplines" placeholder="Masukkan Disciplines" />
+                    <DynamicTextFields label="Keahlian" placeholder="Java Script" />
+                    <DynamicTextFields label="Disciplines" placeholder="UI/UX" />
                     <h6 className="h6 mt-5">Pengalaman</h6>
                     <FormPengalaman />
                     <h6 className="h6 mt-5">Pendidikan</h6>
-                    <TextField label="Universitas" placeholder="Masukkan Universitas" lg="6" />
-                    <TextField label="Domisili" placeholder="Masukkan Domisili" lg="6" />
+                    <TextField label="Universitas" placeholder="Politeknik Negeri Sriwijaya" lg="6" />
+                    <TextField label="Domisili" placeholder="Palembang" lg="6" />
                     <DateField label="Dari Tanggal" placeholder="Masukkan Dari Tanggal" lg="6" />
                     <DateField label="Sampai Tanggal" placeholder="Masukkan Sampai Tanggal" lg="6" />
                     <h6 className="h6 mt-5">Sertifikat & Lisensi</h6>

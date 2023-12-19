@@ -9,7 +9,7 @@ const ProfileMentor = () => {
             <div className="container-xxl mx-auto wrapper-profile-mentor">
                 <div className="row border rounded">
                     <div className="text-center welcome-mentor">
-                        <h5 className="mt-4">Selamat Datang Akbar Budiana!</h5>
+                        <h5 className="mt-4">Selamat Datang Putri Alifia Rizky!</h5>
                         <p>Lengkapi Data Dirimu dan Mulai Mentoring</p>
                     </div>
                     <FormMentor />
