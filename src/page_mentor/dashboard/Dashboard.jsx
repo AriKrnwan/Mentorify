@@ -5,6 +5,7 @@ import { Col, Row } from "react-bootstrap";
 import { FaFile } from "react-icons/fa6";
 import CardPesanan from "../../components/card/CardPesanan";
 import CardJadwalMentor2 from "../../components/card/CardJadwalMentor2";
+import fotorizky from "../../assets/image/profile picture.jpg"
 
 
 
@@ -40,6 +41,7 @@ const Dashboard = () => {
       status_pesanan: "",
       tombol_1: "Diterima",
       tombol_2: "Ditolak",
+      foto: fotorizky
     },
   ];
 
@@ -138,6 +140,7 @@ const Dashboard = () => {
                   status_pesanan={order.status_pesanan}
                   tombol_1={order.tombol_1}
                   tombol_2={order.tombol_2}
+                  foto={order.foto}
                 />
               ))}
             </div>

@@ -150,23 +150,23 @@ export const DetailMentor = () => {
                       <h6 className="mb-0">09:00</h6>
                     </div>
                     <div className="border text-center rounded p-2 card-jam-mentoring">
-                      <h6 className="mb-0">09:00</h6>
+                      <h6 className="mb-0">10:00</h6>
                     </div>
                     <div className="border text-center rounded p-2 card-jam-mentoring">
-                      <h6 className="mb-0">09:00</h6>
+                      <h6 className="mb-0">11:00</h6>
                     </div>
                   </div>
                 </Row>
                 <Row className="py-2">
                   <div className="d-flex justify-content-between">
                     <div className="border text-center rounded p-2 card-jam-mentoring">
-                      <h6 className="mb-0">09:00</h6>
+                      <h6 className="mb-0">13:00</h6>
                     </div>
                     <div className="border text-center rounded p-2 card-jam-mentoring">
-                      <h6 className="mb-0">09:00</h6>
+                      <h6 className="mb-0">14:00</h6>
                     </div>
                     <div className="border text-center rounded p-2 card-jam-mentoring">
-                      <h6 className="mb-0">09:00</h6>
+                      <h6 className="mb-0">15:00</h6>
                     </div>
                   </div>
                 </Row>
